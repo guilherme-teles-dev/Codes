@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        //Entrada
+        const anovotacao = Number(prompt('Digite o ano da votação.'))
+        const nascimento = Number(prompt('Digite o seu ano de nascimento.'))
+        let idade = anovotacao - nascimento
+        //Processamento
+        let podevotar = 'Não'
+        if(idade => 16){
+            podevotar = 'Sim'
+        }
+        //Saída
+        console.log('Pode votar: ' + podevotar)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
