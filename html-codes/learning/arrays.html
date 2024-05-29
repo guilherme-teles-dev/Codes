@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const carros = [
+            'Gol',
+            'Fusca',
+            'Virtus',
+            'Ka'
+        ]
+        console.table(carros) //Mostra um array como tabela
+
+        carros.push('Fiesta') //Aloca um elemento no final do array
+        console.table(carros)
+        carros.unshift('Palio') //Aloca um elemento no inicio do array
+        console.table(carros)
+        const carro1 = carros.shift() //Remove elementos do início do array e salva ele em uma variável
+        const carro2 = carros.shift()
+        const carro3 = carros.shift()
+        console.table(carros)
+        console.log(carro1, carro2, carro3) //Printa os 3 elementos removidos
+        const carro4 = carros.pop() //Remove um elemento do final do array
+        console.table(carros)
+        console.log(carro4)
+        carros.splice(1, 1) //Vai até o index 1 e exclui 1.
+        console.table(carros)
+        carros.splice(1, 0, 'Uno') //Vai até o index 1, não exclui nada e adiciona o item 'Uno'
+        console.table(carros)
+        carros.splice(2, 0, 'Ferrari')
+        console.table(carros)
+        carros.splice(2, 1, 'Lamborgini') //Vá até o index 2, exclui o que tem lá e adicione 'Lamborgini'
+        console.table(carros)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

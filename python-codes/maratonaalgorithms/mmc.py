@@ -1,0 +1,5 @@
+i = int(input())
+j = int(input())
+m = i + j-(i%j)
+m = str(m)
+print("O menor inteiro m maior que i e é múltiplo de j é: "+m+".")

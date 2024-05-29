@@ -1,0 +1,5 @@
+distance = float(input())
+velocity = float(input())
+time = str(distance/velocity)
+meterbysecond = str(velocity/3.6)
+print("The time to arrived is "+time+"h and the meter by second is "+meterbysecond+".")

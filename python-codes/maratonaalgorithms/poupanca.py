@@ -1,0 +1,5 @@
+aplicacaomensal = float(input())
+tax = float(input())
+meses = int(input())
+valoracumulado = str((aplicacaomensal*((1+tax)**meses)-1)/tax)
+print("O valor acumulado é de "+valoracumulado+".")
