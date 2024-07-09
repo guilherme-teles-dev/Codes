@@ -1,0 +1,10 @@
+a = input('Digite algo: ')
+print(f'O tipo premitivo de {a} é {type(a)} ')
+print(f'Só tem espaços: {a.isspace()}')
+print(f'Só tem numeros: {a.isnumeric()}')
+print(f'Só tem letras: {a.isalpha()}')
+print(f'Só tem numeros e/ou letras: {a.isalnum()}')
+print(f'Só está em maiusculo: {a.isupper()}')
+print(f'Só está em minusculo: {a.islower()}')
+print(f'Pode ser escrito: {a.isprintable()}')
+
