@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage[brazil]{babel}
+\usepackage{datetime}
+\newdateformat{mydate}{\THEDAY~monthname[\THEMONTH]~de~\THEYEAR}
+
+\title{Exemplo Prático de Transição de Serviços no ITIL}
+\author{Guilherme Brugeff Teles}
+\date{\mydate\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Descrição do Serviço}
+
+A plataforma acadêmica de programação competitiva é um ambiente online que permite aos alunos participar de competições de programação, resolver problemas algorítmicos e melhorar suas habilidades técnicas. A plataforma inclui recursos como a criação e gerenciamento de desafios, avaliação automática de submissões, rankings, e funcionalidades de gamificação para incentivar a participação. O propósito da plataforma na organização é apoiar o desenvolvimento das habilidades de programação dos alunos, oferecendo um ambiente controlado e estimulante para praticar e competir.
+
+\section{Fase de Transição de Serviços no ITIL}
+
+\subsection{Planejamento e Suporte à Transição}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Definir o cronograma detalhado para a transição da plataforma, incluindo datas de entrega e milestones.
+        \item Alinhar os recursos necessários, como desenvolvedores, servidores de hospedagem, e ferramentas de monitoramento.
+        \item Planejar a comunicação com os \textit{stakeholders}, incluindo professores, alunos, e equipe de suporte técnico.
+        \item Identificar e mitigar riscos associados à transição, como possíveis falhas na integração com sistemas acadêmicos existentes.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Plano de Transição detalhado, contendo o cronograma, alocação de recursos, e plano de comunicação.
+        \item Documento de Gestão de Riscos, com a identificação e mitigação de potenciais problemas.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestão de Mudanças}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Revisar e aprovar as mudanças propostas para a implantação da plataforma.
+        \item Documentar todas as mudanças planejadas, incluindo alterações no código, configuração dos servidores e ajustes nas integrações.
+        \item Garantir que todas as mudanças sejam testadas adequadamente em um ambiente de pré-produção antes de serem aplicadas ao ambiente de produção.
+        \item Conduzir reuniões de controle de mudanças com todas as partes interessadas para validar as decisões e o progresso.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Registro das Mudanças, documentando todas as alterações aprovadas.
+        \item Relatórios de Testes, com resultados dos testes de pré-produção para cada mudança.
+        \item Atas de Reunião de Controle de Mudanças, documentando decisões e próximos passos.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestão de Configuração e Ativos de Serviço}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Criar e manter uma Base de Dados de Configuração (\textit{CMDB}) para a plataforma, incluindo todos os componentes de software, hardware, e documentação.
+        \item Associar cada item de configuração aos serviços que ele suporta, permitindo uma visão clara das dependências.
+        \item Monitorar e atualizar a \textit{CMDB} conforme novas configurações e ativos forem adicionados durante a transição.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item \textit{CMDB} Atualizada, com todos os itens de configuração e seus relacionamentos.
+        \item Relatório de Status de Configuração, fornecendo uma visão geral do estado dos ativos e suas associações.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestão do Conhecimento}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Documentar todos os processos, procedimentos, e scripts utilizados na implantação da plataforma.
+        \item Criar manuais de uso e treinamentos para os administradores da plataforma e para os alunos.
+        \item Estabelecer um repositório de conhecimento acessível a todos os \textit{stakeholders}, onde possam ser armazenados tutoriais, FAQs, e artigos técnicos.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Documentação Completa da Plataforma, incluindo manuais técnicos e guias do usuário.
+        \item Repositório de Conhecimento Online, acessível e organizado por tópicos relevantes.
+        \item Sessões de Treinamento, registradas e disponíveis para consulta futura.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestão da Liberação e Implantação}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Preparar o ambiente de produção para a implantação da plataforma, incluindo a configuração de servidores e a aplicação de patches de segurança.
+        \item Planejar e executar a liberação da plataforma em fases, começando por um lançamento piloto para um grupo reduzido de usuários.
+        \item Monitorar o desempenho da plataforma durante e após a implantação, ajustando conforme necessário.
+        \item Validar a implantação com os usuários finais, garantindo que todos os requisitos funcionais e de desempenho sejam atendidos.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Pacote de Liberação, incluindo código-fonte, scripts de implantação, e notas de versão.
+        \item Relatório de Implantação, documentando cada etapa do processo e os resultados obtidos.
+        \item Feedback dos Usuários, coletado após a liberação piloto e ajustado conforme necessário.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Validação e Testes de Serviço}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Realizar testes funcionais e de integração para garantir que a plataforma atenda a todos os requisitos técnicos e de negócio.
+        \item Conduzir testes de carga e desempenho para avaliar a capacidade da plataforma de lidar com um grande número de usuários simultâneos.
+        \item Verificar a conformidade com as políticas de segurança e privacidade da organização.
+        \item Validar a usabilidade da plataforma com um grupo de alunos e professores, ajustando com base no feedback.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Relatórios de Testes Funcionais e de Integração, detalhando os resultados de cada teste.
+        \item Relatório de Desempenho, mostrando a capacidade da plataforma em condições de carga máxima.
+        \item Checklist de Conformidade, validando a adesão às políticas de segurança e privacidade.
+        \item Relatório de Usabilidade, com insights e recomendações baseados no feedback dos usuários.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Avaliação Pós-Implementação (PIR)}
+\begin{itemize}
+    \item \textbf{Atividades:}
+    \begin{itemize}
+        \item Conduzir uma revisão completa da transição e da implantação da plataforma, avaliando o que funcionou bem e o que precisa ser melhorado.
+        \item Coletar feedback dos \textit{stakeholders}, incluindo alunos, professores, e equipe técnica.
+        \item Identificar lições aprendidas e documentá-las para futuras transições de serviços.
+        \item Propor melhorias contínuas para a plataforma, baseadas nos resultados da avaliação.
+    \end{itemize}
+    \item \textbf{Entregas:}
+    \begin{itemize}
+        \item Relatório de Avaliação Pós-Implementação, com análise detalhada da transição e recomendações.
+        \item Documento de Lições Aprendidas, para referência em projetos futuros.
+        \item Plano de Melhorias, delineando ações corretivas e melhorias contínuas para a plataforma.
+    \end{itemize}
+\end{itemize}
+
+\end{document}
