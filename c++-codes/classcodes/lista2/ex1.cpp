@@ -1,4 +1,15 @@
-#include <stdio.h>
+/*
+Descrição:
+Programa para calcular salário do funcionário.
+
+Input:
+Número da matrícula do funcionário, horas trabalhadas, valor da hora, número de filhos.
+
+Output:
+Salário + 10% de acrescimo por filho.
+*/
+
+#include <stdio.h> // Import de biblioteca 
 
 int main(){
 
