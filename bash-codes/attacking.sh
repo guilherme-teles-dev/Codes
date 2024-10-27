@@ -1,3 +1,6 @@
+/Descrição:
+/Entrada:
+/Saída
 log_file="arquivo.qualquer"
 try_range=5
 
