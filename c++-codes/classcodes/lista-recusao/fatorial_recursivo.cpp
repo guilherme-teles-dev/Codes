@@ -1,5 +1,5 @@
 /*
-Descrição: Código para realizar fatoração recursivamente
+Descrição: Código para realizar fatorial recursivamente
 Entrada: Um valor inteiro qualquer
 Saída: O fatorial dele.
 */
