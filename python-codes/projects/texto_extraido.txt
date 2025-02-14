@@ -1,0 +1,1382 @@
+PROFESSOR(A): BRUNO MALHANO
+Fundamentos de DevOps
+Abordagens de Entrega de Software
+Objetivo da Aula
+Compreender e relacionar as diferentes abordagens de entrega de software. Conhecer
+a abordagem tradicional de entrega de software, conhecida como Waterfall, entender a
+abordagem ágil de entrega de software, utilizando o framework Scrum, e explorar o DevOps
+como uma abordagem moderna e integrada de entrega de software.
+Apresentação
+Nesta aula, vamos falar sobre as diferentes abordagens de entrega de software. O objetivo
+dessa aula é apresentar as principais características e diferenças entre a abordagem tradicional
+de entrega de software, conhecida como Waterfall, e a abordagem ágil, representada pelo
+Scrum, e DevOps.
+Na primeira parte da aula, vamos explorar a abordagem tradicional de entrega de
+software, também conhecida como Waterfall. Vamos entender como essa metodologia
+funciona, quais são as etapas envolvidas e quais são as vantagens e desvantagens desse
+modelo. Veremos como o Waterfall é estruturado em fases sequenciais e como isso pode
+afetar a flexibilidade e a adaptação às mudanças.
+Vamos nos aprofundar na abordagem ágil de entrega de software, representada pelo
+Scrum e entender como o Scrum se diferencia do Waterfall, com sua abordagem iterativa
+e incremental. Veremos como as equipes ágeis trabalham em sprints, realizando entregas
+frequentes e priorizando a colaboração e a flexibilidade. Discutiremos as vantagens do
+Scrum em termos de adaptação às mudanças e satisfação do cliente.
+Ao final, vamos explorar os conceitos do DevOps como abordagem de entrega de software.
+Veremos como o DevOps busca integrar as equipes de desenvolvimento e operações,
+promovendo uma cultura de colaboração e automação para acelerar a entrega de software,
+garantir a qualidade e a estabilidade do ambiente de produção.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 10
+Professor(a): Bruno Malhano
+1. Abordagem Tradicional de Entrega de Software (Waterfall)
+A abordagem tradicional de entrega de software, também conhecida como Waterfall,
+é um método sequencial e linear de desenvolvimento de software. Nessa abordagem, o
+processo de desenvolvimento é dividido em fases bem definidas, onde cada fase depende
+do término da fase anterior.
+O modelo Waterfall foi amplamente utilizado na indústria de software durante muitos
+anos. Ele é caracterizado por uma sequência fixa de etapas que incluem requisitos, design,
+implementação, testes e manutenção. Cada fase é finalizada antes que a próxima comece.
+Figura 1: Modelo Waterfall (Cascata)
+Fonte: Elaborada pelo autor.
+As fases do Waterfall são:
+• Requisitos: nesta fase, os requisitos do software são levantados e documentados de
+forma detalhada. Isso envolve a identificação das necessidades dos usuários e a defi-
+nição das funcionalidades do sistema;
+• Design: nesta fase, o design do sistema é criado com base nos requisitos levantados.
+Isso inclui a definição da arquitetura do software, a criação de diagramas e a especi-
+ficação técnica;
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 2 de 10
+Professor(a): Bruno Malhano
+• Implementação: nesta fase, o código-fonte do software é escrito e os componentes
+do sistema são desenvolvidos. É nessa etapa que ocorre a programação e a criação dos
+módulos do software;
+• Testes: nesta fase, o software é testado para verificar se atende aos requisitos especi-
+ficados. Isso inclui testes de unidade, integração e sistema, bem como a identificação
+e correção de defeitos;
+• Manutenção: após a conclusão das fases anteriores, o software é entregue aos usuá-
+rios finais. Nessa etapa, ocorre a manutenção do sistema, que pode incluir correção
+de bugs, atualizações de funcionalidades e suporte técnico.
+Algumas vantagens do modelo Waterfall incluem:
+• Estrutura clara: o modelo Waterfall fornece uma estrutura bem definida para o desenvolvi-
+mento de software, o que ajuda a garantir que todas as fases sejam executadas corretamente;
+• Documentação completa: cada fase do Waterfall requer documentação detalhada, o
+que ajuda a garantir a rastreabilidade e a compreensão do sistema.
+No entanto, o Waterfall também apresenta algumas desvantagens dentro de um processo
+de desenvolvimento de software, podemos citar:
+• Rigidez: uma vez que cada fase deve ser concluída antes que a próxima comece, o Wa-
+terfall não é adequado para projetos que exigem flexibilidade ou mudanças frequentes
+nos requisitos;
+• Feedback tardio: como o Waterfall é um modelo sequencial, o feedback dos usuários
+geralmente só é obtido no final do processo, o que pode resultar em ajustes e corre-
+ções mais demorados.
+Com o surgimento de metodologias ágeis, como o Scrum e o Kanban, muitas organizações
+passaram a adotar abordagens mais flexíveis e interativas para o desenvolvimento de
+software. Essas metodologias permitem uma maior colaboração entre os membros da
+equipe, feedback constante dos usuários e a entrega incremental de funcionalidades.
+Em resumo, a abordagem tradicional de entrega de software, conhecida como Waterfall,
+apresenta uma estrutura sequencial e linear, com vantagens e desvantagens. Embora tenha
+sido amplamente utilizada no passado, muitas organizações estão adotando metodologias
+ágeis para se adaptarem melhor às necessidades do mercado atual. As metodologias ágeis
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 3 de 10
+Professor(a): Bruno Malhano
+permitem maior flexibilidade, colaboração e feedback constante, o que resulta em um
+processo de desenvolvimento mais eficiente e adaptável às mudanças.
+No entanto, é importante destacar que a abordagem Waterfall ainda pode ser aplicável
+em certos casos, especialmente em projetos onde os requisitos são estáveis e bem definidos
+desde o início. Além disso, o Waterfall pode ser mais adequado para projetos de menor
+escala, com prazos e orçamentos fixos.
+A abordagem tradicional de entrega de software, conhecida como Waterfall, tem suas
+vantagens e desvantagens. Embora tenha sido amplamente utilizada no passado, muitas
+organizações estão migrando para metodologias ágeis para se adaptarem melhor às
+demandas do mercado em constante evolução. A escolha entre o Waterfall e as metodologias
+ágeis dependerá das necessidades específicas de cada projeto e das preferências da equipe
+de desenvolvimento.
+2. Abordagem Ágil de Entrega de Software (Scrum)
+A abordagem ágil de entrega de software, conhecida como Scrum, é um método iterativo
+e incremental de desenvolvimento de software. Diferente do modelo tradicional Waterfall,
+o Scrum enfatiza a colaboração, a flexibilidade e a entrega contínua de valor ao cliente.
+O Scrum é uma metodologia ágil que foi desenvolvida para lidar com os desafios e incertezas
+comuns no desenvolvimento de software. Ele se baseia em um conjunto de princípios e práticas
+que promovem a entrega de funcionalidades de forma iterativa e incremental.
+Figura 2: Os três papéis do Scrum
+Fonte: Elaborada pelo autor.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 4 de 10
+Professor(a): Bruno Malhano
+No Scrum, existem três papéis principais:
+• Product Owner: é o responsável por representar os interesses dos usuários e stakehol-
+ders. Ele define e prioriza os requisitos do produto, além de tomar decisões importantes
+relacionadas ao desenvolvimento;
+• Scrum Master: é o facilitador do processo Scrum. Ele garante que a equipe esteja
+aderindo aos princípios e práticas do Scrum, remove obstáculos e ajuda a equipe a
+melhorar continuamente;
+• Equipe de desenvolvimento: é composta por profissionais multidisciplinares que são
+responsáveis por desenvolver as funcionalidades do produto. Eles trabalham em con-
+junto, de forma autogerenciada, para entregar o valor esperado.
+O ciclo de desenvolvimento do Scrum é dividido em ciclos chamados de “sprints”. Cada
+sprint tem uma duração fixa, geralmente de duas a quatro semanas.
+Figura 3: Os três papéis do Scrum
+Fonte: Researchgate. Disponível em: https://www.researchgate.net/figure/Figura-1-Ciclo-de-desenvolvimento-do-S-
+crum_fig1_347567574. Acesso em: 10 ago. 2023.
+Durante um sprint, as seguintes atividades ocorrem:
+• Planejamento do sprint: o Product Owner e a equipe de desenvolvimento se reúnem
+para definir quais funcionalidades serão desenvolvidas no sprint. Essas funcionalidades
+são adicionadas ao backlog do produto;
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 5 de 10
+Professor(a): Bruno Malhano
+• Daily Scrum: é uma reunião diária de curta duração, onde a equipe de desenvolvimento
+compartilha o que foi feito no dia anterior, o que será feito no dia atual e quaisquer
+obstáculos que estejam enfrentando;
+• Desenvolvimento: a equipe de desenvolvimento trabalha na implementação das fun-
+cionalidades definidas no planejamento do sprint. Eles se organizam para entregar o
+máximo de valor possível até o final do sprint;
+• Revisão do sprint: ao final do sprint, a equipe de desenvolvimento realiza uma reunião
+com o Product Owner e outros stakeholders para demonstrar o que foi desenvolvido.
+O objetivo é obter feedback e validar se as funcionalidades atendem às expectativas;
+• Retrospectiva do sprint: também ao final do sprint, a equipe de desenvolvimento realiza
+uma reunião para refletir sobre o processo de trabalho e identificar oportunidades de
+melhoria para os próximos sprints.
+O Scrum oferece várias vantagens em relação ao modelo Waterfall, incluindo:
+• Flexibilidade: o Scrum permite que os requisitos sejam ajustados e priorizados ao longo
+do projeto, o que torna o processo mais adaptável às mudanças;
+• Colaboração: o Scrum incentiva a colaboração constante entre o Product Owner, a
+equipe de desenvolvimento e outros stakeholders, o que resulta em um melhor en-
+tendimento das necessidades do cliente;
+• Entrega contínua de valor: com os sprints curtos e a entrega incremental de funcionali-
+dades, o Scrum permite que o cliente receba valor constantemente ao longo do projeto.
+Embora o Scrum seja uma abordagem eficaz para muitos projetos de desenvolvimento
+de software, também apresenta algumas desvantagens:
+• Requer envolvimento ativo do cliente: para que o Scrum funcione bem, é necessário
+que o cliente esteja engajado e disponível para fornecer feedback e tomar decisões.
+Se o cliente não estiver comprometido, pode haver atrasos no processo;
+• Exige uma equipe autogerenciada: a equipe de desenvolvimento no Scrum é responsável
+por se auto-organizar e tomar decisões relacionadas ao projeto. Isso pode ser desafiador
+para equipes com pouca experiência ou falta de habilidades de autogerenciamento;
+• Não é adequado para projetos de grande escala: embora o Scrum seja eficaz em pro-
+jetos menores e mais ágeis, pode ser difícil de escalar para projetos de grande porte,
+onde há múltiplas equipes e complexidade maior.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 6 de 10
+Professor(a): Bruno Malhano
+Além do Scrum, existem outras metodologias ágeis que podem ser consideradas para
+o desenvolvimento de software, como o Kanban, que se concentra no fluxo contínuo de
+trabalho, e o Lean, que busca eliminar desperdícios e otimizar o processo.
+Também é importante mencionar que, em alguns casos, uma abordagem híbrida pode
+ser adotada, combinando elementos do Scrum com práticas do modelo Waterfall. Isso
+pode ser benéfico quando há necessidade de um planejamento mais detalhado e requisitos
+estáveis, mas também se deseja manter a flexibilidade e a colaboração do Scrum.
+A abordagem ágil de entrega de software, como o Scrum, ganhou popularidade devido
+à sua flexibilidade, colaboração e entrega contínua de valor. No entanto, é importante
+considerar as características e necessidades específicas do projeto ao escolher a metodologia
+mais adequada.
+3. DevOps como Abordagem de Entrega de Software
+DevOps é uma abordagem colaborativa que combina desenvolvimento (Dev) e operações (Ops)
+com o objetivo de acelerar a entrega de software de forma eficiente e confiável. Essa abordagem
+valoriza a automação, a colaboração e a comunicação entre as equipes de desenvolvimento e
+operações, visando melhorar a qualidade do software e a experiência do usuário.
+DevOps surgiu como uma resposta aos desafios enfrentados pelas equipes de
+desenvolvimento e operações na entrega contínua de software. Tradicionalmente, essas
+equipes trabalhavam separadamente e tinham objetivos diferentes, o que muitas vezes
+resultava em atrasos, problemas de qualidade e dificuldades na implantação do software.
+Figura 4: Ciclo de vida do DevOps
+Fonte: Atlassian. Disponível em: https://www.atlassian.com/br/devops/what-is-devops. Acesso em: 10 ago. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 7 de 10
+Professor(a): Bruno Malhano
+O DevOps se baseia em alguns princípios fundamentais: automação, colaboração,
+monitoramento contínuo, entrega contínua e oferece uma série de benefícios para as
+equipes de desenvolvimento e operações e consequentemente, para as empresas.
+• Maior velocidade de entrega: o DevOps permite que as equipes entreguem software de forma
+mais rápida, eliminando atrasos e gargalos entre as fases de desenvolvimento e operações;
+• Melhoria na qualidade do software: com a automação e o monitoramento contínuo,
+os problemas são identificados e corrigidos mais rapidamente, resultando em um
+software de maior qualidade;
+• Maior eficiência operacional: a automação de tarefas manuais e repetitivas reduz o
+tempo gasto em atividades operacionais e permite que as equipes se concentrem em
+tarefas de maior valor;
+• Melhor colaboração e comunicação: o DevOps promove uma cultura de colaboração
+entre as equipes, incentivando a comunicação e a troca de conhecimento, o que resulta
+em um ambiente de trabalho mais produtivo e eficaz.
+Existem várias ferramentas disponíveis que suportam a implementação do DevOps, auxiliando
+na automação, integração contínua, entrega contínua e monitoramento. Alguns exemplos
+populares incluem: Jenkins, Git, Docker, Kubernetes, Nagios. Podemos destacar também o
+Azure DevOps, uma abordagem para implementação do DevOps em ambiente de nuvem.
+O DevOps se tornou uma abordagem essencial para a entrega de software eficiente e
+confiável. Ao unir as equipes de desenvolvimento e operações, automatizar processos e
+promover a colaboração, o DevOps permite que as empresas se adaptem rapidamente às
+mudanças do mercado, entreguem software de alta qualidade e atendam às expectativas
+dos usuários finais. É uma abordagem que está ganhando cada vez mais popularidade em
+empresas de todos os tamanhos e setores.
+O processo de adoção do DevOps não é apenas sobre a implementação de ferramentas
+e automação. É também uma mudança cultural que requer colaboração, confiança e uma
+mentalidade de aprendizado contínuo. As equipes de desenvolvimento e operações devem
+trabalhar em conjunto, compartilhando responsabilidades e objetivos comuns.
+Não se pode considerar o DevOps como uma abordagem estática, mas, sim, um processo
+contínuo de melhoria ao qual as equipes devem estar dispostas a experimentar, aprender
+com os erros e buscar constantemente maneiras de otimizar e aprimorar seus processos.
+Ao promover a automação, a colaboração e a comunicação entre as equipes, o DevOps
+oferece benefícios significativos, como maior velocidade de entrega, melhoria na qualidade
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 8 de 10
+Professor(a): Bruno Malhano
+do software e eficiência operacional e sua adoção vai muito além de implementar softwares
+e aplicar agilidade, mas, sim, uma mudança cultural das empresas com um compromisso
+contínuo com o processo de melhoria.
+Considerações Finais da Aula
+Nesta aula, discutimos três abordagens diferentes de entrega de software: a abordagem
+tradicional de entrega de software, conhecida como Waterfall, a abordagem ágil de entrega
+de software, conhecida como Scrum, e o DevOps como abordagem de entrega de software.
+A abordagem tradicional de entrega de software, o Waterfall, é caracterizada por uma
+sequência linear de fases, onde cada fase depende da conclusão da fase anterior. Esse
+modelo é conhecido por ser mais rígido e inflexível, pois exige um planejamento detalhado
+desde o início do projeto. No entanto, pode ser útil em projetos onde os requisitos são bem
+definidos e não há muitas mudanças ao longo do tempo.
+Por outro lado, a abordagem ágil de entrega de software, o Scrum, é um modelo mais
+flexível e adaptativo. Ele se baseia em ciclos curtos de desenvolvimento, chamados de
+sprints, onde as equipes trabalham em pequenos incrementos de funcionalidades. Essa
+abordagem permite uma maior colaboração entre os membros da equipe e uma maior
+capacidade de resposta a mudanças nos requisitos do projeto.
+Por fim, discutimos o DevOps como abordagem de entrega de software. O DevOps
+combina práticas de desenvolvimento de software e operações de TI, buscando uma
+integração mais eficiente entre as equipes de desenvolvimento e operações. Isso resulta em
+uma entrega de software mais rápida e com menos erros, além de promover uma cultura
+de colaboração e automação.
+Materiais Complementares
+Manifesto para Desenvolvimento Ágil de Software
+2021, Kent Beck et al.
+O manifesto ágil é um documento que expressa os valores e princípios que orientam o
+desenvolvimento de software ágil. É fundamental conhecer os princípios, pois as abor-
+dagens modernas para desenvolvimento são baseadas nele.
+Link para acesso: https://agilemanifesto.org/iso/ptbr/manifesto.html (acesso em 26 out. 2023).
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 9 de 10
+Professor(a): Bruno Malhano
+Scrum: A arte de fazer o dobro do trabalho na metade do tempo
+2021, Jeff Sutherland.
+O livro aborda as origens do scrum e como sua aplicação em processos de desenvolvi-
+mento foi capaz de virar o jogo dentro de um projeto complexo, dando origem a esta
+abordagem.
+Link para acesso: https://edisciplinas.usp.br/pluginfile.php/4873827/mod_resource/
+content/2/Leit%2007%20-%20SUTHERLAND%20%282014%29%20Scrum%20-%20
+a%20arte%20de%20fazer%20º%20dobro%20-%20Jeff%20Sutherland.pdf (acesso
+em 26 out. 2023).
+Referências
+O QUE é Devops. Atlassian, 2023. Disponível em: https://www.atlassian.com/br/devops/
+what-is-devops. Acesso em: 10 ago. 2023.
+PRESSMAN, R. S. Engenharia de software: uma abordagem profissional. Porto Alegre RS:
+AMGH, 2011.
+THE Scrum Guide. Scrum.org, 2017. Disponível em: https://scrumguides.org/docs/
+scrumguide/v2017/2017-Scrum-Guide-US.pdf. Acesso em: 10 ago. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 10 de 10
+PROFESSOR(A): BRUNO MALHANO
+Fundamentos de DevOps
+Conceitos, Práticas e Cultura DevOps
+Objetivo da Aula
+Compreender os conceitos, práticas e cultura do DevOps como abordagem de entrega
+de software. Explorar as diferenças entre a abordagem tradicional de entrega de software
+(Waterfall), a abordagem ágil (Scrum) e o DevOps. Relacionar os principais conceitos do
+DevOps, identificar suas práticas e entender como a cultura DevOps pode ser aplicada
+na entrega de software.
+Apresentação
+O objetivo principal desta aula é fornecer uma compreensão abrangente do DevOps e
+como ele pode ser aplicado no desenvolvimento de software.
+Começaremos explorando os conceitos fundamentais do DevOps, que envolvem a
+integração entre desenvolvimento e operações. Vamos discutir a importância de uma
+abordagem colaborativa e ágil, bem como a automação de processos para melhorar a
+eficiência e a qualidade do software.
+Em seguida, vamos mergulhar nas práticas e ferramentas do DevOps. Vamos explorar
+conceitos como integração contínua, entrega contínua e implantação contínua, e como essas
+práticas podem acelerar o ciclo de desenvolvimento de software. Além disso, vamos discutir
+algumas das ferramentas populares usadas no DevOps, como Docker, Jenkins e Ansible.
+Por fim, vamos abordar a cultura e os aspectos humanos do DevOps. Vamos discutir a
+importância da colaboração, comunicação e confiança entre as equipes de desenvolvimento
+e operações. Também vamos explorar como o DevOps pode promover uma cultura de
+aprendizado e melhoria contínua.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 12
+Professor(a): Bruno Malhano
+1. Conceitos Fundamentais do DevOps
+O DevOps surgiu como uma resposta aos desafios enfrentados pelas equipes de
+desenvolvimento e operações de TI. Antes do DevOps, essas duas equipes geralmente
+trabalhavam de forma separada e muitas vezes tinham objetivos e prioridades diferentes.
+No passado, a equipe de desenvolvimento era responsável por escrever e entregar
+o código do software, enquanto a equipe de operações era responsável por implantar e
+manter o software em produção. Essa separação entre as equipes muitas vezes resultava em
+atrasos na entrega de software, problemas de comunicação e falta de colaboração efetiva.
+O termo “DevOps” foi cunhado em 2009 por Patrick Debois e Andrew Shafer, que
+organizaram uma conferência chamada “DevOpsDays” em Ghent, na Bélgica. Essa conferência
+foi um marco importante na popularização do termo e no início do movimento DevOps.
+O objetivo do DevOps era unir as equipes de desenvolvimento e operações, promovendo
+uma cultura de colaboração e compartilhamento de responsabilidades. Ao fazer isso, o
+DevOps visava acelerar a entrega de software, melhorar a qualidade e a estabilidade do
+sistema, e aumentar a satisfação do cliente.
+Com o tempo, o DevOps evoluiu para se tornar uma abordagem mais abrangente, que envolve
+não apenas a colaboração entre desenvolvimento e operações, mas também a automação de
+processos, a adoção de práticas ágeis e a utilização de ferramentas e tecnologias modernas.
+Hoje é amplamente adotado por empresas de todos os tamanhos e setores, e é
+considerado essencial para a transformação digital e para a entrega de software de forma
+rápida, confiável e escalável. Existem alguns conceitos fundamentais que são essenciais
+para entender o DevOps. Vamos explorar cada um deles:
+• Cultura de colaboração: a cultura de colaboração é um dos pilares do DevOps. Ela envolve
+a quebra de barreiras entre as equipes de desenvolvimento e operações, promovendo
+a comunicação aberta e a colaboração constante. Isso incentiva a responsabilidade
+compartilhada e a resolução rápida de problemas;
+• Automação: a automação é um aspecto chave do DevOps. Ela envolve a criação de pi-
+pelines de entrega contínua, onde as etapas do desenvolvimento, teste e implantação
+são automatizadas. Isso permite que as equipes liberem software com mais rapidez e
+eficiência, reduzindo o risco de erros humanos;
+• Monitoramento contínuo: o monitoramento contínuo é fundamental para o DevOps.
+Ele envolve o uso de ferramentas e práticas para monitorar o desempenho do software
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 2 de 12
+Professor(a): Bruno Malhano
+em tempo real, identificar problemas e tomar medidas corretivas imediatas. Isso ajuda
+a garantir a estabilidade e a confiabilidade do sistema;
+• Infraestrutura como código: a infraestrutura como código é um conceito que envolve
+a automação da infraestrutura de TI por meio de scripts e configurações. Isso permi-
+te que as equipes gerenciem a infraestrutura de forma mais eficiente, versionem as
+configurações e a tornem mais ágil e escalável;
+• Integração contínua e entrega contínua: a integração contínua (CI) e a entrega contínua
+(CD) são práticas fundamentais do DevOps. A CI envolve a integração frequente do có-
+digo-fonte por meio de ferramentas de automação, enquanto a CD envolve a entrega
+automatizada do software em ambientes de produção. Essas práticas garantem uma
+entrega mais rápida e confiável do software.
+Os conceitos do DevOps visam melhorar a colaboração, a eficiência e a confiabilidade na
+entrega de software. Ao adotar esses conceitos, as equipes podem acelerar o desenvolvimento,
+reduzir riscos e entregar valor aos usuários finais de forma mais rápida e consistente.
+2. Práticas e Ferramentas do DevOps
+Agora detalharemos as práticas utilizadas no DevOps, juntamente das ferramentas utilizadas
+nas empresas. As práticas deste conceito têm se mostrado cada vez mais importantes para as
+empresas modernas. Com a crescente demanda por entrega rápida e confiável de software, o
+DevOps se tornou essencial para a transformação digital e para a competitividade no mercado.
+Uma das principais vantagens das práticas de DevOps é a aceleração do ciclo
+de desenvolvimento e entrega de software. Ao adotar a Integração Contínua (CI) e a
+Entrega Contínua (CD), as empresas podem reduzir o tempo necessário para lançar novas
+funcionalidades e atualizações, respondendo mais rapidamente às necessidades dos clientes
+e do mercado. Além disso, a automação de processos, como testes e implantação, aumenta
+a eficiência e reduz o risco de erros humanos, garantindo a qualidade do software.
+DevOps proporciona melhoria na colaboração e comunicação entre as equipes de
+desenvolvimento e operações. A cultura de colaboração quebra as barreiras entre essas
+equipes, permitindo que trabalhem de forma integrada e compartilhem responsabilidades.
+Isso resulta em uma troca de conhecimento mais efetiva, resolução mais rápida de problemas
+e maior alinhamento de objetivos. A colaboração também ajuda a reduzir o desperdício de
+tempo e recursos, aumentando a eficiência e a produtividade das equipes.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 3 de 12
+Professor(a): Bruno Malhano
+2.1. Integração Contínua
+A Integração Contínua é uma prática do DevOps que envolve a integração frequente
+do código-fonte de diferentes desenvolvedores em um repositório central. O objetivo é
+detectar e corrigir problemas de integração de forma rápida, reduzindo o risco de conflitos
+e melhorando a colaboração entre as equipes de desenvolvimento.
+Figura 1: Fluxo de Integração contínua
+Fonte: Primecontrol. Disponível em: https://www.primecontrol.com.br/integracao-continua-entrega-continua-e-im-
+plantacao-continua/. Acesso em: 8 ago. 2023.
+Para implementar a Integração Contínua, são utilizadas diversas ferramentas que
+automatizam o processo de construção, testes e análise de código. Vamos explorar algumas delas:
+• Jenkins: o Jenkins é uma das ferramentas mais populares para a implementação da
+Integração Contínua. Ele permite a criação de pipelines de CI, onde cada etapa do
+processo é definida e executada automaticamente. O Jenkins oferece uma ampla va-
+riedade de plugins que podem ser utilizados para integração com outras ferramentas
+e serviços, como controle de versão, ferramentas de teste e notificações;
+• GitLab CI/CD: o GitLab é uma plataforma de desenvolvimento de software que também
+oferece funcionalidades de CI/CD. Com o GitLab CI/CD, é possível configurar pipelines
+de CI diretamente no GitLab, utilizando arquivos de configuração no formato YAML.
+Essa integração nativa facilita a implementação da Integração Contínua em projetos
+hospedados no GitLab;
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 4 de 12
+Professor(a): Bruno Malhano
+• Travis CI: o Travis CI é uma ferramenta de Integração Contínua especialmente voltada
+para projetos hospedados no GitHub. Ele permite a execução de testes e a integração
+com serviços de nuvem, como AWS e Google Cloud. O Travis CI é fácil de configurar e
+oferece uma interface intuitiva para monitorar o status dos builds e testes;
+• CircleCI: o CircleCI é outra ferramenta popular para a implementação de Integração
+Contínua. Ele suporta projetos hospedados no GitHub, Bitbucket e GitLab, e oferece
+uma ampla gama de recursos, como execução paralela de testes, integração com ser-
+viços de nuvem e notificações em tempo real. O CircleCI é conhecido por sua facilidade
+de uso e configuração;
+• Azure DevOps: o Azure DevOps é uma plataforma completa para o ciclo de vida de de-
+senvolvimento de software, que inclui recursos de Integração Contínua. Ele permite a
+criação de pipelines de CI/CD por meio de uma interface intuitiva e oferece integração
+com outras ferramentas e serviços da Microsoft, como o Azure Cloud. O Azure DevOps
+é uma opção popular para equipes que já utilizam a infraestrutura da Microsoft.
+Figura 2: Fluxo de Integração, integração e entrega contínua
+Fonte: Solvimm. Disponível em: https://solvimm.com/blog/qual-a-diferenca-entre-integracao-entrega-e-implantacao-
+-continuas/. Acesso em: 8 ago. 2023.
+A prática de Integração Contínua envolve a integração frequente do código-fonte de
+diferentes desenvolvedores em um repositório central. Isso é feito por meio de ferramentas
+de automação, como o Jenkins, que realizam a compilação, testes e análise de código
+automaticamente. A CI ajuda a identificar problemas de integração mais cedo, reduzindo
+o risco de conflitos e facilitando a colaboração entre as equipes.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 5 de 12
+Professor(a): Bruno Malhano
+2.2. Entrega Contínua
+A Entrega Contínua envolve a entrega automatizada do software em ambientes de
+produção. Isso é feito por meio de ferramentas como o Docker e Kubernetes, que permitem
+a criação de ambientes isolados e replicáveis. Com a CD (Continuous Delivery), é possível
+implantar atualizações de software de forma rápida e confiável, reduzindo o tempo de
+espera entre o desenvolvimento e a disponibilização do software para os usuários finais.
+Figura 3: Entrega contínua
+Fonte: Solvimm. Disponível em: https://solvimm.com/blog/qual-a-diferenca-entre-integracao-entrega-e-implantacao-
+-continuas/. Acesso em: 8 ago. 2023.
+Para implementar a Entrega Contínua, são utilizadas diversas ferramentas que
+automatizam as etapas do processo de implantação. Vamos explorar algumas delas:
+• Docker: plataforma de virtualização que permite empacotar o software em contêine-
+res. Com o Docker, é possível criar ambientes isolados e replicáveis, onde o software
+pode ser executado de forma consistente em diferentes sistemas operacionais. Isso
+facilita a implantação e a portabilidade do software, tornando-o uma ferramenta
+popular para a Entrega Contínua;
+• Kubernetes: plataforma de orquestração de contêineres que permite gerenciar e es-
+calar aplicativos em contêineres de forma automatizada. Com o Kubernetes, é possível
+implantar e gerenciar aplicativos em ambientes de produção de maneira eficiente,
+garantindo alta disponibilidade e escalabilidade. O Kubernetes é frequentemente
+utilizado em conjunto com o Docker para a implantação de software em larga escala;
+• Jenkins: ferramenta para Integração Contínua, o Jenkins também pode ser utilizado
+para a Entrega Contínua. Com o Jenkins, é possível criar pipelines de CD, onde as etapas
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 6 de 12
+Professor(a): Bruno Malhano
+de construção, testes e implantação são automatizadas. O Jenkins pode ser integrado
+a outras ferramentas, como o Docker e o Kubernetes, para facilitar a implantação e o
+gerenciamento do software em ambientes de produção;
+• AWS CodePipeline: um serviço de entrega contínua oferecido pela Amazon Web Ser-
+vices (AWS). Ele permite criar pipelines de CD que automatizam a compilação, teste
+e implantação de aplicativos na nuvem da AWS. O CodePipeline pode ser integrado a
+serviços como o AWS Elastic Beanstalk e o AWS Lambda, facilitando a implantação e a
+escalabilidade do software na nuvem;
+• Azure DevOps: é uma plataforma completa para o ciclo de vida de desenvolvimento
+de software que também oferece recursos para a Entrega Contínua (CD). Com o Azure
+DevOps, é possível criar pipelines de CD para automatizar a implantação de aplicativos
+em ambientes de produção.
+Essas são algumas das ferramentas disponíveis no mercado para a implementação da
+Entrega Contínua. Cada uma delas oferece recursos específicos para automatizar e facilitar
+o processo de implantação de software. A escolha da ferramenta depende das necessidades
+da equipe e do ambiente de trabalho, mas todas têm em comum o objetivo de garantir
+uma entrega contínua e confiável do software aos usuários finais.
+2.3. Infraestrutura como Código (IaC)
+A prática de Infraestrutura como Código envolve a automação da infraestrutura de
+TI por meio de scripts e configurações. Ferramentas como o Ansible, o Terraform e o
+Chef permitem que as equipes gerenciem a infraestrutura com código, gerando versões
+e configurações, facilitando a replicação e a escalabilidade dos ambientes. A IaC ajuda a
+reduzir erros humanos, aumentar a agilidade e a consistência da infraestrutura.
+Para implementar a Infraestrutura como Código, são utilizadas diversas ferramentas
+que facilitam o gerenciamento e a automação da infraestrutura.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 7 de 12
+Professor(a): Bruno Malhano
+Figura 4: Diagrama de provisionamento com IaC
+Fonte: Winspire. Disponível em: https://www.winspire.com.br/infraestrutura-como-codigo/. Acesso em: 8 ago. 2023.
+O Ansible é uma ferramenta de automação de TI que permite a criação de playbooks,
+que são arquivos YAML que descrevem as configurações e tarefas a serem executadas.
+Com o Ansible, é possível definir a infraestrutura como código, provisionando servidores,
+instalando pacotes e configurando serviços de forma automatizada. O Ansible é conhecido
+por sua simplicidade e facilidade de uso.
+O Terraform é uma ferramenta de provisionamento de infraestrutura que permite
+definir e gerenciar recursos de infraestrutura em diferentes provedores de nuvem, como
+AWS, Azure e Google Cloud. Com o Terraform, é possível criar arquivos de configuração no
+formato HCL (HashiCorp Configuration Language) que descrevem a infraestrutura desejada.
+A ferramenta provisiona os recursos de forma automatizada, garantindo a consistência e
+a replicabilidade da infraestrutura.
+O Chef permite a criação de receitas (recipes) e livros de receitas (cookbooks) para a
+configuração de servidores. Com o Chef, é possível definir as configurações desejadas dos
+servidores e aplicar essas configurações de forma automatizada. O Chef é amplamente
+utilizado para a automação de tarefas de configuração e gerenciamento de servidores.
+O Puppet permite a configuração e o gerenciamento de servidores de forma automatizada.
+Com o Puppet, é possível definir as configurações desejadas dos servidores em arquivos de
+manifesto (manifest files) e aplicar essas configurações de forma consistente em diferentes
+sistemas operacionais. O Puppet é conhecido por sua escalabilidade e flexibilidade.
+O Bicep é uma linguagem de domínio específico (DSL) desenvolvida pela Microsoft para
+a definição de infraestrutura como código no Azure. Com o Bicep, é possível descrever
+recursos de infraestrutura do Azure, como máquinas virtuais, redes, armazenamento,
+entre outros, em um formato declarativo. O Bicep simplifica a criação e o gerenciamento
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 8 de 12
+Professor(a): Bruno Malhano
+de recursos no Azure, oferecendo uma sintaxe mais intuitiva e fácil de usar em comparação
+com a linguagem JSON do Azure Resource Manager (ARM).
+Figura 5: Diagrama de funcionamento de IaC
+Fonte: Insights Fcamara. Disponível em: https://insights.fcamara.com/iac/. Acesso em: 8 ago. 2023.
+2.4. Monitoramento e Logging
+O monitoramento contínuo do desempenho do software e a análise de logs são práticas
+essenciais do DevOps. Ferramentas como o Prometheus e o ELK Stack (Elasticsearch,
+Logstash, Kibana) permitem que as equipes monitorem o desempenho do sistema em tempo
+real, identifiquem problemas e tomem medidas corretivas imediatas. O monitoramento
+e o logging ajudam a garantir a estabilidade e a confiabilidade do software em produção.
+2.5. Automação de Testes
+A automação de testes é uma prática fundamental do DevOps. Ferramentas como o
+Selenium e o JUnit permitem que as equipes criem e executem testes automatizados,
+garantindo a qualidade do software de forma rápida e consistente. A automação de
+testes ajuda a identificar problemas mais cedo, reduzir o tempo de teste e aumentar a
+confiabilidade do software.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 9 de 12
+Professor(a): Bruno Malhano
+2.6. Cultura e Aspectos Humanos do DevOps
+A cultura e os aspectos humanos são partes fundamentais do DevOps. Embora o DevOps
+seja frequentemente associado a ferramentas e automação, seu verdadeiro valor reside na
+forma como ele promove a colaboração, a comunicação e a mentalidade de equipe entre
+os profissionais de desenvolvimento e operações.
+A cultura DevOps é uma forma de integrar as equipes de desenvolvimento e operação
+de software, visando melhorar a qualidade, a velocidade e a eficiência dos projetos. Ela se
+baseia em princípios como colaboração, comunicação, responsabilidade compartilhada,
+automação, feedback e aprendizado contínuo.
+Figura 6: Interação do time DevOps
+Fonte: Atlassian. Disponível em: https://www.atlassian.com/br/continuous-delivery. Acesso em: 8 ago. 2023.
+A mentalidade de aprendizado contínuo é outro aspecto marcante na cultura. Em
+vez de buscar a perfeição desde o início, os profissionais de DevOps são encorajados a
+experimentar, aprender com os erros e buscar constantemente melhorias. Essa mentalidade
+ágil e orientada para o aprendizado permite que as equipes se adaptem rapidamente às
+mudanças e inovações, tornando-se mais resilientes e eficientes, buscando sempre romper
+os silos entre as equipes e criar um ambiente de trabalho mais ágil e produtivo.
+Algumas das vantagens da cultura DevOps são:
+• Redução do tempo de entrega e do custo dos projetos;
+• Aumento da satisfação dos clientes e dos usuários finais;
+• Melhoria da confiabilidade, da segurança e da performance do software;
+• Maior inovação e competitividade no mercado;
+• Crescimento profissional e pessoal dos colaboradores.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 10 de 12
+Professor(a): Bruno Malhano
+Para implementar a cultura DevOps, é preciso investir em soluções tecnológicas que
+facilitem a automação, a integração e o monitoramento dos processos. Também é necessário
+promover uma mudança cultural que valorize a cooperação, a confiança, a transparência e a
+empatia entre as equipes. Além disso, é importante adotar práticas ágeis de desenvolvimento,
+como Scrum, Kanban, Lean etc.
+Considerações Finais da Aula
+Nesta aula, aprendemos que o DevOps busca promover uma abordagem colaborativa
+e ágil, visando melhorar a eficiência e a qualidade do software.
+Descobrimos que a integração contínua, a entrega contínua e a implantação contínua são
+práticas essenciais para acelerar o ciclo de desenvolvimento de software. Além disso, conhecemos
+algumas das ferramentas populares usadas no DevOps, como Docker, Jenkins, Azure DevOps,
+Ansible, Terraform que auxiliam na automação de processos e na colaboração entre as equipes.
+Abordamos a cultura e os aspectos humanos do DevOps. Compreendemos a importância
+da colaboração, comunicação e confiança entre as equipes de desenvolvimento e operações.
+Aprendemos que o DevOps promove uma cultura de aprendizado e melhoria contínua,
+incentivando a experimentação e a resolução colaborativa de problemas. Reforçamos a
+importância do DevOps como uma abordagem que visa aprimorar a eficiência, a qualidade
+e a colaboração no desenvolvimento de software.
+Todos os aspectos tradados em aula são muito importantes para seu crescimento
+profissional e estão aderentes ao mercado de trabalho, que cada vez mais busca profissionais
+com esses conhecimentos.
+Material Complementar
+DevOps/Dicionário do Programador
+2018, Código Fonte TV.
+O vídeo aborda os benefícios da utilização do DevOps nas estratégias de entrega de
+software, trazendo contextos técnicos para enriquecer o aprendizado.
+Link para acesso: https://www.youtube.com/watch?v=iwf6kcvxeD4 (acesso em 26 out. 2023).
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 11 de 12
+Professor(a): Bruno Malhano
+Referências
+CULTURA DevOps. Atlassian, 2023. Disponível em: <https://www.atlassian.com/br/de-
+vops/what-is-devops/devops-culture>. Acesso em: 8 ago. 2023.
+CULTURA DevOps. Profissionais TI, 2019. Disponível em: <https://www.profissionaisti.
+com.br/cultura-devops/>. Acesso em: 8 ago. 2023.
+CULTURA DevOps: tudo que você precisa saber. Blog Cubos, 2021. Disponível em: <https://
+blog.cubos.io/cultura-devops-tudo-que-voce-precisa-saber/>. Acesso em: 8 ago. 2023.
+FREEMAN, Emily. DevOps para leigos. Rio de Janeiro: Alta Books, 2021. Livro digital. (1 recurso
+online). (Os primeiros passos para o sucesso!). ISBN 9788550816661. Disponível em: <ht-
+tps://integrada.minhabiblioteca.com.br/books/9788550816661>. Acesso em: 22 set. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 12 de 12
+PROFESSOR(A): BRUNO MALHANO
+Fundamentos de DevOps
+Controle de Versão
+Objetivo da Aula
+Compreender o conceito e a importância do controle de versão no desenvolvimento de
+software. Conhecer os conceitos do controle de versão e suas melhores práticas.
+Apresentação
+O controle de versão de código é algo extremamente utilizado nos dias atuais. Nesta
+aula, vamos descobrir como essa prática é essencial para o desenvolvimento de software e
+sua importância. Iremos desvendar o conceito e compreender seu funcionamento. Veremos
+como o controle de versão permite que diferentes pessoas trabalhem em um mesmo projeto.
+Veremos como funciona o Git, um dos sistemas de controle de versão mais populares
+atualmente, as melhores práticas, e fluxo de trabalho recomendado no controle de versão.
+Ao final desta aula, você estará apto a compreender o funcionamento de um sistema
+de controle de versão.
+1. Introdução ao Controle de Versão
+O Controle de Versão é uma prática essencial na área de desenvolvimento de software. Ele
+é responsável por gerenciar as alterações feitas nos arquivos ao longo do tempo, permitindo
+que os desenvolvedores acompanhem e controlem as modificações feitas em um projeto.
+Existem diferentes sistemas de controle de versão disponíveis, como o Git, o Subversion
+e o Mercurial. Essas ferramentas permitem que os desenvolvedores trabalhem em equipe
+de forma colaborativa, mantendo um histórico de todas as alterações feitas nos arquivos.
+O Controle de Versão oferece uma série de benefícios para os desenvolvedores. Um dos principais
+é a capacidade de rastrear e recuperar versões anteriores de um arquivo. Isso é extremamente
+útil quando ocorrem erros ou quando é necessário voltar a uma versão estável do projeto.
+Vários desenvolvedores podem trabalhar simultaneamente em diferentes partes do
+projeto, sem se preocupar com conflitos de código. O sistema de controle de versão é capaz
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 10
+Professor(a): Bruno Malhano
+de mesclar as alterações feitas por diferentes pessoas, facilitando a integração do trabalho
+de todos os membros da equipe.
+Outro benefício importante é a possibilidade de ramificar o código. Isso significa que é
+possível criar diferentes versões do projeto, permitindo que os desenvolvedores experimentem
+novas funcionalidades ou corrijam erros sem afetar a versão principal do software. Essa
+capacidade de ramificação é especialmente útil quando se trabalha em projetos complexos
+ou com várias equipes envolvidas.
+O Controle de Versão funciona através da criação de um repositório, que é um local
+centralizado onde todas as versões do projeto são armazenadas. Cada vez que um
+desenvolvedor faz uma alteração em um arquivo, essa alteração é registrada no repositório.
+Existem duas abordagens principais para o Controle de Versão: o sistema centralizado
+e o sistema distribuído. No sistema centralizado, um servidor central é responsável por
+armazenar todas as versões do projeto. Já no sistema distribuído, cada desenvolvedor
+possui uma cópia completa do repositório em sua máquina.
+Figura 1: Sistemas de controle de versão centralizados x distribuídos
+Fonte: Atlassian. Disponível em: https://www.atlassian.com/br/git/tutorials/why-git. Acesso em: 9 ago. 2023.
+O Git, por exemplo, é um sistema de controle de versão distribuído muito popular. Ele
+permite que os desenvolvedores trabalhem offline, realizem várias alterações e, em seguida,
+sincronizem suas alterações com o repositório central.
+O Controle de Versão é uma prática fundamental para o desenvolvimento de software.
+Ele oferece uma série de benefícios, como o rastreamento de alterações, o trabalho em
+equipe colaborativo e a capacidade de ramificar o código. Com ferramentas como o Git,
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 2 de 10
+Professor(a): Bruno Malhano
+os desenvolvedores podem ter um melhor controle sobre o histórico de alterações de um
+projeto e garantir um trabalho mais eficiente e organizado.
+2. Git como Sistema de Controle de Versão
+O Git é um sistema de controle de versão distribuído amplamente utilizado no
+desenvolvimento de software. Ele foi criado por Linus Torvalds em 2005 e se tornou uma
+ferramenta essencial para gerenciar o código-fonte de projetos de todos os tamanhos.
+O Git funciona através da criação de um repositório local em cada máquina dos
+desenvolvedores. Isso significa que cada desenvolvedor possui uma cópia completa do
+projeto em sua máquina, incluindo todo o histórico de alterações.
+Figura 2: Diretório de trabalho, área de preparo, e o diretório Git
+Fonte: Git. Disponível em: https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-O-B%C3%A1sico-do-Git. Acesso
+em: 9 ago. 2023.
+Essa abordagem distribuída traz uma série de benefícios. Primeiro, permite que os
+desenvolvedores trabalhem offline, sem depender de uma conexão com o servidor central. Isso
+é especialmente útil quando se está viajando ou em locais com conexão de internet instável.
+Além disso, o Git é extremamente eficiente em termos de velocidade. Como cada
+desenvolvedor possui uma cópia local do repositório, as operações como commit, branch
+e merge são realizadas de forma rápida e eficiente.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 3 de 10
+Professor(a): Bruno Malhano
+Figura 3: Recursos do Git
+Fonte: Acervo Lima. Disponível em: https://acervolima.com/recursos-do-git/. Acesso em: 9 ago. 2023.
+O Git oferece uma série de recursos poderosos que facilitam o controle de versão e o
+trabalho colaborativo. Alguns dos recursos mais importantes são:
+• Histórico de alterações: o Git mantém um histórico completo de todas as alterações
+feitas nos arquivos do projeto. Isso permite que os desenvolvedores rastreiem facil-
+mente as modificações e recuperem versões anteriores do código;
+• Branching e merging: com o Git, é possível criar ramificações no código, permitindo
+que os desenvolvedores trabalhem em novas funcionalidades ou correções de bugs
+sem afetar a versão principal do projeto. O Git também facilita a mesclagem dessas
+ramificações, garantindo que as alterações sejam integradas de forma suave;
+• Colaboração: o Git facilita o trabalho em equipe, permitindo que vários desenvolvedo-
+res trabalhem simultaneamente no mesmo projeto. Cada desenvolvedor pode fazer
+suas alterações localmente e, em seguida, sincronizá-las com o repositório central. O
+Git é capaz de mesclar automaticamente as alterações feitas por diferentes pessoas,
+facilitando a colaboração;
+• Controle de acesso: o Git permite que os desenvolvedores controlem o acesso aos ar-
+quivos do projeto. É possível definir permissões de leitura e escrita para cada usuário
+ou grupo de usuários, garantindo a segurança e a privacidade do código-fonte.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 4 de 10
+Professor(a): Bruno Malhano
+2.1. Comandos GIT e Integração com GitHub
+Para utilizar o GIT, é necessário instalar o software em seu computador e, em seguida,
+criar um repositório local. A partir daí, é possível utilizar diversos comandos para gerenciar
+as alterações no código-fonte. Alguns exemplos de comandos GIT são:
+• git init: cria um novo repositório local;
+• git add <arquivo>: adiciona um arquivo ao próximo commit;
+• git commit -m “mensagem”: cria um novo commit com as alterações realizadas;
+• git push: envia as alterações para um repositório remoto.
+Já a integração com o GitHub envolve o envio das alterações para um repositório remoto
+na plataforma. Para isso, é necessário criar uma conta no GitHub e, em seguida, criar um
+repositório remoto. Após isso, é possível utilizar o comando “git remote add origin <endereço
+do repositório>“ para vincular o repositório local ao remoto. Em seguida, é possível utilizar
+o comando “git push -u origin master” para enviar as alterações para o repositório remoto.
+É importante destacar que a utilização do GIT e do GitHub é fundamental para projetos
+de software colaborativos, pois permite o gerenciamento de alterações e a colaboração
+entre os membros da equipe. Além disso, a utilização dessas ferramentas pode facilitar o
+processo de desenvolvimento e garantir a qualidade do código-fonte produzido.
+Você encontra aqui um passo a passo para integração do Git e GitHub.
+Link para acesso: https://docs.github.com/pt/get-started/quickstart/hello-world.
+https://learn.microsoft.com/pt-br/training/modules/introduction-to-github/
+(acesso em 26 out. 2023).
+O Git é uma ferramenta poderosa e uma das mais utilizadas no mundo para controle
+de versão, oferecendo recursos avançados e uma abordagem distribuída. Com o Git, os
+desenvolvedores podem gerenciar eficientemente o histórico de alterações, trabalhar em
+equipe de forma colaborativa e controlar o acesso aos arquivos do projeto. Seja para projetos
+pequenos ou grandes, o Git é uma escolha sólida como sistema de controle de versão.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 5 de 10
+Professor(a): Bruno Malhano
+3. Melhores Práticas e Fluxo de Trabalho com Controle de Versão
+Quando se trata de controle de versão, existem algumas melhores práticas que podem
+ajudar a garantir um fluxo de trabalho suave e eficiente. Vamos explorar algumas delas:
+• Commits atômicos: ao fazer um commit, é importante manter as alterações relacionadas
+agrupadas. Isso significa que cada commit deve representar uma alteração lógica e inde-
+pendente. Commits atômicos facilitam a compreensão das alterações feitas e permitem
+que outros desenvolvedores revisem e revertam as alterações de forma mais eficiente;
+• Mensagens de commit descritivas: ao fazer um commit, é recomendado fornecer
+uma mensagem descritiva que explique claramente as alterações feitas. Isso ajuda a
+entender o propósito do commit e facilita a navegação pelo histórico de alterações.
+Mensagens de commit bem escritas são especialmente úteis quando se precisa localizar
+uma alteração específica no futuro;
+• Branches para desenvolvimento de funcionalidades: utilizar branches é uma prática
+comum para o desenvolvimento de funcionalidades em paralelo. Criar um branch se-
+parado para cada funcionalidade permite que os desenvolvedores trabalhem de forma
+isolada, evitando conflitos com o código principal. Quando a funcionalidade estiver
+pronta, ela pode ser mesclada de volta para o branch principal;
+• Pull Requests para revisão de código: ao trabalhar em equipe, é recomendado utilizar o
+recurso de pull requests para revisar o código antes de mesclá-lo ao branch principal.
+Isso permite que outros desenvolvedores revisem as alterações, façam comentários
+e sugiram melhorias. A revisão de código é uma prática importante para garantir a
+qualidade do código e a conformidade com as diretrizes do projeto;
+• Testes automatizados: é fundamental incluir testes automatizados no fluxo de traba-
+lho com controle de versão. Os testes automatizados garantem que as alterações não
+introduzam regressões ou quebras no código existente. É possível configurar integração
+contínua para que os testes sejam executados automaticamente sempre que houver
+uma nova alteração no repositório;
+• Versionamento semântico: utilizar o versionamento semântico é uma prática reco-
+mendada para manter um controle claro das versões do software. O versionamento
+semântico segue um padrão de três números: MAJOR.MINOR.PATCH. O número MAJOR
+é incrementado quando há alterações incompatíveis, o número MINOR é incrementado
+quando funcionalidades são adicionadas de forma compatível e o número PATCH é
+incrementado para correções de bugs.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 6 de 10
+Professor(a): Bruno Malhano
+Figura 4: Versionamento Semântico
+Fonte: Edson Amaral, Medium. Disponível em: https://medium.com/@eddyajunior/versionamento-sem%C3%A2ntico-
+-9d6ee89886b1. Acesso em: 9 ago. 2023.
+As melhores práticas e o fluxo de trabalho eficiente com controle de versão são
+fundamentais para garantir um desenvolvimento de software organizado, colaborativo
+e de alta qualidade. Commits atômicos, mensagens de commit descritivas, branches
+para desenvolvimento de funcionalidades, pull requests para revisão de código, testes
+automatizados e versionamento semântico são algumas das práticas que podem ser adotadas
+para otimizar o processo de controle de versão. Ao seguir essas práticas, os desenvolvedores
+podem ter um melhor controle sobre o histórico de alterações, facilitar a colaboração em
+equipe e garantir a estabilidade e qualidade do código.
+Além dessas práticas, é importante mencionar que o fluxo de trabalho com controle
+de versão pode variar de acordo com as necessidades e características do projeto. Existem
+diferentes modelos de fluxo de trabalho que podem ser adotados, como o GitFlow, o GitHub
+Flow e o GitLab Flow, cada um com suas próprias vantagens e aplicabilidade.
+O GitFlow, por exemplo, é um modelo de fluxo de trabalho muito utilizado em projetos
+com lançamentos regulares. Ele utiliza dois branches principais: o branch “master” para
+as versões estáveis do software e o branch “develop” para o desenvolvimento contínuo.
+Além disso, são criados branches de “feature” para o desenvolvimento de funcionalidades
+e branches de “release” para a preparação de lançamentos.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 7 de 10
+Professor(a): Bruno Malhano
+Figura 5: Funcionamento GitFlow
+Fonte: GeeksforGeeks. Disponível em: https://www.geeksforgeeks.org/git-flow-vs-github-flow/. Acesso em: 9 ago. 2023.
+GitHub Flow é um modelo de fluxo de trabalho mais simples e adequado para projetos
+com lançamentos frequentes ou contínuos. Ele utiliza apenas um branch principal, o
+“master”, onde todas as alterações são feitas. Cada funcionalidade ou correção de bug é
+desenvolvida em um branch separado e, quando finalizada, é mesclada ao branch “master”
+por meio de um pull request.
+Figura 6: Funcionamento GitHub Flow
+Fonte: Build5Nines. Disponível em: https://build5nines.com/introduction-to-git-version-control-workflow/. Acesso
+em: 9 ago. 2023.
+O GitLab Flow é um modelo de fluxo de trabalho semelhante ao GitHub Flow, mas com
+a adição de um branch “staging” para testes e revisão antes de ser mesclado ao branch
+“master”. Isso permite que as alterações sejam validadas em um ambiente de teste antes
+de serem lançadas em produção.
+Independentemente do modelo de fluxo de trabalho escolhido, é importante que a
+equipe esteja alinhada e siga as práticas estabelecidas. A comunicação eficiente, a revisão
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 8 de 10
+Professor(a): Bruno Malhano
+de código e a automação de processos são fatores-chave para garantir um fluxo de trabalho
+suave e eficiente.
+As melhores práticas e o fluxo de trabalho com controle de versão são essenciais para
+o sucesso de um projeto de desenvolvimento de software. Commits atômicos, mensagens
+descritivas, branches para desenvolvimento de funcionalidades, pull requests, testes
+automatizados e versionamento semântico são algumas das práticas que podem ser
+adotadas. Além disso, é importante escolher um modelo de fluxo de trabalho adequado às
+necessidades do projeto. Ao seguir essas práticas e adotar um fluxo de trabalho eficiente,
+os desenvolvedores podem colaborar de forma mais produtiva, garantir a qualidade do
+código e entregar software de alta qualidade.
+Considerações Finais da Aula
+Nesta aula, discutimos sobre controle de versão, com foco no Git, e também abordamos
+algumas melhores práticas para trabalhar com controle de versão.
+No controle de versão, aprendemos que é importante ter um sistema que permita
+rastrear e controlar as alterações feitas em um projeto ao longo do tempo. O Git é um dos
+sistemas de controle de versão mais populares e amplamente utilizados atualmente, devido
+à sua eficiência e flexibilidade.
+Ao trabalhar com controle de versão, é essencial seguir algumas melhores práticas.
+Primeiramente, é recomendado utilizar um repositório centralizado para armazenar o código-
+fonte do projeto, permitindo que todos os membros da equipe tenham acesso e possam
+colaborar de forma eficiente. Além disso, é fundamental utilizar branches para desenvolver
+novas funcionalidades ou corrigir bugs, evitando assim alterações diretas no código principal.
+Outra prática importante é realizar commits frequentes e bem documentados, de forma
+a registrar de maneira clara as alterações realizadas. Isso facilita a identificação de problemas
+e a reversão de alterações, caso necessário. Também é recomendado utilizar mensagens de
+commit descritivas, que expliquem de forma sucinta o que foi alterado e o motivo da alteração.
+É importante sempre buscar atualizar-se e aprender novas técnicas, pois o controle de
+versão é uma ferramenta fundamental para o desenvolvimento de software de qualidade.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 9 de 10
+Professor(a): Bruno Malhano
+Material Complementar
+GitHub folha de dicas de GIT
+2022, Trainning GitHub.
+Para operar os sistemas de controle de versão, é fundamental entender os comandos
+e saber como utilizá-los. Neste documento, você terá os principais comandos com as
+devidas especificações para uso.
+Link para acesso: https://training.github.com/downloads/pt_BR/github-git-cheat-sheet.
+pdf (acesso em 26 out. 2023).
+Referências
+AQUILES, Alexandre. FERREIRA, Rodrigo. Controlando Versões com Git e GitHub. São Pau-
+lo: Casa do Código, 2014.
+FERREIRA, Arthur Gonçalves. Design patterns e gerência de configuração: do projeto ao
+controle de versões. São Paulo: Platos Soluções Educacionais, 2021. Livro digital. (1 re-
+curso online). ISBN 9786589965312. Disponível em: https://integrada.minhabiblioteca.
+com.br/books/9786589965312. Acesso em: 22 set. 2023.
+O BÁSICO de Git. Git, 2023. Disponível em: <https://git-scm.com/book/pt-br/v2/Co-
+me%C3%A7ando-O-B%C3%A1sico-do-Git>. Acesso em: 8 ago. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 10 de 10
+PROFESSOR(A): BRUNO MALHANO
+Fundamentos de DevOps
+Ferramentas e Soluções de DevOps
+Objetivo da Aula
+Compreender o uso e a aplicação das ferramentas de DevOps. Entender a aplicação
+do DevOps em cenários distintos. Entender como o DevOps pode ser aplicado em
+ambientes de nuvem.
+Apresentação
+Nesta aula, vamos explorar o mundo do DevOps e sua aplicação em diferentes cenários.
+O objetivo é entender como as ferramentas no ciclo de vida do DevOps podem ser utilizadas
+para otimizar o desenvolvimento e a entrega de software.
+Vamos conhecer as diversas ferramentas disponíveis para cada etapa do ciclo de vida
+do DevOps, desde a integração contínua até a implantação automatizada. Vamos discutir
+como essas ferramentas podem ajudar a melhorar a colaboração entre equipes, aumentar
+a eficiência e garantir a qualidade do software.
+Veremos como o DevOps pode ser integrado ao desenvolvimento de aplicações em
+nuvem, permitindo uma implantação mais rápida e escalável.
+1. Ferramentas no Ciclo de Vida do DevOps
+Para implementar o DevOps, é preciso usar ferramentas adequadas para cada fase
+do ciclo de vida do software, que são: planejamento contínuo, integração contínua, teste
+contínuo, entrega contínua e monitoramento contínuo.
+Na fase de planejamento contínuo, a equipe define o escopo, as metas, os requisitos e
+as prioridades do projeto, baseando-se na pesquisa e no feedback dos usuários. Algumas
+ferramentas que podem auxiliar nessa fase são: Mural, Miro, Jira Product Discovery, Azure Boards.
+Na integração contínua, a equipe desenvolve o código fonte do software, usando práticas
+como controle de versão, revisão de código e testes unitários. Algumas ferramentas que
+podem auxiliar nessa fase são: Git, Bitbucket, GitHub, Azure Repos, Jenkins.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 10
+Professor(a): Bruno Malhano
+Na etapa de testes contínuos, a equipe realiza testes automatizados e manuais para
+verificar a qualidade, a funcionalidade e a segurança do software. Algumas ferramentas
+que podem auxiliar nessa fase são: Selenium, JUnit, TestNG, Azure Tests Plan e Jira.
+Na etapa de entrega contínua, é feita a preparação para o software para ser implantado em
+um ambiente de produção, usando práticas como empacotamento, configuração e orquestração.
+Algumas ferramentas que podem auxiliar nessa fase são: Docker, Kubernetes, Ansible, Terraform.
+O software em um ambiente de produção, na etapa de implantação contínua, usando
+práticas como automação, monitoramento e rollback. Algumas ferramentas que podem
+auxiliar nessa fase são: Spinnaker, AWS CodeDeploy, Azure DevOps e Bamboo, Azure Pipelines.
+Para monitorar o processo, a equipe precisa acompanhar o desempenho, a disponibilidade
+e a utilização do software em produção, usando práticas como coleta de dados, análise e
+alerta. Algumas ferramentas que podem auxiliar nessa fase são: Prometheus, Grafana,
+Datadog e New Relic.
+Figura 1: Ferramentas nas etapas do DevOps
+Fonte: Blog 4Linux. Disponível em: https://blog.4linux.com.br/qual-o-nivel-de-maturidade-devops-da-sua-empresa/.
+Acesso em: 9 ago. 2023.
+Na etapa de Feedback contínuo, os dados são coletados e analisados com base no
+feedback dos usuários e das partes interessadas sobre o software em produção, usando
+práticas como pesquisa, métricas e aprendizado. Algumas ferramentas que podem auxiliar
+nessa fase são: Google Analytics, Hotjar, SurveyMonkey e Jira Service Management.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 2 de 10
+Professor(a): Bruno Malhano
+Não existe uma única solução de DevOps para todas as equipes e projetos. Cada equipe
+deve escolher as ferramentas que melhor se adaptam às suas necessidades e contextos
+específicos. Além disso, as ferramentas devem ser integradas entre si para facilitar a
+comunicação, a colaboração e a automação dos processos.
+Para definir a melhor cadeia de ferramentas de DevOps, é essencial conhecer as melhores
+práticas de DevOps e como as ferramentas as suportam. Em seguida, criar uma estratégia de
+ferramentas unificada que possibilite a cooperação das equipes nas fases de desenvolvimento,
+testes e implantação. Quando as empresas optam pelo DevOps, elas geralmente têm duas
+alternativas: definir a cadeia de ferramentas escolhendo cada solução específica para as
+etapas, de maneira personalizável, ou definir uma ferramenta completa, que entregue todo
+o ferramental necessário para o processo. Escolher a configuração adequada é importante,
+pois ela influencia os processos de DevOps de uma equipe.
+2. Digite a DevOps Aplicado à Diferentes Cenários
+Os conceitos de DevOps podem ser aplicados em diversas áreas de conhecimento,
+sobretudo, quando há necessidade de definir um processo ágil e escalável de desenvolvimento.
+A cultura DevOps já é amplamente aplicada em contextos de engenharia de dados, ciência
+de dados e inteligência artificial.
+2.1. MLOps
+MLOps, ou DevOps aplicado à ciência de dados e aprendizado de máquina, é uma
+abordagem que visa trazer as práticas de colaboração, automação e integração contínua para
+o desenvolvimento e operação de modelos de aprendizado de máquina. Essa metodologia
+é fundamental para garantir a eficiência, confiabilidade e escalabilidade dos processos de
+desenvolvimento e implantação de modelos de ML.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 3 de 10
+Professor(a): Bruno Malhano
+Figura 2: Modelo de fluxo do MLOps
+Fonte: Blog NVidia. Disponível em: https://blog.nvidia.com.br/2020/09/08/o-que-e-mlops/. Acesso em: 3 set. 2023.
+Assim como no DevOps tradicional, o MLOps promove a colaboração entre as equipes de
+ciência de dados, desenvolvimento e operações. Ao trabalhar de forma integrada desde o início
+do projeto, as equipes podem compartilhar conhecimentos, alinhar expectativas e garantir
+que os modelos de ML atendam às necessidades das operações e do negócio como um todo.
+A automação é um aspecto chave do MLOps. Com a automação, é possível criar pipelines
+de dados e modelos, que permitem a execução automatizada de tarefas como coleta de
+dados, pré-processamento, treinamento de modelos, validação e implantação. Isso reduz
+a dependência de processos manuais e minimiza erros, além de permitir a reprodução e
+rastreabilidade dos resultados.
+Integração contínua e entrega contínua de modelos:
+Assim como no DevOps, o MLOps busca a integração contínua e a entrega contínua de
+modelos de ML. Isso significa que as atualizações e melhorias nos modelos são entregues
+de forma rápida e confiável, permitindo que as organizações acompanhem as demandas
+em constante mudança. Com a entrega contínua, também é possível realizar testes
+automatizados e validar a performance dos modelos antes de sua implantação.
+Uma parte fundamental do MLOps é o monitoramento e gerenciamento dos modelos
+em produção. Isso envolve o acompanhamento contínuo do desempenho dos modelos, a
+detecção de anomalias e a manutenção da qualidade dos resultados. Além disso, o MLOps
+também considera a retreinagem e a atualização dos modelos de forma sistemática,
+garantindo que eles permaneçam precisos e relevantes ao longo do tempo.
+Em resumo, o MLOps é uma abordagem que traz as práticas de DevOps para o
+desenvolvimento e operação de modelos de aprendizado de máquina. Ao adotar essa
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 4 de 10
+Professor(a): Bruno Malhano
+metodologia, as equipes de ciência de dados podem garantir a eficiência, confiabilidade
+e escalabilidade dos processos de ML, promovendo a colaboração, automação e
+integração contínua.
+2.2. DataOps
+DataOps é uma abordagem que visa trazer as práticas de colaboração, automação e integração
+contínua para o gerenciamento e operação de dados. É uma metodologia que busca melhorar
+a eficiência, qualidade e governança dos processos de gestão de dados em uma organização.
+Figura 3: Modelo de fluxo do DataOps
+Fonte: Saagie. Disponível em: https://www.saagie.com/en/blog/what-is-dataops/. Acesso em: 9 set. 2023.
+Assim como no DevOps e MLOps, o DataOps promove a colaboração entre as equipes de
+dados, desenvolvimento e operações. Ao trabalhar de forma integrada, as equipes podem
+compartilhar conhecimentos, alinhar expectativas e garantir que os dados atendam às
+necessidades das operações e do negócio como um todo. Isso inclui a colaboração entre
+cientistas de dados, engenheiros de dados, administradores de bancos de dados e outros
+profissionais envolvidos na gestão dos dados.
+Com a automação, é possível criar pipelines de dados, que permitem a execução
+automatizada de tarefas como extração, transformação, limpeza e carga (ETL) de dados.
+Além disso, a automação também pode ser aplicada em tarefas como monitoramento de
+qualidade dos dados, validação de integridade e conformidade, entre outros. A automação
+reduz erros, agiliza os processos e permite a rastreabilidade dos dados.
+O processo de DataOps busca a integração contínua e a entrega contínua de dados
+para atualizar e melhorar os dados são entregues, de forma rápida e confiável, permitindo
+que as organizações acompanhem as demandas em constante mudança. Com a entrega
+contínua de dados, também é possível realizar testes automatizados, garantir a qualidade
+dos dados e facilitar a tomada de decisões baseada em informações atualizadas.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 5 de 10
+Professor(a): Bruno Malhano
+O DataOps também considera a governança e a segurança dos dados como aspectos
+essenciais. Isso envolve a definição de políticas e padrões para a gestão dos dados, a
+aplicação de controles de acesso e a garantia da conformidade com regulamentações e
+políticas internas. A governança e a segurança dos dados são fundamentais para garantir
+a confiabilidade e a privacidade das informações, além de mitigar riscos relacionados à
+gestão inadequada dos dados.
+Ao adotar essa metodologia, as equipes de dados podem melhorar a eficiência, qualidade
+e governança dos processos de gestão de dados, promovendo a colaboração, automação
+e integração contínua.
+2.3. DevSecOps
+DevSecOps é uma combinação das palavras “Desenvolvimento”, “Segurança” e “Operações”.
+É uma abordagem que busca integrar a segurança cibernética em todo o ciclo de vida do
+desenvolvimento de software, desde a concepção até a implantação e manutenção.
+No modelo tradicional de desenvolvimento de software, a segurança muitas vezes é
+tratada como uma etapa separada, realizada apenas no final do processo. Isso pode resultar
+em vulnerabilidades e falhas de segurança que são descobertas tarde demais, causando
+atrasos e custos adicionais para corrigi-las.
+O DevSecOps propõe uma mudança de mentalidade, onde a segurança é incorporada desde
+o início do processo de desenvolvimento. Isso significa que as equipes de desenvolvimento,
+operações e segurança trabalham juntas desde o início, colaborando para garantir que o
+software seja seguro e protegido contra ameaças cibernéticas.
+Figura 4: Modelo de fluxo DevSecOps
+Fonte: Dynatrace. Disponível em: https://www.dynatrace.com/news/blog/what-is-devsecops/. Acesso em: 9 set. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 6 de 10
+Professor(a): Bruno Malhano
+Ao adotar o DevSecOps, as equipes de desenvolvimento incorporam práticas de segurança
+em todas as etapas do ciclo de vida do software. Isso inclui a utilização de ferramentas
+automatizadas para realizar testes de segurança, a implementação de controles de segurança
+durante o processo de desenvolvimento e a realização de revisões de segurança regulares.
+Além disso, o DevSecOps também envolve a automação de processos de segurança, como
+a implementação de políticas de segurança, a detecção de vulnerabilidades e a resposta a
+incidentes de segurança. Isso permite que as equipes identifiquem e corrijam rapidamente
+as falhas de segurança, reduzindo o risco de ataques cibernéticos e violações de dados.
+Em resumo, o DevSecOps é uma abordagem que busca integrar a segurança cibernética
+em todo o ciclo de vida do desenvolvimento de software. Ao adotar o DevSecOps, as equipes
+de desenvolvimento, operações e segurança trabalham juntas desde o início, garantindo
+que o software seja seguro e protegido contra ameaças cibernéticas.
+3. Ferramentas no Ciclo de Vida do DevOps
+DevOps é uma abordagem que tem sido amplamente adotada em arquiteturas de
+solução em nuvem, trazendo benefícios significativos para o desenvolvimento, implantação
+e operação de sistemas na nuvem. Ao aplicar os princípios do DevOps a essas arquiteturas,
+as organizações podem obter maior agilidade, escalabilidade e confiabilidade em seus
+ambientes em nuvem.
+Automação de infraestrutura: uma das principais vantagens do DevOps aplicado a
+arquiteturas de solução em nuvem é a automação da infraestrutura. Com ferramentas
+de automação como o Terraform, é possível criar e gerenciar recursos de infraestrutura
+na nuvem de forma programática. Isso permite que as equipes de desenvolvimento e
+operações criem e configurem ambientes de maneira rápida e consistente, reduzindo erros
+e aumentando a eficiência.
+Integração contínua e entrega contínua: ao aplicar esses conceitos a arquiteturas
+de solução em nuvem, as equipes podem automatizar o processo de integração, teste
+e implantação de código em ambientes na nuvem. Isso permite que as alterações sejam
+entregues de forma rápida e confiável, acelerando o tempo de lançamento de novas
+funcionalidades e reduzindo o risco de problemas em produção.
+Escalabilidade e elasticidade: as arquiteturas em nuvem oferecem a vantagem de
+escalabilidade e elasticidade, e o DevOps pode aproveitar esses recursos de forma
+eficiente. Com a automação e a orquestração de recursos, as equipes podem dimensionar
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 7 de 10
+Professor(a): Bruno Malhano
+automaticamente os ambientes de acordo com a demanda, garantindo que os sistemas
+sejam capazes de lidar com picos de tráfego ou carga de trabalho. Isso permite uma melhor
+utilização dos recursos e evita problemas de desempenho.
+Monitoramento e gerenciamento de infraestrutura: o DevOps também incentiva o
+monitoramento contínuo e o gerenciamento proativo da infraestrutura em nuvem. Com
+ferramentas de monitoramento e registros, as equipes podem acompanhar o desempenho
+dos sistemas, identificar problemas em tempo real e tomar medidas corretivas. Além
+disso, o uso de práticas de monitoramento também ajuda a otimizar o uso dos recursos e
+a garantir a disponibilidade e a confiabilidade dos serviços na nuvem.
+A arquitetura representada na figura 5 é um exemplo de como funciona o processo de
+integração contínua e entrega contínua (CI/CD) em um ambiente de desenvolvimento no Azure.
+Figura 5: Arquitetura de solução: CI/CD para AKS
+Fonte: Microsoft Learning. Disponível em: https://learn.microsoft.com/en-us/azure/architecture/guide/aks/aks-cicd-
+-azure-pipelines. Acesso em: 9 set. 2023.
+A integração contínua é um processo em que as alterações de código são integradas e
+testadas automaticamente em um ambiente de teste. No caso desse fluxo, a integração
+contínua é acionada quando uma solicitação de pull request (PR) é feita no repositório Git do
+Azure Repos. Isso desencadeia uma pipeline de PR que realiza verificações de qualidade. Se
+alguma dessas verificações falhar, a PR não será mesclada (Merge). Se todas as verificações
+forem bem-sucedidas, a PR será mesclada com sucesso.
+Após o merge da PR, é acionada uma pipeline de CI (integração contínua), e essa pipeline
+executa as mesmas tarefas da pipeline de PR, mas com algumas adições importantes. A
+pipeline de CI executa testes de integração, que necessitam de senhas, que neste cenário
+estão armazenadas no Azure KeyVault (Cofre de senhas). Essa pipeline obtém esses segredos
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 8 de 10
+Professor(a): Bruno Malhano
+do Azure Key Vault. O resultado bem-sucedido dessa pipeline é a criação e publicação de
+uma imagem de contêiner em um repositório de contêineres do Azure não produtivo.
+A conclusão da pipeline de CI aciona a pipeline de CD (entrega contínua). Essa pipeline
+faz o deploy de um modelo YAML (O que é) para o ambiente de preparação do AKS (Azure
+Kubernetes Service). O modelo especifica a imagem de contêiner do ambiente não produtivo.
+Em seguida, a pipeline executa testes de aceitação no ambiente de preparação para validar
+o deployment. Se os testes forem bem-sucedidos, é executada uma tarefa de validação
+manual, que requer a validação do deployment por uma pessoa. Essa etapa de validação
+manual é opcional e algumas organizações automatizam esse processo.
+Se a intervenção manual for retomada, a pipeline de CD promove a imagem do registro
+de contêineres não produtivo para o registro de produção. Em seguida, a pipeline de CD
+faz o deploy de um modelo YAML para o ambiente de produção do AKS, especificando a
+imagem de contêiner do ambiente de produção.
+Além disso, os Insights do container é periodicamente envia métricas de desempenho,
+dados de inventário e informações de estado de saúde dos hosts e contêineres de contêineres
+para o Azure Monitor. O Azure Monitor coleta dados de observabilidade, como logs e métricas,
+para que um operador possa analisar dados de saúde, desempenho e uso. O Application
+Insights coleta todos os dados de monitoramento específicos da aplicação, como traces.
+O Azure Log Analytics é usado para armazenar todos esses dados.
+Esse fluxo de CI/CD é uma prática comum no desenvolvimento de software, pois permite
+que as alterações de código sejam testadas e implantadas de forma mais rápida e confiável.
+Ele ajuda a garantir a qualidade do código e a acelerar o ciclo de desenvolvimento.
+Considerações Finais da Aula
+Nesta aula, exploramos os principais assuntos relacionados ao DevOps e sua aplicação
+em diferentes cenários. Abordamos as ferramentas utilizadas ao longo do ciclo de vida
+do DevOps, compreendendo como elas podem otimizar o desenvolvimento e a entrega
+contínua de software.
+Discutimos a importância de adotar práticas de DevOps em diversos cenários, desde pequenos
+projetos até grandes empresas. Vimos como a colaboração entre equipes de desenvolvimento,
+operações e qualidade pode impulsionar a eficiência e a qualidade do software entregue.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 9 de 10
+Professor(a): Bruno Malhano
+Além disso, destacamos a aplicação do DevOps em arquiteturas de soluções em nuvem.
+Exploramos como a automação, a escalabilidade e a flexibilidade oferecidas pela nuvem
+podem ser aproveitadas para melhorar o processo de desenvolvimento e entrega contínua.
+Materiais Complementares
+Explore as 30 melhores ferramentas de DevOps a serem procuradas em 2023
+2022, Amrita Pathak.
+O mercado de TI proporciona uma variedade de oportunidades para atuar com diver-
+sas tecnologias. Todo profissional precisa estar por dentro das tendências e saber para
+onde o mercado vai.
+Link para acesso: https://kinsta.com/pt/blog/ferramentas-devops/ (acesso em 26 out. 2023).
+Referências
+AZURE DevOps Documentation. Microsoft Docs, 2023. Disponível em: <https://docs.mi-
+crosoft.com/azure/devops/?view=azure-devops-rest-7.1>. Acesso em: 26 out. 2023.
+BRYSON, N. Terraform – Up & Running: Writing Infrastructure as Code. O’Reilly Media. 2019.
+GÉRON, A. Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts,
+Tools, and Techniques to Build Intelligent Systems. 2019.
+HUMBLE, J.; FARLEY, D. Continuous Delivery: Reliable Software Releases Through Build,
+Test, and Deployment Automation. Pearson Education. 2010.
+JERÔNIMO, Anderson Pereira de Lima. Práticas da cultura DevOps no desenvolvimen-
+to de sistemas. São Paulo: Platos Soluções Educacionais, 2021. Livro digital. (1 recurso
+online). ISBN 9786553560567. Disponível em: https://integrada.minhabiblioteca.com.br/
+books/9786553560567. Acesso em: 22 set. 2023.
+O’REILLY Media. Gohil, S. MLOps: Continuous Delivery and Automation Pipelines in Machine
+Learning. Apress. 2020.
+WHAT is DevSecOps. Redhat, 2023. Disponível em: <https://www.redhat.com/en/topics/
+devops/what-is-devsecops>. Acesso em: 26 out. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 10 de 10
+PROFESSOR(A): BRUNO MALHANO
+Fundamentos de DevOps
+Pipeline de CI/CD
+Objetivo da Aula
+Compreender o funcionamento de um pipeline de CI/CD. Conhecer ferramentas
+para implementação de pipelines. Compreender as melhores práticas para criação de
+pipelines de CI/CD.
+Apresentação
+Olá! Nesta aula, vamos explorar o Azure DevOps, uma plataforma poderosa que oferece uma
+ampla gama de ferramentas e recursos para o desenvolvimento de software. Nosso objetivo
+é entender como o Azure DevOps pode ajudar a otimizar o processo de desenvolvimento e
+entrega contínua de software. Vamos nos aprofundar nos componentes e etapas de um
+pipeline no Azure DevOps. Vamos explorar como criar pipelines de integração contínua e entrega
+contínua, utilizando as ferramentas disponíveis no Azure DevOps, como o Azure Pipelines.
+Vamos entender quais as melhores práticas para implementação de um pipeline na nuvem.
+1. Introdução ao Azure DevOps
+O Azure DevOps é uma plataforma de serviços em nuvem da Microsoft que oferece uma
+variedade de ferramentas e recursos para apoiar o desenvolvimento de software colaborativo
+e ágil. Ele é projetado para facilitar a colaboração entre equipes de desenvolvimento,
+operações e gerenciamento de projetos, permitindo a criação, teste e entrega contínua de
+aplicativos de forma eficiente.
+Uma das principais características do Azure DevOps é a integração de várias ferramentas
+em um único ambiente unificado. Ele abrange uma ampla gama de funcionalidades, incluindo
+gerenciamento de código-fonte, planejamento de projetos, controle de versão, automação
+de compilação e implantação, testes automatizados, rastreamento de problemas e muito
+mais. Essa integração ajuda as equipes a colaborarem de forma mais eficiente e a terem
+uma visão holística do ciclo de vida do desenvolvimento de software.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 9
+Professor(a): Bruno Malhano
+Uma das principais ferramentas do Azure DevOps é o Azure Repos, que fornece um
+repositório de controle de versão baseado no Git ou no Team Foundation Version Control
+(TFVC). Ele permite que as equipes colaborem no desenvolvimento de código-fonte,
+gerenciando branches, revisões de código e merge de alterações de forma eficiente.
+Outra ferramenta importante é o Azure Boards, que oferece recursos de planejamento e
+rastreamento de projetos. Com o Azure Boards, as equipes podem criar e gerenciar backlogs
+de trabalho, definir sprints, atribuir tarefas e acompanhar o progresso do projeto de forma
+visual e colaborativa.
+O Azure Pipelines é outra ferramenta essencial do Azure DevOps, que permite a automação
+de compilação, teste e implantação contínua de aplicativos. Ele suporta a criação de
+pipelines de CI/CD (Integração Contínua e Entrega Contínua) para diferentes plataformas e
+tecnologias, como.NET, Java, Node.js e muito mais. Com o Azure Pipelines, as equipes podem
+automatizar o processo de construção, testes e implantação de aplicativos, garantindo a
+entrega rápida e confiável de software.
+Além disso, o Azure Test Plans é uma ferramenta que permite a criação e execução de
+testes manuais e automatizados. Ele fornece recursos para planejar, rastrear e analisar os
+resultados dos testes, garantindo a qualidade do aplicativo em desenvolvimento.
+O Azure DevOps também oferece integração com outras ferramentas populares, como
+o Azure Kubernetes Service (AKS), Azure Functions e Azure App Service, permitindo a
+implantação e o gerenciamento de aplicativos em contêineres, funções e serviços em nuvem.
+Em resumo, o Azure DevOps é uma plataforma abrangente que oferece uma variedade
+de ferramentas e recursos para apoiar o desenvolvimento de software colaborativo e ágil.
+Com suas ferramentas integradas, como Azure Repos, Azure Boards, Azure Pipelines e
+Azure Test Plans, as equipes podem colaborar de forma eficiente, automatizar processos
+e entregar aplicativos de alta qualidade de forma rápida e confiável.
+2. Componentes e Etapas de um Pipeline
+Entender os termos básicos e as partes do Azure Pipelines ajuda você a explorar ainda
+mais como ele pode ajudá-lo a entregar código melhor de maneira mais eficiente e confiável,
+além de ajudar a compreender como outras ferramentas de DevOps funcionam, pois toda
+solução é baseada em um conceito, e os conceitos são fundamentais para o processo de
+entendimento das soluções de tecnologia.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 2 de 9
+Professor(a): Bruno Malhano
+Figura 1: Termos-chave do Azure Pipelines
+Fonte: Microsoft Learning. Disponível em: https://learn.microsoft.com/en-us/training/modules/explore-azure-pipeli-
+nes/4-understand-key-terms. Acesso em: 9 set. 2023.
+1) Pipeline: um pipeline é uma sequência de etapas que definem o fluxo de trabalho para
+a construção, teste e implantação contínua de um aplicativo. No Azure Pipelines, um pipeline
+é configurado usando um arquivo YAML ou por meio de uma interface visual no Azure DevOps;
+2) Job: um job é uma unidade de trabalho dentro de um pipeline. Ele pode ser configurado
+para executar uma ou várias tarefas em paralelo, ou sequencialmente. Cada job é executado
+em um agente, que é uma máquina virtual ou um contêiner que executa as tarefas definidas;
+3) Tarefa (Task): uma tarefa é uma etapa individual dentro de um job. Ela executa uma
+ação específica, como compilar o código-fonte, executar testes, implantar o aplicativo ou
+executar uma tarefa personalizada. O Azure Pipelines fornece uma ampla gama de tarefas
+pré-definidas que abrangem várias tecnologias e plataformas;
+4) Agente (Agent): um agente é a entidade responsável por executar as tarefas definidas
+em um pipeline. Ele pode ser uma máquina virtual hospedada no Azure, uma máquina local
+ou um contêiner. Os agentes são configurados para se conectarem ao Azure Pipelines e
+executarem as tarefas atribuídas a eles;
+5) Gatilho (Trigger): um gatilho é um evento que dispara a execução de um pipeline.
+Ele pode ser configurado para ser acionado por alterações no repositório de código-fonte,
+agendamento, solicitações manuais ou outros eventos específicos. Os gatilhos permitem
+que o pipeline seja executado automaticamente sempre que ocorrer um evento relevante;
+6) Variável (Variable): uma variável é um valor nomeado que pode ser usado para
+armazenar informações dinâmicas durante a execução do pipeline. As variáveis podem
+ser definidas no nível do pipeline, do job ou da tarefa e podem ser usadas para passar
+informações entre as etapas do pipeline ou para configurar parâmetros personalizados;
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 3 de 9
+Professor(a): Bruno Malhano
+7) Grupo de estágios (Stage Group): Um grupo de estágios é uma coleção lógica de estágios
+dentro de um pipeline. Ele permite que os estágios sejam agrupados para facilitar a organização
+e a visualização do fluxo de trabalho. Os grupos de estágios podem ser usados para executar
+estágios em paralelo ou em sequência, dependendo das necessidades do pipeline.
+3. Melhores Práticas e Desafios na Implementação de um Pipeline
+Implementar um pipeline no Azure DevOps pode trazer muitos benefícios para o
+desenvolvimento de software, como automação de processos, entrega contínua e maior
+eficiência. Existem algumas melhores práticas e desafios a serem considerados ao implementar
+um pipeline no Azure DevOps.
+É muito importante realizar um planejamento adequado, antes de iniciar a implementação
+do pipeline. Isso envolve a definição das etapas necessárias, a identificação das ferramentas
+e tecnologias a serem utilizadas, a definição de critérios de sucesso e a determinação
+dos recursos necessários. O Azure Boards é uma solução que auxilia no planejamento e
+acompanhamento das tarefas, backlog e toda gestão da sprint.
+Figura 2: Azure Boards
+Fonte: Microsoft Learning. Disponível em: https://azure.microsoft.com/pt-br/products/devops/boards. Acesso em: 9
+set. 2023.
+É fundamental utilizar um sistema de controle de versão, como o Git, para gerenciar
+o código-fonte do seu aplicativo. Isso permite que você rastreie alterações, reverta para
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 4 de 9
+Professor(a): Bruno Malhano
+versões anteriores e trabalhe de forma colaborativa com outros membros da equipe. Como
+solução de versionamento de código o Azure DevOps possui o Azure Repos, uma solução
+de repositórios Git para colaboração e análise de código, totalmente integrada como todo
+ecossistema de nuvem.
+Figura 3: Azure Repos
+Fonte: Elaborada pelo autor.
+Implementar testes automatizados é uma prática essencial para garantir a qualidade do
+seu aplicativo. É importante configurar tarefas no pipeline para executar testes unitários,
+testes de integração e testes de aceitação automaticamente. Isso ajudará a detectar
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 5 de 9
+Professor(a): Bruno Malhano
+problemas mais cedo e a garantir que seu aplicativo esteja funcionando corretamente em
+cada etapa do pipeline. O Azure Tests Plan é uma solução que podemos planejar os testes
+dentro do pipeline e explorar as métricas disponibilizadas pela solução.
+Figura 4: Azure Test Plan
+Fonte: Microsoft Learning. Disponível em: https://azure.microsoft.com/pt-br/products/devops/test-plan. Acesso
+em: 9 set. 2023.
+Para automatizar o processo de implantação das aplicações, o Azure DevOps entrega uma
+experiência completa com o Azure Pipelines em diferentes ambientes, como desenvolvimento,
+teste e produção. Isso permitirá que você entregue seu aplicativo de forma rápida e
+confiável, garantindo consistência e reduzindo erros humanos. O Azure Pipelines é um
+serviço de integração contínua e entrega contínua (CI/CD) hospedado na nuvem que permite
+automatizar compilações e implantações. É possível pipelines hospedar pipelines na nuvem
+para Linux, MacOS e Windows, permitindo compilar aplicativos da Web, Desktop ou mobile
+e os implante em qualquer nuvem ou no ambiente local.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 6 de 9
+Professor(a): Bruno Malhano
+Figura 5: Azure Pipelines
+Fonte: Microsoft Learning. Disponível em: https://azure.microsoft.com/pt-br/products/devops/pipelines. Acesso em:
+9 set. 2023.
+Existem vários mecanismos de monitoramento para acompanhar o desempenho das
+aplicações. A Azure oferece ferramentas como o Azure Application Insights para coletar
+métricas, logs e telemetria. Isso ajudará a identificar problemas de desempenho, detectar
+anomalias e fornecer feedback valioso para melhorias contínuas.
+Figura 6: Azure Pipelines
+Fonte: Microsoft Learning. Disponível em: https://learn.microsoft.com/en-us/azure/azure-monitor/app/
+app-insights-overview?tabs=net. Acesso em: 9 set. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 7 de 9
+Professor(a): Bruno Malhano
+3.1. Desafios ao Implementar um Pipeline no Azure DevOps
+Assim como toda tecnologia, framework, ou metodologia, o processo de adoção é sempre
+fundamental para o sucesso. Criar uma cultura que fomente a inovação e mentalidade de
+crescimento é a chave para o sucesso dos negócios. Implementar a cultura DevOps é um
+desafio, e consequentemente seus processos. Podemos listar alguns pontos desafiadores
+em uma estratégia de implantação.
+• Aprendizado e adaptação: a implementação de um pipeline no Azure DevOps pode exigir
+um período de aprendizado e adaptação, especialmente se você não estiver familia-
+rizado com as ferramentas e conceitos envolvidos. É importante dedicar tempo para
+aprender e explorar as funcionalidades do Azure DevOps, bem como buscar suporte e
+recursos adicionais, como documentação e tutoriais;
+• Configuração e personalização: configurar e personalizar um pipeline no Azure DevOps
+pode ser complexo, especialmente ao lidar com cenários mais avançados. É importante
+entender as opções de configuração disponíveis, como definir variáveis, configurar gatilhos
+e estabelecer dependências entre tarefas. Além disso, pode ser necessário desenvolver
+scripts personalizados para atender às necessidades específicas do seu aplicativo;
+• Gerenciamento de dependências: dependendo do seu aplicativo, pode ser necessário
+lidar com várias dependências, como bibliotecas externas, serviços de terceiros ou
+infraestrutura específica. Gerenciar essas dependências de forma eficiente e garantir
+sua disponibilidade durante a execução do pipeline pode ser um desafio adicional;
+• Integração com outras ferramentas: o Azure DevOps oferece integração com várias
+ferramentas populares de desenvolvimento, como o Visual Studio, o Visual Studio Code
+e o Azure. No entanto, integrar o Azure DevOps com outras ferramentas específicas
+do seu ambiente de desenvolvimento pode exigir esforço adicional. Certifique-se de
+entender as opções de integração disponíveis e avalie a necessidade de desenvolver
+integrações personalizadas;
+• Gerenciamento de erros e resolução de problemas: durante a implementação do pi-
+peline, é possível que você enfrente erros e problemas que precisam ser resolvidos. É
+importante ter um processo de gerenciamento de erros eficiente, que inclua a coleta
+e análise de logs, a identificação da causa raiz dos problemas e a implementação de
+soluções adequadas.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 8 de 9
+Professor(a): Bruno Malhano
+Considerações Finais da Aula
+Nesta aula, exploramos o Azure DevOps, uma plataforma abrangente que oferece ferramentas
+e recursos para o desenvolvimento de software. Vimos como o Azure DevOps pode ser utilizado
+para gerenciar o ciclo de vida do desenvolvimento, desde o planejamento até a implantação e
+monitoramento de aplicações. Compreendemos como cada pedaço da solução do Azure DevOps
+pode apoiar nas diversas atividades presentes em uma esteira de DevOps.
+Material Complementar
+Crie seu primeiro pipeline
+2023, Fabrício Verones.
+O conteúdo prático ensina a criar uma conta gratuita no Azure DevOps e implementar
+um pipeline. Explore todos os conceitos e aplique o aprendizado.
+Link para acesso: https://www.youtube.com/watch?v=qVd8wMJ74co&pp=ygUMQXp-
+1cmUgRGV2T3Bz (acesso em 26 out. 2023).
+Referências
+AZURE Pipelines. Microsoft Docs, 2023. Disponível em: <https://docs.microsoft.com/en-us/
+azure/devops/pipelines/>. Acesso em: 26 out. 2023.
+MONTEIRO, Eduarda Rodrigues et al. DevOps. Porto Alegre: SAGAH, 2021. Livro digital. (1
+recurso online). ISBN 9786556901725. Disponível em: https://integrada.minhabiblioteca.
+com.br/books/9786556901725. Acesso em: 22 set. 2023.
+O conteúdo deste livro eletrônico é licenciado para GUILHERME - 03168252123, vedada, por quaisquer meios e a qualquer título, a sua reprodução, cópia, divulgação ou
+distribuição, sujeitando-se aos infratores à responsabilização civil e criminal.
+faculdade.grancursosonline.com.br 9 de 9

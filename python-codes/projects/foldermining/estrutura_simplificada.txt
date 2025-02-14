@@ -1,0 +1,93 @@
+.
+├── dockerstats.sh
+└── docker-compose.yml
+├── frontend-dipemax/
+├── postcss.config.mjs
+├── tsconfig.json
+├── components.json
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── .gitignore
+├── Dockerfile
+├── .env.local
+├── .eslintrc.json
+├── README.md
+├── package.json
+└── tailwind.config.ts
+│   ├── src/
+│   │   ├── lib/
+│   │   ├── utils.ts
+│   │   └── axios.ts
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   ├── label.tsx
+│   │   │   ├── navPages.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── navUserMenu.tsx
+│   │   │   ├── form.tsx
+│   │   │   ├── navLogo.tsx
+│   │   │   ├── button.tsx
+│   │   │   └── tabs.tsx
+│   │   │   ├── Navbar/
+│   │   │   └── NavbarCore.tsx
+│   │   │   ├── Forms/
+│   │   │   ├── SignupForm.tsx
+│   │   │   └── SigninForm.tsx
+│   │   │   ├── NextAuth/
+│   │   │   └── SessionWrapper.tsx
+│   │   ├── app/
+│   │   └── globals.css
+│   │   │   ├── (authenticated)/
+│   │   │   └── layout.tsx
+│   │   │   │   ├── index/
+│   │   │   │   └── page.tsx
+│   │   │   ├── (unauthenticated)/
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   │   │   ├── signin/
+│   │   │   │   └── page.tsx
+│   │   │   │   ├── signup/
+│   │   │   │   └── page.tsx
+│   │   │   ├── api/
+│   │   │   │   ├── auth/
+│   │   │   │   │   ├── [...nextauth]/
+│   │   │   │   │   └── route.ts
+├── src/
+├── backend-dipemax/
+├── tsconfig.json
+├── .env.example
+├── package-lock.json
+├── .gitignore
+├── Dockerfile
+├── .dockerignore
+├── autorun.sh
+├── nodemon.json
+├── README.md
+└── package.json
+│   ├── src/
+│   │   ├── public/
+│   │   │   ├── images/
+│   │   │   │   ├── example/
+│   │   │   │   └── Screenshot_5.png
+│   │   ├── app/
+│   │   │   ├── controller/
+│   │   │   ├── Addresscontroller.ts
+│   │   │   └── UserController.ts
+│   │   │   ├── usecases/
+│   │   │   │   ├── Address/
+│   │   │   │   ├── ListAddressAction.ts
+│   │   │   │   └── CrudAddressAction.ts
+│   │   │   │   ├── User/
+│   │   │   │   ├── SignupUserAction.ts
+│   │   │   │   └── LoginUserAction.ts
+│   │   │   ├── dao/
+│   │   │   ├── AddressDao.ts
+│   │   │   └── UserDao.ts
+│   │   ├── core/
+│   │   ├── app.ts
+│   │   ├── db.ts
+│   │   ├── routes.ts
+│   │   └── index.ts
+│   ├── prisma/
+│   └── schema.prisma

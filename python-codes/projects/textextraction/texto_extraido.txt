@@ -1,0 +1,1529 @@
+PROFESSOR(A): BRUNO MALHANO
+IaC (Infratestrutura como Código) e CI/CD
+Ferramentas de Automação
+Objetivo da Aula
+Conhecer as ferramentas de automação, em particular a IaC (Infraestrutura como código)
+e CI/CD (Continuous Integration/Continuous Deployment). Compreender os conceitos
+básicos, as principais ferramentas, suas vantagens e limitações, além de exemplos práticos
+de como aplicar a automação de infraestrutura.
+Apresentação
+Vamos entender como funciona o mundo da automação e descobrir como essas ferramentas
+podem revolucionar a forma como lidamos com a infraestrutura e desenvolvimento de
+software. O objetivo desta aula é proporcionar uma visão abrangente sobre as ferramentas
+de automação, com foco especial nas principais ferramentas de IaC. Vamos explorar como
+essas ferramentas permitem que a infraestrutura seja tratada como código, facilitando o
+provisionamento, configuração e gerenciamento de recursos.
+Ao longo da aula, abordaremos uma variedade de tópicos como uma introdução às
+ferramentas de automação, para que você possa entender melhor o que é possível alcançar
+com elas. Vamos conhecer ferramentas de IaC, como Ansible, Terraform, Chef e Puppet,
+comparando essas ferramentas, e analisando suas vantagens e limitações. Compreender
+as diferenças entre elas é fundamental para escolher a mais adequada para cada projeto.
+1. Introdução às Ferramentas de Automação
+Automação é uma palavra-chave atualmente, principalmente quando se trata do ambiente
+de TI. No mundo da tecnologia, a automação é sinônimo de eficiência e escalabilidade. Com
+o avanço da tecnologia, surgiram diversas ferramentas que permitem automatizar tarefas
+e processos, trazendo benefícios significativos para profissionais de TI e empresas em geral.
+As ferramentas de automação, também conhecidas como Infrastructure as Code (IaC),
+são recursos que permitem aos profissionais de TI automatizar tarefas e processos em um
+ambiente de tecnologia. Essas ferramentas são projetadas para simplificar e agilizar as
+operações de TI, permitindo que os profissionais economizem tempo e recursos valiosos.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 13
+Professor(a): Bruno Malhano
+A automação tem se tornado cada vez mais importante no mundo da tecnologia, à medida
+que as empresas buscam maneiras de aumentar a eficiência e reduzir erros humanos. As
+ferramentas de automação permitem que tarefas repetitivas e demoradas sejam executadas
+de forma rápida e precisa, liberando os profissionais de TI para se concentrarem em tarefas
+mais estratégicas e de maior valor agregado.
+Uma das principais vantagens das ferramentas de automação é a economia de tempo.
+Tarefas que antes levavam horas ou até mesmo dias para serem concluídas manualmente,
+agora podem ser executadas em questão de minutos com o uso dessas ferramentas. Isso
+permite que os profissionais de TI tenham mais tempo disponível para lidar com projetos
+de maior complexidade e inovação.
+Ao automatizar processos, os profissionais de TI diminuem a probabilidade de falhas
+causadas por fatores humanos, como lapsos de memória ou desatenção. As ferramentas de
+automação executam tarefas de forma consistente e precisa, garantindo que os processos
+sejam executados corretamente.
+Existem diversos cenários em que a automação pode ser especialmente útil. Um exemplo é a
+implantação de infraestrutura em nuvem. Com o uso de ferramentas de automação, é possível
+provisionar rapidamente recursos de computação, armazenamento e rede em uma nuvem
+pública ou privada, evitando o processo demorado e suscetível a erros da configuração manual.
+Imagine que você é um administrador de ambientes de nuvem, e precisa provisionar
+infraestrutura, se preocupando com conectividade de redes, configuração de ambientes
+e recursos e ainda dar suporte às soluções. Tarefas como provisionamento e configuração
+dos ambientes podem ser absorvidas facilmente por scripts de IaC. Então, sob demanda, à
+medida que os usuários precisam de algum tipo de infraestrutura, esses scripts executam
+e geram o ambiente personalizado.
+Além disso, a automação também é útil na administração de sistemas. Tarefas como
+monitoramento de servidores, gerenciamento de patches e atualizações de segurança podem
+ser automatizadas, garantindo que os sistemas estejam sempre atualizados e protegidos
+contra possíveis vulnerabilidades.
+A automação também pode ser aplicada na configuração e gerenciamento de redes.
+É possível provisionar e configurar dispositivos de rede de maneira rápida e consistente,
+além de facilitar a implementação de políticas de segurança e monitoramento da rede.
+Em resumo, as ferramentas de automação têm um impacto significativo nos ambientes
+de TI, trazendo benefícios como economia de tempo, redução de erros e a capacidade de os
+profissionais de TI se concentrarem em tarefas mais estratégicas. Além disso, a automação
+pode ser aplicada em diversos cenários, como a implantação de infraestrutura em nuvem,
+automação de testes de software e administração de sistemas e redes.
+.
+faculdade.grancursosonline.com.br 2 de 13
+Professor(a): Bruno Malhano
+2. Principais Ferramentas IaC: Ansible, Terraform, Chef, Puppet
+A automação é um elemento fundamental na área de tecnologia, especialmente
+quando se trata do gerenciamento de infraestrutura. Para facilitar esse processo, surgiram
+as ferramentas de Infraestrutura como Código (IaC), que permitem a automação de
+configurações e o gerenciamento de máquinas remotas. Neste texto, iremos explorar
+algumas das principais ferramentas de IaC: Ansible, Terraform, Chef e Puppet.
+2.1. Ansible
+O Ansible é uma ferramenta de IaC que se destaca pela sua simplicidade e facilidade de
+uso. Com ele, é possível automatizar a configuração de servidores e o gerenciamento de
+máquinas remotas. O Ansible utiliza uma abordagem baseada em YAML para descrever as
+configurações e tarefas a serem executadas. YAML é uma linguagem de marcação simples
+de fácil compreensão, e é comumente usada para arquivos de configuração e em aplicativos
+onde os dados estão sendo armazenados ou transmitidos. O Ansible possui um agente
+centralizado, o Ansible Controller, que se conecta aos servidores remotos através de SSH
+e executa as tarefas definidas nos playbooks. Além disso, o Ansible é altamente escalável
+e suporta a automatização de configurações em grande escala.
+Figura 1: Modelo de execução Ansible
+Fonte: Interop. Disponível em: https://www.interop.com.br/blog/ansible/. Acesso em: 27 ago. 2023.
+.
+faculdade.grancursosonline.com.br 3 de 13
+Professor(a): Bruno Malhano
+O código Ansible é organizado em arquivos chamados playbooks, que contêm as tarefas
+e configurações a serem executadas nos servidores. Um playbook Ansible é composto por
+três seções principais: hosts, tasks e handlers.
+• Hosts: a seção “hosts” especifica os servidores ou grupos de servidores nos quais as
+tarefas serão executadas. É possível definir os servidores individualmente, usando
+seus endereços IP ou nomes de host, ou agrupá-los em grupos para facilitar a gestão.
+Por exemplo:
+Figura 2: Hosts
+Fonte: Elaborada pelo autor.
+• Tasks: a seção “tasks” contém a lista de tarefas a serem executadas nos servidores
+especificados. Cada tarefa é descrita em forma de dicionário, com uma chave indi-
+cando o nome da tarefa e um conjunto de opções que definem o que deve ser feito.
+Por exemplo:
+Figura 3: Tasks
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 4 de 13
+Professor(a): Bruno Malhano
+Nesse exemplo, duas tarefas são definidas. A primeira instala o pacote Apache usando o
+módulo “apt” e a segunda reinicia o serviço Apache usando o módulo “service”. A opção “become:
+yes” indica que as tarefas devem ser executadas com privilégios de superusuário (root).
+• Handlers: a seção “handlers” define ações que serão executadas quando acionadas
+por uma tarefa. Os handlers são úteis para reiniciar serviços ou executar outras ações
+apenas quando necessário, evitando reinicializações desnecessárias. Por exemplo:
+Figura 4: Handlers
+Fonte: Elaborada pelo autor.
+Nesse caso, é definido um handler para reiniciar o serviço Apache. Ele será acionado
+apenas se alguma tarefa anterior especificar que o serviço precisa ser reiniciado.
+É possível adicionar mais seções e opções para personalizar e estender as funcionalidades.
+Além disso, o Ansible oferece uma ampla gama de módulos e plugins para realizar diversas
+ações, desde a instalação de pacotes até a configuração de servidores e serviços.
+2.2. Terraform
+O Terraform é uma ferramenta de IaC voltada para o provisionamento de infraestrutura.
+Ele permite a criação e o gerenciamento de recursos em diversas nuvens e ambientes,
+como AWS, Azure e Google Cloud. O Terraform utiliza uma linguagem declarativa, chamada
+HashiCorp Configuration Language (HCL), para descrever a infraestrutura desejada.
+Com o Terraform, é possível definir e versionar a infraestrutura como código. Além disso,
+o Terraform possui recursos avançados, como a possibilidade de criar módulos reutilizáveis
+e o suporte à infraestrutura imutável.
+.
+faculdade.grancursosonline.com.br 5 de 13
+Professor(a): Bruno Malhano
+Figura 5: Fluxo Terraform
+Fonte: Developer Hashicorp. Disponível em: https://developer.hashicorp.com/Terraform/intro. Acesso em: 27 ago.
+2023.
+O Terraform analisa o código, determina as dependências entre os recursos e provisiona-
+os na ordem correta, garantindo a consistência da infraestrutura. Ele também permite
+gerenciar o ciclo de vida dos recursos, como criar, atualizar e destruir, de maneira segura
+e controlada. A estrutura de um código Terraform pode incluir os seguintes elementos:
+• Providers: a seção “providers” especifica os provedores de nuvem ou plataformas que
+serão utilizados para provisionar os recursos. Cada provedor é definido com suas con-
+figurações específicas, como credenciais de acesso e região. Por exemplo:
+Figura 6: Providers
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 6 de 13
+Professor(a): Bruno Malhano
+Nesse exemplo, está sendo utilizado o provedor da AWS (Amazon Web Services) e são
+fornecidas as chaves de acesso e a região.
+• Resources: a seção “resources” descreve os recursos que serão provisionados. Cada
+recurso é definido com seu tipo e nome, seguido de suas configurações específicas.
+Por exemplo:
+Figura 7: Resources
+Fonte: Elaborada pelo autor.
+Nesse caso, está sendo criada uma instância EC2 na AWS, com uma imagem AMI específica
+e do tipo “t2.micro”.
+• Variables: a seção “variables” permite definir variáveis que podem ser usadas no código
+Terraform. Isso ajuda a tornar o código mais flexível e reutilizável. Por exemplo:
+Figura 8: Variables
+Fonte: Elaborada pelo autor.
+Nesse exemplo, está sendo definida uma variável chamada “aws_region” com uma
+descrição e um valor padrão.
+• Outputs: a seção “outputs” permite definir valores que serão exibidos após a execu-
+ção do código Terraform. Isso pode ser útil para obter informações sobre os recursos
+criados. Por exemplo:
+.
+faculdade.grancursosonline.com.br 7 de 13
+Professor(a): Bruno Malhano
+Figura 9: Outputs
+Fonte: Elaborada pelo autor.
+Nesse caso, está sendo definida uma saída chamada “webserver_ip” que exibirá o
+endereço IP público da instância “webserver”.
+2.3. Chef
+O Chef é uma ferramenta de IaC que se concentra na automação de configurações.
+Ele utiliza uma abordagem baseada em “receitas” e “papéis” para definir e aplicar as
+configurações desejadas nos servidores. As “receitas” são scripts escritos em Ruby que
+descrevem as configurações e tarefas a serem executadas.
+Os “papéis” são conjuntos de “receitas” que definem o estado desejado de um servidor ou
+grupo de servidores. O Chef possui um agente, o Chef Client, que se conecta aos servidores
+e executa as “receitas” definidas nos “papéis”. Além disso, o Chef possui recursos avançados,
+como a possibilidade de testar as configurações antes de aplicá-las e o suporte a chef-solo,
+que permite a execução das configurações sem a necessidade de um servidor centralizado.
+Figura 10: Funcionamento do Chef
+Fonte: Docs Chef. Disponível em: https://docs.chef.io/platform_overview/. Acesso em: 27 ago. 2023.
+.
+faculdade.grancursosonline.com.br 8 de 13
+Professor(a): Bruno Malhano
+2.4. Puppet
+O Puppet oferece recursos avançados de automação de configurações e gerenciamento
+de infraestrutura como código. Ele utiliza uma linguagem declarativa para descrever
+as configurações desejadas nos servidores. Com o Puppet, é possível definir e aplicar
+configurações em um formato chamado “manifestos”. Esses manifestos descrevem o
+estado desejado dos servidores e são aplicados pelo agente do Puppet, o Puppet Agent.
+Uma das principais características do Puppet é o seu sistema de gerenciamento de
+recursos, que permite definir e controlar diferentes aspectos da configuração dos servidores,
+como pacotes, arquivos de configuração e serviços. Além disso, o Puppet possui um sistema
+de hierarquia, no qual é possível definir diferentes níveis de configuração para diferentes
+grupos de servidores.
+Figura 11: Funcionamento do Puppet
+Fonte: Docs Puppet. Disponível em: https://www.puppet.com/docs/puppet/8/what_is_puppet. Acesso em: 27 ago.
+2023.
+3. Comparando Ferramentas: Vantagens e Limitações
+Ao avaliar e escolher a melhor ferramenta de automação de infraestrutura para suas
+necessidades específicas, você pode considerar os seguintes critérios:
+• Complexidade: avalie a facilidade de uso e aprendizado de cada ferramenta. Algumas
+ferramentas podem ter uma curva de aprendizado mais íngreme do que outras, de-
+pendendo da sua experiência e conhecimento prévio;
+• Flexibilidade: verifique se a ferramenta oferece suporte a uma ampla variedade de
+sistemas operacionais, provedores de nuvem e tecnologias. Isso é importante para
+garantir que a ferramenta possa ser aplicada em diferentes cenários;
+.
+faculdade.grancursosonline.com.br 9 de 13
+Professor(a): Bruno Malhano
+• Escalabilidade: considere a capacidade da ferramenta de lidar com a escalabilidade da
+sua infraestrutura. Verifique se a ferramenta permite a configuração de servidores
+em grande escala e se possui recursos para gerenciar a resiliência e a disponibilidade
+dos servidores;
+• Integração: verifique se a ferramenta pode ser facilmente integrada com outras fer-
+ramentas e sistemas que você já está usando. Isso é importante para garantir a inte-
+roperabilidade e a automação contínua do seu ambiente;
+• Comunidade e Suporte: considere a comunidade de usuários e o suporte oferecido
+pela ferramenta. Verifique se existem fóruns, documentação abrangente e recursos
+de suporte disponíveis para ajudá-lo no uso da ferramenta.
+Além de avaliar os critérios, é importante uma análise detalhada do que se considera
+vantagem e desvantagem, pois isso está intimamente ligado aos casos de uso.
+Figura 12: Vantagens e limitações das ferramentas de automação
+Fonte: Elaborada pelo autor.
+• Ansible:
+− Vantagens: fácil de aprender e usar, não requer agentes nos nós, suporta uma am-
+pla variedade de sistemas operacionais e provedores de nuvem, tem uma grande
+comunidade e uma vasta coleção de módulos pré-construídos;
+− Limitações: menos adequado para cenários de configuração complexa e para am-
+bientes com requisitos de segurança mais rigorosos.
+.
+faculdade.grancursosonline.com.br 10 de 13
+Professor(a): Bruno Malhano
+• Terraform:
+− Vantagens: especializado em provisionamento de infraestrutura em nuvem, suporta
+uma ampla variedade de provedores de nuvem, permite a gestão do ciclo de vida
+completo da infraestrutura;
+− Limitações: menos adequado para configuração de servidores e ambientes além do
+provisionamento inicial, requer o uso de outras ferramentas para a configuração de
+servidores.
+• Chef:
+− Vantagens: poderoso para configuração e gerenciamento de servidores, fornece
+recursos avançados de automação e escalabilidade, tem uma grande comunidade
+e uma vasta coleção de receitas e cookbooks;
+− Limitações: curva de aprendizado mais íngreme, requer a instalação de agentes nos
+nós.
+• Puppet:
+− Vantagens: poderoso para configuração e gerenciamento de servidores, suporta
+uma ampla variedade de sistemas operacionais, tem uma grande comunidade e
+uma vasta coleção de módulos pré-construídos;
+− Limitações: curva de aprendizado mais íngreme, requer a instalação de agentes nos
+nós.
+Em última análise, a escolha da melhor ferramenta dependerá das suas necessidades
+específicas e preferências. Recomenda-se avaliar os critérios de comparação mencionados
+anteriormente e considerar as vantagens e limitações de cada ferramenta em relação às
+suas necessidades específicas. Por exemplo, se você está procurando uma ferramenta fácil
+de aprender e usar, o Ansible pode ser uma boa opção. Se você está focado principalmente
+no provisionamento de infraestrutura em nuvem, o Terraform pode ser mais adequado.
+Se você precisa de recursos avançados de automação e escalabilidade, o Chef ou o Puppet
+podem ser as escolhas certas.
+Além disso, é importante considerar a compatibilidade e integração com suas tecnologias
+existentes. Verifique se a ferramenta pode ser facilmente integrada com outras ferramentas
+e sistemas que você já está usando, para garantir uma automação contínua e uma
+infraestrutura coesa.
+.
+faculdade.grancursosonline.com.br 11 de 13
+Professor(a): Bruno Malhano
+Lembre-se de que, independentemente da ferramenta escolhida, é crucial investir
+tempo na compreensão e no aprendizado adequado da ferramenta. Isso ajudará você a
+aproveitar ao máximo seus recursos e a obter os melhores resultados.
+Considerações Finais da Aula
+Ao encerrar nossa exploração sobre ferramentas de automação, é notável a transformação
+que essas tecnologias têm trazido ao mundo da infraestrutura de TI. Começamos com
+uma introdução abrangente às ferramentas de automação, compreendendo seu papel
+fundamental na modernização e eficiência dos ambientes de TI.
+As principais ferramentas de IaC, incluindo Ansible, Terraform, Chef e Puppet, têm suas
+próprias características e vantagens distintas. Exploramos como essas ferramentas podem
+ser aplicadas de acordo com as necessidades específicas de cada projeto.
+Ao comparar essas ferramentas, conseguimos entender suas vantagens e limitações
+individuais. Isso nos forneceu uma visão clara sobre qual ferramenta é mais adequada
+para situações específicas, capacitando-nos a tomar decisões informadas ao implementar
+estratégias de automação.
+À medida que a tecnologia continua a avançar, a automação se torna cada vez mais
+crucial para a administração eficiente de infraestrutura. O conhecimento adquirido nesta
+aula serve como um guia valioso para qualquer profissional de TI em busca de eficiência,
+escalabilidade e confiabilidade em seus ambientes de infraestrutura. Que essa jornada nos
+inspire a abraçar as ferramentas de automação e aprimorar nossas habilidades em prol do
+sucesso em nossos projetos futuros.
+Material Complementar
+O que é Infraestrutura como Código
+2020, Will Pereira.
+O vídeo aborda o modelo de infraestrutura tradicional e de nuvem, explicando os moti-
+vos de adoção nos ambientes de computação atuais.
+Link para acesso: https://www.youtube.com/watch?v=_iho2OK_LDg&ab_channel=Wil-
+lPereira (acesso em 27 out. 2023).
+.
+faculdade.grancursosonline.com.br 12 de 13
+Professor(a): Bruno Malhano
+Referências
+ANSIBLEDOCS. Ansible, 2023. Disponível em: https://www.ansible.com/. Acesso em: 20
+ago. 2023.
+CHEN, J.; LI, Y. Automating IT Operations and Management: A Review of Basic Concepts
+and Recent Advances. IEEE Access, 6, 72529-72537. 2018.
+DOCUMENTAÇÃO Oficial do Terraform. Terraform, 2023. Disponível em: https://www.
+terraform.io/docs/index.html. Acesso em: 20 ago. 2023.
+ENTENDENDO pipelines de CI/CD. Jet Brains, 2023. Disponível em: https://www.je-
+tbrains.com/pt-br/teamcity/ci-cd-guide/ci-cd-pipeline/. Acesso em: 23 abr. 2023.
+FERRAMENTAS do mundo Devops. 4linux, 2023. Disponível em: https://4linux.com.br/
+ferramentas-do-mundo-devops/. Acesso em: 23 abr. 2023.
+HAMON, S.; MIGEON, F. Infrastructure as code: Managing servers in the cloud. O’Reilly
+Media. 2018.
+KAVIS, M. Architecting the Cloud: Design Decisions for Cloud Computing Service Models
+(SaaS, PaaS, and IaaS). John Wiley & Sons. 2015.
+.
+faculdade.grancursosonline.com.br 13 de 13
+PROFESSOR(A): BRUNO MALHANO
+IaC (Infratestrutura como Código) e CI/CD
+Implementando Ambiente com IaC
+Objetivo da Aula
+Compreender como implementar infraestrutura de computação utilizando código.
+Entender a relação da IaC com ambientes de nuvem.
+Apresentação
+Esta aula será dedicada à implementação de ambientes com Infrastructure as Code
+(IaC). Nesta jornada, abordaremos uma abordagem fundamental para o desenvolvimento
+e gerenciamento de infraestrutura de TI de maneira eficiente e escalável.
+Começaremos mergulhando na arte de desenvolver e gerenciar código de infraestrutura,
+compreendendo como expressar toda a infraestrutura como código. Em seguida, exploraremos
+o fascinante mundo do provisionamento de máquinas virtuais e recursos na nuvem de forma
+automatizada e consistente, utilizando ferramentas específicas.
+Para fechar, focaremos na importância de testar e validar a infraestrutura criada
+como um passo crítico para garantir sua confiabilidade. Prepare-se para uma aula repleta
+de insights sobre uma das tendências mais impactantes na administração de sistemas e
+infraestrutura de TI: o IaC.
+1. Desenvolvendo e Gerenciando Código de Infraestrutura
+A partir de agora, vamos focar nossos estudos em uma ferramenta de automação que
+é muito conhecida e utilizada no mercado, principalmente pela sua capacidade de prover
+e gerenciar infraestrutura de nuvem, com suporte para os três grandes provedores de
+serviços de nuvem do mercado.
+Os conceitos principais do Terraform são fundamentais para entender como essa
+ferramenta pode ajudar na implantação e gerenciamento de infraestruturas de TI. O conceito
+de “infraestrutura como código” é a base do Terraform. Isso significa que a infraestrutura
+de TI é tratada como um código, que pode ser versionado, testado e mantido usando as
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 11
+Professor(a): Bruno Malhano
+mesmas práticas que são usadas para desenvolver softwares. A infraestrutura como código
+permite que as equipes de TI trabalhem de forma mais ágil e eficiente, pois podem usar
+ferramentas de controle de versão e automação para implantar e gerenciar ambientes de
+forma mais rápida e consistente.
+Recursos: Os “recursos” são as unidades básicas de infraestrutura que o Terraform
+gerencia. Cada tipo de recurso representa um componente diferente da infraestrutura,
+como instâncias de máquinas virtuais, grupos de segurança, redes, discos etc. O Terraform
+usa a definição de recursos para criar, alterar ou remover elementos da infraestrutura.
+Módulos: Os “módulos” são uma forma de encapsular recursos em unidades lógicas e
+reutilizáveis. Os módulos permitem que as equipes de TI criem componentes de infraestrutura
+que podem ser facilmente compartilhados e reutilizados em diferentes projetos. Os módulos
+podem ser definidos em arquivos separados e podem ser instanciados várias vezes com
+diferentes configurações.
+A composição é a combinação de vários módulos para criar uma infraestrutura
+mais complexa.
+Figura 1: Composição de infraestrutura Terraform
+Fonte: Terraform Best Practices. Disponível em: https://www.terraform-best-practices.com/v/ptbr/key-concepts.
+Acesso em: 27 ago. 2023.
+.
+faculdade.grancursosonline.com.br 2 de 11
+Professor(a): Bruno Malhano
+Fontes de dados: As fontes de dados são um recurso do Terraform que permitem que
+você consulte informações sobre sua infraestrutura existente. Elas permitem que uma
+configuração do Terraform se baseie em informações definidas fora do Terraform ou
+definidas por outra configuração separada do Terraform.
+Providers: Os “providers” são os plugins que o Terraform usa para se comunicar com os
+diferentes serviços e plataformas de nuvem. Cada provider é responsável por traduzir as
+ações do Terraform em comandos que são entendidos pela plataforma-alvo. O Terraform
+suporta dezenas de providers, incluindo AWS, Azure, Google Cloud, Kubernetes, entre outros.
+Estado: O “estado” é um conceito central no Terraform. O estado representa como está
+a infraestrutura de TI que está sendo gerenciada pelo Terraform. O Terraform mantém um
+registro detalhado de todos os recursos que foram criados, alterados ou removidos. Isso
+permite que o Terraform possa fazer alterações incrementais na infraestrutura, em vez de
+ter que reconstrui-la completamente a cada vez.
+1.1. Estrutura de Configurações do Terraform
+Ao trabalhar com o Terraform, é essencial adotar uma estrutura organizada para suas
+configurações. Embora seja tentador colocar todo o código em um único arquivo, conhecido
+como main.tf, essa abordagem é difícil de gerenciar à medida que o projeto cresce em
+complexidade. Portanto, é recomendado dividir suas configurações em vários arquivos,
+seguindo uma estrutura lógica e modular.
+• main.tf: este arquivo serve como ponto de entrada para a sua configuração do Terra-
+form. Aqui, você deve chamar módulos, definir variáveis locais e especificar fontes de
+dados para criar todos os recursos necessários. A ideia é manter este arquivo o mais
+conciso possível, delegando as responsabilidades para outros arquivos específicos;
+• variables.tf: neste arquivo, você declara todas as variáveis que serão utilizadas na
+configuração principal (main.tf). As variáveis são uma parte fundamental do Terra-
+form, pois permitem a personalização e parametrização das configurações. Separar
+as variáveis em um arquivo dedicado facilita a organização e a manutenção, além de
+permitir atualizações rápidas e centralizadas;
+• outputs.tf: este arquivo contém as saídas dos recursos criados pela configuração do
+Terraform. As saídas são úteis para recuperar informações sobre os recursos criados,
+como endereços IP ou nomes DNS. Ao separar as saídas em um arquivo separado, você
+pode facilmente acessar e utilizar essas informações em outros processos ou infraes-
+truturas relacionadas;
+.
+faculdade.grancursosonline.com.br 3 de 11
+Professor(a): Bruno Malhano
+• versions.tf: este arquivo é utilizado para especificar os requisitos de versão do Terra-
+form. Ele garante que sua configuração seja compatível com a versão do Terraform
+que você está utilizando. Além disso, você pode fornecer restrições para as versões dos
+provedores necessários neste arquivo. Isolar os requisitos de versão em um arquivo
+separado facilita a gestão e a atualização conforme necessário.
+Ao adotar essa estrutura de arquivos, você ganha em organização, legibilidade e
+escalabilidade. Sua configuração se torna mais modular, facilitando a colaboração em
+equipe e a manutenção contínua do seu código.
+1.2. Recomendações
+Algumas recomendações comuns para a estruturação de código Terraform. É mais fácil
+e rápido trabalhar com um número menor de recursos.
+Terraform plan e Terraform apply fazem chamadas de API na nuvem para verificar o
+status dos recursos.
+• Se você tiver toda a sua infraestrutura em uma única composição, isso pode levar
+algum tempo;
+• Isolar recursos não relacionados uns dos outros, colocando-os em composições sepa-
+radas, reduz o risco se algo der errado;
+• Inicie seu projeto usando o estado remoto porque seu laptop não é lugar para sua in-
+fraestrutura fonte de verdade. Gerenciar um arquivo tfstate no git é um pesadelo. Mais
+tarde, quando as camadas de infraestrutura começarem a crescer em várias direções
+(número de dependências ou recursos), será mais fácil manter as coisas sob controle;
+• Pratique uma estrutura consistente de nomes de convenção. Como o código de aplica-
+ções, o código Terraform deve ser escrito para as pessoas lerem primeiro, a consistência
+ajudará quando as mudanças acontecerem daqui a seis meses;
+• Mantenha os módulos de recursos o mais simples possível. Não codifique valores que
+podem ser passados como variáveis ou descobertos usando fontes de dados. Use fontes
+de dados e Terraform_remote_state especificamente como uma cola entre módulos
+de infraestrutura dentro da composição.
+.
+faculdade.grancursosonline.com.br 4 de 11
+Professor(a): Bruno Malhano
+2. Provisionamento de Máquinas Virtuais e Recursos na Nuvem
+Antes de começar a desenvolver um código de infraestrutura, são necessários alguns
+passos para preparar o ambiente de desenvolvimento. Vamos utilizar o Microsoft Azure
+como provedor de nuvem para provisionamento do ambiente que estará representado
+em código. Como pré-requisitos para desenvolver e aplicar o código de infraestrutura, é
+necessário seguir estes passos:
+Pré-requisitos:
+• Instale o Terraform: o primeiro passo é instalar o Terraform na sua máquina local. No
+link a seguir, você encontra um guia detalhado de como poderá instalar o Terraform
+de acordo com arquitetura e sistema operacional. Para se comunicar com a sua conta
+Azure, é necessário ter um conjunto de credenciais. Você pode configurar suas creden-
+ciais de duas maneiras: usando variáveis de ambiente ou um arquivo de configuração.
+Link para acesso: https://learn.microsoft.com/pt-br/azure/developer/Terraform/
+quickstart-configure;
+• Instalar IDE para desenvolvimento: vamos utilizar o Visual Studio Code como IDE. Você
+encontra para download neste site: https://code.visualstudio.com/.
+Figura 2: Plugin Terraform Visual Studio
+Figura 2: Plugin Terraform Visual Studio
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 5 de 11
+Professor(a): Bruno Malhano
+Siga os passos para instalar a extensão do Terraform no Visual Studio
+Code: https://learn.microsoft.com/pt-br/azure/developer/Terraform/
+configure-vs-code-extension-for-Terraform?tabs=azure-cli.
+2.1. Desenvolvendo o Código de Infraestrutura
+Crie um diretório no seu computador para armazenar os arquivos. Em seguida abra o VS Code
+e clique em Arquivo (File), depois em abrir pasta (Open Folder). Selecione a pasta do projeto.
+Figura 3: Selecionar a pasta do projeto
+Fonte: Elaborada pelo autor.
+Criar arquivos Terraform: agora você está pronto para criar o seu projeto de infraestrutura
+com código. Vamos criar 4 arquivos dentro do diretório criado através do VS Code: main.tf,
+output.tf, providers.tf, variables.tf.
+.
+faculdade.grancursosonline.com.br 6 de 11
+Professor(a): Bruno Malhano
+Figura 4: Criando arquivos Terraform
+Fonte: Elaborada pelo autor.
+Agora vamos adicionar o código em cada um dos arquivos. Você encontra o código neste
+repositório Git: https://github.com/brunomalhano/Terraform_exemples.
+Inicie o Terraform: Depois de finalizar arquivos, você precisa inicializar o Terraform para
+que ele possa baixar os provedores necessários e configurar o ambiente. O comando para
+isso é Terraform init.
+Crie o seu plano: Agora que o Terraform está configurado corretamente, você pode criar
+um plano para a sua infraestrutura. O plano é uma visualização do que o Terraform fará
+quando você aplicar suas alterações. O comando para isso é Terraform plan.
+Aplique as alterações: Quando você estiver satisfeito com o plano, você pode aplicar
+as alterações. O Terraform criará todos os recursos definidos no seu arquivo Terraform na
+sua conta Azure. O comando para isso é Terraform apply.
+3. Testando e Validando a Infraestrutura Criada
+Após a execução dos scripts Terraform, podemos verificar a criação do ambiente na
+nuvem. Vamos verificar se tudo que foi configurado nos arquivos Terraform foi implementado
+em ambiente de nuvem.
+Figura 5: Verificação da criação do ambiente na nuvem
+.
+faculdade.grancursosonline.com.br 7 de 11
+Professor(a): Bruno Malhano
+Fonte: Elaborada pelo autor.
+Como podemos ver na figura 5, foram criados sete recursos dentro do grupo de recursos
+win-vm-caiman-rg (este nome vai depender do nome definido no Terraform). Foram criados
+recursos de rede, armazenamento e computação (máquina virtual).
+Figura 6: Recursos de rede, armazenamento e computação
+Fonte: Elaborada pelo autor.
+No bloco de código do arquivo Terraform main.tf, configuramos a instalação do serviço
+IIS na máquina virtual:
+.
+faculdade.grancursosonline.com.br 8 de 11
+Professor(a): Bruno Malhano
+Figura 7: Configuração e instalação
+Fonte: Elaborada pelo autor.
+Podemos verificar que a instalação foi efetuada com sucesso acessando o IP Público da
+máquina virtual. Selecione o recurso Máquina Virtual (Virtual Machine) e copie o endereço
+de IP Público do serviço. Com o endereço do IP copiado, podemos colar no navegador e
+verificar se o serviço está em execução.
+Figura 8: Verificação do serviço IIS
+Fonte: Elaborada pelo autor.
+Uma das capacidades de ambientes de nuvem é a possibilidade de criar e destruir (apagar)
+ambientes e, caso algo dê errado com a implantação, podemos refatorar os códigos, apagar
+os serviços no portal da Azure ou, ainda, utilizar o utilitário do Terraform para apagar o
+ambiente, executando o comando: Terraform plan -destroy -out main.destroy.tfplan. Em
+seguida, execute o comando Terraform apply main.destroy.tfplan.
+.
+faculdade.grancursosonline.com.br 9 de 11
+Professor(a): Bruno Malhano
+O comando Terraform plan é usado para criar um plano de execução que determina
+quais ações são necessárias para criar a configuração especificada em seus arquivos de
+configuração. Esse padrão permite que você verifique se o plano de execução corresponde
+às suas expectativas antes de fazer qualquer alteração nos recursos reais. O parâmetro
+opcional -out permite que você especifique um arquivo de saída para o plano. Usar o
+parâmetro -out garante que o plano que você examinou seja exatamente o que é aplicado.
+Considerações Finais da Aula
+Como conclusão, podemos destacar a importância de adotar essa abordagem para o
+desenvolvimento e gerenciamento de infraestrutura.
+Aprendemos a desenvolver e gerenciar código de infraestrutura, permitindo-nos
+tratar nossa infraestrutura da mesma forma que tratamos o código de aplicativos. O
+provisionamento automatizado de recursos na nuvem nos dá a flexibilidade e escalabilidade
+necessárias para enfrentar desafios em constante evolução.
+Além disso, a ênfase na validação e teste da infraestrutura garante que nosso ambiente
+seja confiável e seguro. À medida que nos aprofundamos nesse conceito, estamos melhor
+preparados para criar infraestruturas mais robustas, econômicas e ágeis, alinhadas com
+as demandas do mundo digital em constante evolução. Avancemos, armados com esse
+conhecimento, para enfrentar os desafios de TI, com confiança e eficácia.
+Material Complementar
+Usar o Terraform para criar uma VM do Linux no Azure
+2023, Microsoft.
+Use este tutorial para exercitar o conteúdo desta aula, executando os passos para provi-
+sionar um novo ambiente. Replique o aprendizado agora com uma máquina virtual Linux.
+Link para acesso: https://learn.microsoft.com/pt-br/azure/virtual-machines/linux/
+quick-create-Terraform (acesso em 27 out. 2023).
+Referências
+DOCUMENTAÇÃO do Terraform. Hashicorp, 2023. Disponível em: https://developer.hashi-
+corp.com/Terraform/docs. Acesso em: 22 ago. 2023.
+.
+faculdade.grancursosonline.com.br 10 de 11
+Professor(a): Bruno Malhano
+ENTENDENDO pipelines de CI/CD. Jet Brains, 2023. Disponível em: https://www.je-
+tbrains.com/pt-br/teamcity/ci-cd-guide/ci-cd-pipeline/. Acesso em: 23 abr. 2023.
+FERRAMENTAS do mundo Devops. 4linux, 2023. Disponível em: https://4linux.com.br/
+ferramentas-do-mundo-devops/. Acesso em: 23 abr. 2023.
+GUIA de aprendizagem da HashiCorp sobre organização do código do Terraform. Hashi-
+corp, 2023. Disponível em: https://learn.hashicorp.com/tutorials/Terraform/organize-
+-configuration. Acesso em: 22 ago. 2023.
+KEY Concepts. Terraform Best Practices, 2021. Disponível em: https://www.terraform-
+-best-practices.com/key-concepts. Acesso em: 12 de out. de 2021.
+.
+faculdade.grancursosonline.com.br 11 de 11
+PROFESSOR(A): BRUNO MALHANO
+IaC (Infratestrutura como Código) e CI/CD
+Implementando Pipeline de CI/CD
+Objetivo da Aula
+Compreender os princípios de implementação de um pipeline de CI/CD. Compreender
+os aspectos de configuração. Compreender o papel dos testes no pipeline de CI/CD.
+Apresentação
+Nesta aula, exploraremos os pilares que sustentam a eficiência e a qualidade no
+desenvolvimento de software. Começaremos compreendendo a arquitetura essencial de
+um Pipeline de CI/CD, estabelecendo as bases para uma entrega de software contínua e
+confiável. Em seguida, mergulharemos na configuração detalhada de um Pipeline de CI/
+CD, mostrando como orquestrar cada etapa de desenvolvimento de forma automatizada e
+eficiente. Por fim, veremos como a automação de testes e implantações no Pipeline elevam
+a qualidade e a consistência do nosso software.
+Prepare-se para dominar uma das metodologias mais críticas e impactantes no mundo
+do desenvolvimento de software moderno.
+1. Arquitetura de um Pipeline de CI/CD
+Um Pipeline de CI/CD (Continuous Integration/Continuous Deployment) é uma estrutura
+que permite automatizar e otimizar o processo de entrega de software. Ele engloba várias
+etapas, desde a integração do código até a implantação e monitoramento em ambiente
+de produção. Essa arquitetura é fundamental para garantir a eficiência e qualidade na
+entrega de software.
+Um Pipeline de CI/CD é uma abordagem que visa integrar, testar, implantar e monitorar o
+software de forma contínua. Ele é composto por uma série de etapas sequenciais, também
+conhecidas como fases, executadas automaticamente a cada alteração no código fonte. Essa
+abordagem permite que os desenvolvedores detectem e corrijam problemas rapidamente,
+além de possibilitar a entrega frequente de novas funcionalidades aos usuários.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 10
+Professor(a): Bruno Malhano
+Figura 1: Ci/CD Pipeline
+Fonte: Blog XP Educação. Disponível em: https://blog.xpeducacao.com.br/pipeline-ci-cd/. Acesso em: 22 ago. 2023.
+Os benefícios de um Pipeline de CI/CD são inúmeros. Ele permite a detecção precoce de
+bugs e erros de integração, uma vez que cada alteração é testada automaticamente. Além
+disso, a entrega contínua de software reduz o tempo de lançamento de novas funcionalidades,
+tornando a empresa mais ágil e competitiva. Outro benefício é a diminuição do risco de
+falhas em produção, uma vez que o software passa por um processo rigoroso de testes
+antes de ser implantado.
+Um Pipeline de CI/CD é composto por diversas fases executadas sequencialmente. As
+etapas típicas incluem:
+• Integração: nesta fase, o código é integrado com o repositório principal, onde todas as
+alterações são armazenadas. É nesse momento que são realizados os testes de inte-
+gração para garantir que o código seja compatível com o restante do sistema;
+• Teste: após a integração, o código passa por uma bateria de testes automatizados para
+garantir que ele funcione corretamente. Esses testes podem incluir testes unitários,
+testes de integração, testes de aceitação, entre outros;
+• Implantação: após os testes serem aprovados, o código é implantado em um ambien-
+te de homologação ou produção. Essa etapa envolve a configuração do ambiente, a
+instalação do software e a realização de testes finais;
+• Monitoramento: após a implantação, o software é monitorado em tempo real para
+garantir que ele esteja funcionando corretamente. Isso inclui a coleta de métricas, logs
+e alertas para identificar possíveis problemas e tomar ações corretivas.
+.
+faculdade.grancursosonline.com.br 2 de 10
+Professor(a): Bruno Malhano
+1.1. Arquitetura de Base CI/CD com Azure Pipelines
+O Azure DevOps Pipelines é uma plataforma que permite a automação do processo de
+desenvolvimento, teste e implantação de software. Ele fornece uma maneira eficiente de
+criar, testar e implantar aplicativos em várias plataformas, como nuvem, local ou híbrida.
+Na figura 2, podemos observar o fluxo de execução de uma arquitetura de base utilizando
+o Azure Devps.
+Figura 2: Fluxo de execução de uma arquitetura
+Fonte: Microsoft Learning. Disponível em: https://learn.microsoft.com/pt-br/azure/devops/pipelines/architectures/
+devops-pipelines-baseline-architecture?view=azure-devops. Acesso em: 22 ago. 2023.
+O fluxo de execução de um pipeline no Azure DevOps Pipelines começa com a configuração
+de um pipeline, onde o código-fonte é definido e os estágios são configurados. Em seguida, o
+pipeline é disparado, e os agentes começam a executar as tarefas definidas em cada estágio.
+Durante a execução, os agentes podem acessar os repositórios de código-fonte para obter
+o código necessário para a construção do aplicativo. Eles também podem acessar outros
+recursos, como bancos de dados ou serviços de nuvem, para realizar tarefas específicas.
+À medida que o pipeline avança, os artefatos são gerados e armazenados em um local
+específico. Esses artefatos podem ser usados posteriormente em outras etapas do pipeline
+ou podem ser implantados em ambientes de produção.
+1.2. Arquitetura de um Pipeline em AWS
+Agora vamos avaliar um das arquiteturas de referência da AWS para construção de um
+pipeline focado em DevSecOps. Na arquitetura, são considerados serviços disponíveis em
+ambiente de nuvem AWS.
+.
+faculdade.grancursosonline.com.br 3 de 10
+Professor(a): Bruno Malhano
+Figura 3: Arquitetura de referência DevSecOps da AWS
+Fonte: Amazon Blog. Disponível em: https://aws.amazon.com/pt/blogs/aws-brasil/construindo-um-pipeline-de-ci-cd-
+-aws-devsecops-de-ponta-a-ponta-com-ferramentas-de-codigo-aberto-sca-sast-e-dast/. Acesso em: 22 ago. 2023.
+Quando o usuário envia o código para um repositório do CodeCommit, é gerando um
+evento do CloudWatch que aciona o CodePipeline.
+O CodeBuild empacota o código e envia os artefatos para um bucket do S31. O CodeBuild
+também usa as informações de autenticação armazenadas no Parameter Store para iniciar
+a análise de segurança do código.
+O CodeBuild escaneia o código com uma ferramenta de SCA (OWASP Dependency-Check)
+e uma ferramenta de SAST (SonarQube ou PHPStan). Se houver alguma vulnerabilidade, o
+CodeBuild invoca uma função Lambda que envia os resultados para o Security Hub e para
+um bucket do S33.
+Se não houver vulnerabilidades, o CodeDeploy implanta o código no ambiente de teste
+do Elastic Beanstalk.
+Após a implantação bem-sucedida, o CodeBuild aciona a análise de DAST com a ferramenta
+OWASP ZAP. Se houver alguma vulnerabilidade, o CodeBuild invoca a mesma função Lambda.
+Se não houver vulnerabilidades, a etapa de aprovação é acionada e um e-mail é enviado
+para o aprovador. Após a aprovação, o CodeDeploy implanta o código no ambiente de
+produção do Elastic Beanstalk. Durante a execução do pipeline, o CloudWatch Events captura
+as mudanças de estado da construção e envia e-mails.
+.
+faculdade.grancursosonline.com.br 4 de 10
+Professor(a): Bruno Malhano
+2. Aspectos de um Pipeline de CI/CD Focado em IaC
+Configurar um pipeline de CI/CD focado em IaC (Infrastructure as Code) envolve algumas
+etapas específicas. Vamos detalhar cada uma delas:
+• Escolher a ferramenta de IaC: a primeira etapa é escolher a ferramenta de IaC que
+será utilizada para gerenciar a infraestrutura como código. Alguns exemplos popu-
+lares são o Terraform, AWS CloudFormation, Azure Resource Manager, Google Cloud
+Deployment Manager, entre outros. Selecione a ferramenta que melhor se adequa às
+necessidades do projeto e da equipe;
+• Definir a estrutura da infraestrutura: em seguida, é necessário definir a estrutura
+da infraestrutura desejada utilizando a linguagem específica da ferramenta escolhida.
+Isso pode incluir a criação de máquinas virtuais, redes, bancos de dados, serviços de
+armazenamento, entre outros recursos. É importante criar uma estrutura modular e
+reutilizável, permitindo que a infraestrutura possa ser gerenciada de forma eficiente;
+• Configurar o repositório de código: assim como em um pipeline de CI/CD tradicional,
+é necessário configurar a integração com o repositório de código utilizado pela equipe.
+Certifique-se de que a ferramenta de IaC escolhida seja capaz de se integrar ao repositório,
+permitindo que as alterações no código de infraestrutura disparem a execução do pipeline;
+• Definir os scripts e comandos: para configurar um pipeline de IaC, é necessário definir
+os scripts e comandos que serão executados para gerenciar a infraestrutura. Isso pode
+incluir comandos para criar, atualizar e destruir os recursos de infraestrutura. Além
+disso, é possível definir scripts para validar a configuração, executar testes e realizar
+verificações de segurança;
+• Automatizar os testes: da mesma forma que em um pipeline de CI/CD tradicional, é
+fundamental automatizar os testes da infraestrutura como código. Isso pode incluir
+a execução de testes de validação da configuração, testes de integração com outros
+serviços, testes de segurança e conformidade, entre outros. A automação dos testes
+garante que a infraestrutura seja confiável e consistente;
+• Configurar a implantação automatizada: na etapa de implantação, é necessário
+configurar a implantação automatizada da infraestrutura em ambientes de teste e
+produção. Isso pode envolver a criação de pipelines separados para cada ambiente, a
+configuração de ambientes isolados e a definição de políticas de controle de acesso
+aos recursos. A implantação automatizada garante uma entrega rápida e confiável da
+infraestrutura;
+.
+faculdade.grancursosonline.com.br 5 de 10
+Professor(a): Bruno Malhano
+• Monitorar e auditar a infraestrutura: após a implantação, é importante monitorar e
+auditar continuamente a infraestrutura para garantir sua integridade e segurança. Isso
+pode incluir o monitoramento de métricas de desempenho, logs de eventos e alertas de
+segurança. Além disso, é possível realizar auditorias regulares para garantir que a configura-
+ção da infraestrutura esteja em conformidade com as políticas e requisitos estabelecidos;
+• Versionar a infraestrutura: para garantir a rastreabilidade e a reversibilidade das
+alterações na infraestrutura, é importante versionar o código de infraestrutura. Utilize
+um sistema de controle de versão, como o Git, para gerenciar as alterações e histórico
+da infraestrutura como código. Isso permite que a equipe trabalhe de forma colabo-
+rativa, mantendo um registro completo das alterações realizadas;
+• Realizar revisões de código: assim como no desenvolvimento de software, é reco-
+mendado que haja revisões de código para o código de infraestrutura. Isso ajuda a
+identificar possíveis erros, melhorar a qualidade e garantir boas práticas. Estabeleça
+processos de revisão de código entre os membros da equipe para garantir que o código
+de infraestrutura seja revisado e aprovado antes da implantação;
+• Utilizar ambientes de teste: para testar as alterações na infraestrutura antes da
+implantação em produção, é recomendado o uso de ambientes de teste. Configure
+ambientes isolados e semelhantes ao ambiente de produção para validar as alterações
+de maneira segura. Isso ajuda a identificar problemas e evitar impactos indesejados
+no ambiente de produção;
+• Implementar pipelines de aprovação: dependendo da complexidade do ambiente de
+produção e das políticas da organização, pode ser necessário implementar pipelines
+de aprovação antes da implantação em produção. Isso permite que as alterações na
+infraestrutura sejam revisadas e aprovadas por pessoas responsáveis antes de serem
+implantadas no ambiente de produção;
+• Monitorar e otimizar o pipeline: assim como em qualquer pipeline de CI/CD, é importante
+monitorar e otimizar o pipeline de IaC. Isso inclui a análise de métricas, como o tempo de
+execução do pipeline, a taxa de sucesso das implantações, a detecção de erros ou falhas
+e o tempo de reversão de alterações. Com base nessas métricas, é possível identificar
+possíveis melhorias e ajustes no pipeline para torná-lo mais eficiente e confiável.
+Com base nessas características, é possível construir um pipeline de CI/CD, focado em
+IaC, eficiente e confiável, permitindo que a infraestrutura seja gerenciada de forma ágil e
+automatizada.
+.
+faculdade.grancursosonline.com.br 6 de 10
+Professor(a): Bruno Malhano
+3. Testes no Monitoramento de um Pipeline IaC
+Para garantir a qualidade do pipeline de CI/CD focado em Infrastructure as Code (IaC),
+é importante aplicar várias etapas de testes. Essas etapas visam validar as mudanças na
+infraestrutura e garantir que não haja problemas ou falhas antes da implantação.
+• Testes de sintaxe e formatação: antes de qualquer outra coisa, é importante garantir
+que o código IaC esteja corretamente escrito e formatado. Isso pode ser feito utilizando
+ferramentas de linting e formatação, como o Terraform fmt para arquivos Terraform
+ou o Pylint para arquivos Ansible. Esses testes garantem que o código esteja legível,
+coerente e siga as melhores práticas;
+• Testes de unidade: os testes de unidade são aplicados para verificar o comportamento
+correto de componentes individuais do código IaC. Por exemplo, você pode testar se
+um módulo do Terraform cria corretamente um recurso específico ou se um playbook
+do Ansible configura corretamente um serviço. Esses testes ajudam a identificar pro-
+blemas em componentes específicos antes da implantação;
+• Testes de integração: os testes de integração são realizados para verificar se os dife-
+rentes componentes do código IaC funcionam corretamente em conjunto. Isso envolve
+a implantação da infraestrutura em um ambiente de teste e a execução de casos de
+teste que verifiquem se os recursos estão corretamente configurados e interagindo
+entre si. Esses testes ajudam a identificar problemas de integração entre componentes;
+• Testes de segurança: os testes de segurança são essenciais para garantir que a in-
+fraestrutura provisionada esteja segura contra ameaças. Isso envolve a verificação de
+configurações de segurança, como permissões de acesso, criptografia e controle de
+acesso a recursos sensíveis. Ferramentas como o Terraform Security e o Ansible Vault
+podem ser utilizadas para automatizar esses testes;
+• Testes de desempenho: os testes de desempenho são aplicados para verificar se a
+infraestrutura provisionada é capaz de lidar com a carga esperada. Isso envolve a exe-
+cução de testes de estresse, monitoramento de métricas de desempenho e otimização
+da configuração para melhorar o desempenho. Ferramentas como o JMeter e o Locust
+podem ser utilizadas para realizar esses testes.
+Existem várias ferramentas disponíveis para a automação de testes no pipeline de IaC.
+Algumas das mais populares incluem:
+.
+faculdade.grancursosonline.com.br 7 de 10
+Professor(a): Bruno Malhano
+• InSpec: uma ferramenta que permite escrever testes de conformidade em formato de
+código, verificando se a infraestrutura está em conformidade com as políticas definidas;
+• Serverspec: uma biblioteca de testes em Ruby que permite verificar o estado da in-
+fraestrutura como código, verificando configurações, serviços em execução e outros
+aspectos;
+• Test Kitchen: uma ferramenta que automatiza a criação e execução de testes em
+diferentes ambientes, permitindo testar o código IaC em ambientes reais antes de
+implantá-lo;
+• Terraform Validator: uma ferramenta específica para testar arquivos de configuração
+do Terraform, verificando a sintaxe, validando parâmetros e detectando erros comuns.
+Uma vez definidos os tipos de testes e escolhidas as ferramentas de automação, é
+importante integrar os testes no pipeline de IaC. Isso pode ser feito por meio de integração
+contínua, onde os testes automatizados são executados a cada commit ou pull request,
+garantindo que o código IaC esteja sempre em conformidade e livre de erros.
+Além disso, é possível implementar a entrega contínua, onde o código IaC é implantado
+automaticamente em ambientes de staging ou pré-produção, permitindo testes mais
+abrangentes antes da implantação em ambiente de produção.
+Figura 4: Exemplo de um pipeline com estágios
+Fonte: Cloud Motion. Disponível em: https://www.cloudmotion.com.br/blog/2020/01/13/azure-pipelines-deployment-
+-gates. Acesso em: 22 ago. 2023.
+A automação de testes no pipeline de IaC traz diversos benefícios para a equipe de
+infraestrutura, como:
+.
+faculdade.grancursosonline.com.br 8 de 10
+Professor(a): Bruno Malhano
+• Detecção precoce de erros: os testes automatizados permitem detectar erros e pro-
+blemas na infraestrutura antes mesmo da implantação em ambiente de produção,
+reduzindo o tempo de resolução e evitando impactos negativos para os usuários finais;
+• Entrega contínua de infraestrutura confiável: com os testes automatizados integrados
+ao pipeline de IaC, é possível garantir a entrega contínua de infraestrutura confiável,
+reduzindo os riscos de falhas e indisponibilidade;
+• Eficiência e produtividade: a automação de testes permite que a equipe de infraes-
+trutura execute os testes de forma rápida e consistente, o que aumenta a eficiência
+e a produtividade, liberando tempo para atividades mais estratégicas;
+• Conformidade e governança: os testes automatizados ajudam a garantir que a infraes-
+trutura esteja em conformidade com as políticas e padrões definidos pela organização,
+fornecendo maior controle e governança sobre o ambiente.
+Considerações Finais da Aula
+Compreendemos exemplos de arquitetura que sustenta a entrega contínua, a configuração
+de pipelines e a automação de testes e implantações.
+Ao aplicarmos esses conceitos em nossos projetos, fortalecemos a eficiência operacional e
+elevamos a qualidade do software que entregamos. Lembremos sempre que o CI/CD não é apenas
+uma ferramenta, mas uma filosofia que promove a excelência no desenvolvimento de software.
+Ao continuar a explorar e aplicar essas práticas, estaremos mais bem preparados para
+enfrentar os desafios em constante evolução da indústria de TI. Avancemos, confiantes
+de que dominar o CI/CD é uma conquista que enriquecerá nossas habilidades e melhorará
+nossos resultados em projetos futuros.
+Material Complementar
+Tutorial: Implantar ambientes em CI/CD com o GitHub
+2023, Microsoft.
+Neste tutorial você aprenderá a integrar os Ambientes de Implantação do Azure ao
+pipeline de CI/CD usando o GitHub Actions. Você pode usar qualquer provedor GitOps
+que dê suporte a CI/CD, como GitHub Actions, Azure Arc, GitLab ou Jenkins.
+Link para acesso: https://learn.microsoft.com/pt-br/azure/deployment-environments/
+tutorial-deploy-environments-in-cicd-github (acesso em 27 out. 2023).
+.
+faculdade.grancursosonline.com.br 9 de 10
+Professor(a): Bruno Malhano
+Referências
+ANSIBLE Vault. Ansible, 2023. Disponível em: https://docs.ansible.com/ansible/latest/
+user_guide/vault.html. Acesso em: 20 ago. 2023.
+APACHE Software Foundation. Apache JMeter, 2023. Página inicial. Disponível em: ht-
+tps://jmeter.apache.org/. Acesso em: 20 ago. 2023.
+BHARDWAJ, Anuj et al. Infrastructure as Code: Managing Servers in the Cloud. O’Reilly
+Media, 2016.
+CHEF. What is Test Kitchen? KitchenCi, 2021. Disponível em: https://kitchen.ci. Acesso
+em: 19 out. 2021.
+DOCUMENTATION. Pylint, 2023. Disponível em: https://pylint.pycqa.org/en/latest/.
+Acesso em: 27 out. 2023.
+DOCUMENTATION. Terraform Security, 2023. Disponível em: https://www.terraform-se-
+curity.com/. Acesso em: 20 ago. 2023.
+DUVALL, P., MATYAS, S.; GLOVER, A. Continuous integration: improving software quality
+and reducing risk. Pearson Education. 2007.
+ENTENDENDO pipelines de CI/CD. Jet Brains, 2023. Disponível em: https://www.je-
+tbrains.com/pt-br/teamcity/ci-cd-guide/ci-cd-pipeline/. Acesso em: 23 abr. 2023.
+FERRAMENTAS do mundo Devops. 4linux, 2023. Disponível em: https://4linux.com.br/
+ferramentas-do-mundo-devops/. Acesso em: 23 abr. 2023.
+FOWLER, M. Continuous integration. Martin Fowler, 2006. Disponível em: https://martin-
+fowler.com/articles/continuousIntegration.html. Acesso em: 22 ago. 2023.
+INFRASTRUCTURE as Code (IaC). Hashicorp, 2023. Disponível em: https://www.hashicorp.
+com/resources/what-is-infrastructure-as-code-iac. Acesso em: 22 ago. 2023.
+HUMBLE, J.; Farley, D. Continuous delivery: reliable software releases through build, test,
+and deployment automation. Addison-Wesley Professional, 2010.
+.
+faculdade.grancursosonline.com.br 10 de 10
+PROFESSOR(A): BRUNO MALHANO
+IaC (Infratestrutura como Código) e CI/CD
+Desenvolvimento Orientado a Testes
+Objetivo da Aula
+Compreender os princípios do desenvolvimento orientado a testes. Conhecer os testes
+unitários e como escrevê-los. Compreender os testes de aceitação e a integração dos testes
+em ambientes de CI/CD.
+Apresentação
+Abordaremos os princípios fundamentais que norteiam o TDD, uma metodologia que
+se destaca pela sua capacidade de assegurar a criação de software sólido e confiável.
+Inicialmente, nos aprofundaremos nos princípios centrais do TDD, compreendendo como esta
+abordagem tem o potencial de transformar os processos de desenvolvimento de software.
+Em seguida, focalizaremos a habilidade de criar Testes Unitários eficazes, essenciais para
+verificar se cada componente do código opera de acordo com as expectativas.
+No entanto, nossa exploração não se limitará a isso. Dedicaremos um tempo para examinar
+os Testes de Integração e os Testes de Aceitação, ampliando, assim, nosso repertório de
+ferramentas para garantir a qualidade do software. Por fim, aprenderemos como integrar
+esses testes de forma harmoniosa em nosso fluxo de Integração Contínua/Entrega Contínua
+(CI/CD), assegurando que a qualidade seja uma preocupação constante durante todo o ciclo
+de vida do desenvolvimento.
+1. Princípios do Desenvolvimento Orientado a Testes (TDD)
+O Desenvolvimento Orientado a Testes (TDD) é uma metodologia de desenvolvimento
+de software que tem como princípio escrever os testes antes de escrever o código. Isso
+significa que, antes mesmo de começar a implementar uma funcionalidade, o desenvolvedor
+escreve um teste automatizado que verifica se essa funcionalidade está sendo corretamente
+implementada.
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 11
+Professor(a): Bruno Malhano
+Essa abordagem tem como objetivo principal garantir que o código seja testado de
+forma automática e contínua, reduzindo a ocorrência de bugs e melhorando a qualidade
+do software. Além disso, o TDD também contribui para a documentação do código, pois os
+testes servem como exemplos claros de como a funcionalidade deve ser utilizada.
+Figura 1: TDD
+Fonte: Dev Media. Disponível em: https://www.devmedia.com.br/tdd-fundamentos-do-desenvolvimento-orientado-a-
+-testes/28151. Acesso em: 22 ago. 2023.
+O ciclo de desenvolvimento TDD é composto por três etapas: Red, Green e Refactor.
+Na etapa Red, o desenvolvedor escreve um teste automatizado que falhe, representando
+a funcionalidade que será implementada. Em seguida, na etapa Green, o desenvolvedor
+escreve o código mínimo necessário para fazer o teste passar. Por fim, na etapa Refactor,
+o desenvolvedor realiza melhorias no código, garantindo que ele esteja limpo e de fácil
+manutenção.
+Esse ciclo é repetido várias vezes ao longo do desenvolvimento da funcionalidade,
+garantindo que o código esteja sempre bem testado e que as melhorias sejam feitas de
+forma incremental. Dessa forma, o desenvolvedor pode ter mais confiança na qualidade do
+código e ter a certeza de que as alterações realizadas não causaram regressões no software.
+O TDD traz uma série de benefícios para o desenvolvimento de software. Um dos
+principais benefícios é a melhoria na qualidade do código. Ao escrever os testes primeiro,
+o desenvolvedor é obrigado a pensar nos casos de uso e nos possíveis cenários de erro, o
+que ajuda a identificar e corrigir problemas antes mesmo deles acontecerem. Isso resulta
+em um código mais robusto, com menos bugs e mais fácil de ser mantido e evoluído.
+.
+faculdade.grancursosonline.com.br 2 de 11
+Professor(a): Bruno Malhano
+Além disso, o TDD também acelera o desenvolvimento. Embora possa parecer que,
+escrever primeiro os testes demanda mais tempo, na prática, essa abordagem traz uma
+série de benefícios a longo prazo. Ao ter um conjunto abrangente de testes automatizados,
+o desenvolvedor pode fazer alterações no código com mais confiança, pois tem a garantia
+de que as funcionalidades existentes continuarão funcionando corretamente. Isso permite
+que as alterações sejam feitas de forma mais rápida, sem o medo de introduzir regressões.
+Em resumo, o TDD é uma abordagem de desenvolvimento que traz benefícios significativos
+para a qualidade do código e para a velocidade de desenvolvimento. Ao escrever os testes
+primeiro, o desenvolvedor garante que o software seja testado de forma automática e
+contínua, reduzindo bugs e melhorando a qualidade. Além disso, o TDD também permite
+que o desenvolvedor faça alterações no código com mais confiança e agilidade, acelerando
+o processo de desenvolvimento. Com isso, o TDD se torna uma prática fundamental para
+equipes de desenvolvimento ágeis, pois promove a entrega de software de alta qualidade
+de forma mais eficiente.
+2. Escrevendo Testes Unitários Eficientes
+Os testes unitários são uma prática fundamental no desenvolvimento de software que
+consiste em testar as unidades individuais do código, como funções, métodos ou classes, de
+forma isolada. O objetivo é verificar se essas unidades funcionam corretamente e produzem
+os resultados esperados.
+Esses testes são escritos em uma linguagem de programação específica para automatizar
+o processo de verificação. Eles são executados de forma rápida e repetitiva, permitindo
+identificar erros e falhas de forma ágil e eficiente.
+Os testes unitários se encaixam no desenvolvimento de software como uma etapa
+essencial do processo de qualidade. Eles ajudam a garantir que cada unidade de código
+funcione corretamente antes de ser integrada ao sistema como um todo. Dessa forma, os
+testes unitários contribuem para a detecção precoce de problemas, facilitam a depuração
+e tornam o processo de desenvolvimento mais seguro e confiável.
+Um teste unitário eficaz possui uma estrutura clara e bem definida. Geralmente, é
+composto por três partes principais:
+• Preparação: nesta etapa, são definidos os dados de entrada e as condições iniciais ne-
+cessárias para testar a unidade em questão. Isso pode envolver a criação de objetos, a
+configuração de parâmetros e a definição de cenários específicos;
+.
+faculdade.grancursosonline.com.br 3 de 11
+Professor(a): Bruno Malhano
+• Execução: aqui, a unidade de código é executada com base nos dados de entrada e
+condições definidas anteriormente. O objetivo é testar a funcionalidade em questão
+e verificar se ela produz o resultado esperado;
+• Verificação: nesta etapa, são realizadas as asserções para verificar se o resultado obtido
+é igual ao resultado esperado. Isso envolve a comparação de valores, a verificação de
+exceções e a validação de comportamentos específicos.
+Figura 2: Exemplo de teste unitário
+Fonte: Elaborada pelo autor.
+Para escrever testes unitários eficientes, é importante seguir algumas boas práticas:
+• Mantenha os testes pequenos e focados em uma única funcionalidade. Isso facilita a
+identificação e a correção de erros;
+• Utilize nomes descritivos para os testes e as asserções, de forma que fique claro o que
+está sendo testado e o que se espera como resultado;
+• Evite o acoplamento entre testes. Cada teste deve ser independente e não depender
+do resultado de outros testes;
+• Utilize dados de teste relevantes e representativos. Isso ajuda a cobrir diferentes ce-
+nários e a identificar possíveis falhas;
+• Mantenha os testes atualizados conforme o código é alterado. Isso garante que eles
+continuem sendo eficazes e reflitam o comportamento atual do código.
+Ao seguir essas boas práticas, é possível escrever testes unitários legíveis, de fácil
+manutenção e que contribuam de forma significativa para a qualidade do software.
+.
+faculdade.grancursosonline.com.br 4 de 11
+Professor(a): Bruno Malhano
+3. Testes de Integração e Testes de Aceitação
+Os testes de integração são uma etapa importante no processo de desenvolvimento de
+software, onde diferentes unidades de código são combinadas e testadas em conjunto. O
+objetivo desses testes é verificar se as diversas partes do sistema se comunicam e funcionam
+corretamente quando integradas.
+Enquanto os testes unitários focam em testar as unidades individuais do código, os
+testes de integração verificam a interação entre essas unidades. Eles ajudam a identificar
+problemas que podem surgir quando diferentes componentes são combinados, como
+conflitos de dependências, erros de comunicação ou falhas na integração de funcionalidades.
+Esses testes podem ser realizados em diferentes níveis de integração, desde a integração
+de pequenos componentes até a integração de módulos completos do sistema. Eles são
+necessários para garantir que todas as peças do software funcionem corretamente
+em conjunto, evitando problemas de incompatibilidade e assegurando a qualidade do
+produto final.
+Os testes de aceitação são realizados para verificar se o software atende aos requisitos e
+expectativas do usuário. Eles são conduzidos com base nos casos de uso e nas especificações
+funcionais do sistema, simulando situações reais de uso para validar o comportamento e
+a usabilidade do software.
+Esses testes são escritos a partir da perspectiva do usuário, focando nos principais
+fluxos de trabalho e nas funcionalidades críticas. Eles ajudam a identificar problemas de
+usabilidade, falhas de lógica e possíveis lacunas nos requisitos.
+Os testes de aceitação podem ser realizados manualmente ou de forma automatizada,
+utilizando ferramentas específicas. Eles são essenciais para garantir que o software atenda
+às necessidades e expectativas do usuário final, proporcionando uma experiência satisfatória
+e funcional.
+• Teste de Aceitação do Usuário (UAT): o teste de aceitação do usuário é conduzido com
+a participação direta dos usuários finais ou de representantes dos usuários. O objetivo
+é avaliar se o software atende às necessidades e expectativas dos usuários. Durante
+esse teste, os usuários executam tarefas reais e fornecem feedback sobre a usabi-
+lidade, a experiência do usuário e a adequação do software às suas necessidades. O
+UAT é fundamental para garantir que o software seja intuitivo, eficiente e atenda às
+expectativas dos usuários antes de ser implantado em produção;
+.
+faculdade.grancursosonline.com.br 5 de 11
+Professor(a): Bruno Malhano
+• Teste de Aceitação Operacional (OAT): o teste de aceitação operacional verifica se o
+software está pronto para ser implantado e operado em um ambiente de produção.
+Ele avalia a capacidade do sistema de suportar a carga de trabalho esperada, a esca-
+labilidade, a disponibilidade e a estabilidade. Esse teste também pode incluir a verifi-
+cação de aspectos como backup e recuperação, segurança, gerenciamento de falhas
+e conformidade com os requisitos operacionais. O objetivo é garantir que o software
+esteja pronto para uso em um ambiente real e que seja capaz de atender às necessi-
+dades operacionais do negócio;
+• Testes de Aceitação Alfa e Beta: os testes de aceitação alfa e beta são realizados em
+fases específicas do ciclo de desenvolvimento do software. O teste de aceitação alfa é
+conduzido internamente pela equipe de desenvolvimento ou em um ambiente contro-
+lado, antes do lançamento do software para os usuários finais. Ele tem como objetivo
+identificar e corrigir problemas antes da disponibilização para um público mais amplo.
+Já o teste de aceitação beta, é conduzido por um grupo seleto de usuários externos,
+que testam o software em seus próprios ambientes e fornecem feedback valioso sobre
+possíveis problemas e melhorias. Esses testes permitem que o software seja refinado
+e aprimorado com base no feedback dos usuários antes de ser lançado oficialmente;
+• Teste de Aceitação Contratual (CAT): o teste de aceitação contratual é realizado para
+verificar se o software atende aos requisitos e especificações contratuais acordados
+entre o cliente e o fornecedor. Ele tem como objetivo garantir que o software entregue
+esteja em conformidade com os termos e condições estabelecidos no contrato. Esse
+teste envolve a verificação de cada funcionalidade e requisito especificado no contrato,
+garantindo que o software cumpra todas as obrigações contratuais;
+• Teste de Aceitação Regulatória (RAT): o teste de aceitação regulatória é conduzido para
+garantir que o software esteja em conformidade com as regulamentações e normas es-
+pecíficas do setor ou do mercado em que será utilizado. Esse teste verifica se o software
+atende aos requisitos legais, regulatórios ou de conformidade relevantes, como segurança
+de dados, privacidade, acessibilidade, entre outros. O objetivo é assegurar que o software
+cumpra todas as obrigações regulatórias e minimize os riscos legais associados ao seu uso.
+Cada um desses tipos de teste de aceitação desempenha um papel importante na
+validação do software, garantindo que ele atenda aos requisitos e expectativas dos usuários,
+seja operacionalmente viável, seja compatível com as regulamentações aplicáveis e cumpra os
+termos acordados no contrato. Esses testes ajudam a garantir a qualidade e a conformidade
+do software, minimizando riscos e assegurando uma experiência positiva para os usuários.
+.
+faculdade.grancursosonline.com.br 6 de 11
+Professor(a): Bruno Malhano
+É importante ressaltar que a abordagem e a extensão dos testes de aceitação podem
+variar de acordo com o contexto do projeto, as necessidades do cliente e as regulamentações
+específicas do setor. É fundamental envolver os stakeholders relevantes, como usuários
+finais, gerentes de produto, equipes de desenvolvimento e especialistas regulatórios,
+para garantir que os testes de aceitação sejam abrangentes e adequados às necessidades
+específicas do projeto.
+Em resumo, os testes de aceitação do usuário, operacional, alfa, beta, contratual e
+regulatório são essenciais para validar o software, garantindo sua adequação às necessidades
+dos usuários, a conformidade com as regulamentações e a qualidade geral do produto. Ao
+realizar uma combinação adequada desses testes, as organizações podem assegurar que
+o software seja robusto, confiável e atenda às expectativas dos usuários e às exigências
+do mercado.
+Existem diversas ferramentas disponíveis para auxiliar na realização de testes de
+integração e testes de aceitação. Algumas das ferramentas populares incluem:
+• Selenium: é uma ferramenta de automação de testes que permite simular interações
+do usuário em navegadores web, facilitando a realização de testes de aceitação em
+interfaces web;
+• JUnit e NUnit: são frameworks de teste unitário que também podem ser utilizados
+para a criação de testes de integração, possibilitando a execução de testes em dife-
+rentes níveis de integração;
+• Cucumber: é uma ferramenta de automação de testes que utiliza uma linguagem de
+especificação chamada Gherkin para criar testes de aceitação legíveis e compreensíveis,
+permitindo a colaboração entre desenvolvedores, testadores e stakeholders do projeto.
+Essas são apenas algumas das ferramentas disponíveis, e a escolha da ferramenta
+adequada dependerá das necessidades e requisitos do projeto em questão.
+Em resumo, os testes de integração e testes de aceitação são etapas cruciais no processo
+de desenvolvimento de software. Os testes de integração garantem que as diferentes
+partes do sistema funcionem corretamente em conjunto, enquanto os testes de aceitação
+verificam se o software atende aos requisitos e expectativas do usuário. Ambos os tipos de
+teste são essenciais para garantir a qualidade do software e assegurar que todas as peças
+se encaixem corretamente.
+.
+faculdade.grancursosonline.com.br 7 de 11
+Professor(a): Bruno Malhano
+4. Integração de Testes no Fluxo de CI/CD
+A integração de testes no fluxo de CI/CD (Integração Contínua/Entrega Contínua)
+é um aspecto crucial para garantir a qualidade do software, desde as fases iniciais do
+desenvolvimento até a implantação em produção. Seguindo o princípio de “teste como
+você constrói, construa como você testa”, os testes são incorporados em cada etapa do
+pipeline de CI/CD, garantindo a detecção precoce de problemas e a entrega de um software
+confiável e de alta qualidade.
+Figura 3: Integração de testes de CI/CD
+Fonte: Biplus. Disponível em: https://biplus.com.vn/ci-cd-devops/. Acesso em: 24 ago. 2023.
+No fluxo de CI/CD, os testes se encaixam em diferentes pontos, dependendo da estrutura
+e das necessidades do projeto. No estágio de integração contínua, os testes unitários são
+executados para verificar a corretude e o funcionamento isolado de cada componente
+do software. Esses testes são automatizados e verificam se as funcionalidades estão de
+acordo com as expectativas e requisitos definidos. A execução desses testes logo após a
+integração de um novo código ajuda a identificar problemas de compatibilidade e regressão.
+No estágio de entrega contínua, os testes de integração e os testes de sistema são
+realizados para verificar se as diferentes partes do sistema se comunicam corretamente e
+se o software como um todo está funcionando conforme o esperado. Esses testes também
+.
+faculdade.grancursosonline.com.br 8 de 11
+Professor(a): Bruno Malhano
+são automatizados e podem incluir cenários de uso real, validação de fluxos de trabalho e
+casos de teste end-to-end. A execução desses testes garante que o software seja testado
+em um ambiente semelhante ao de produção, minimizando surpresas durante a implantação.
+Figura 4: Entrega contínua
+Fonte: Manrai Tarun- Medium. Disponível em: https://manrai-tarun.medium.com/how-to-effectively-build-an-ci-cd-
+-pipeline-2a34d5a93c0. Acesso em: 24 ago. 2023.
+A automação de testes é fundamental para permitir a execução rápida e repetível
+dos testes em cada estágio do pipeline de CI/CD. Isso ajuda a acelerar o feedback para
+os desenvolvedores e permite a detecção precoce de problemas, reduzindo o tempo e os
+esforços necessários para corrigi-los. Os testes automatizados também garantem que os
+mesmos cenários de teste sejam executados consistentemente, evitando erros humanos
+e aumentando a confiabilidade dos resultados.
+Além disso, o monitoramento contínuo dos resultados dos testes é essencial para identificar
+tendências, problemas recorrentes e possíveis gargalos no processo de desenvolvimento. Isso
+pode ser feito por meio de dashboards, alertas e relatórios automatizados que fornecem
+insights sobre a qualidade do software em cada estágio do pipeline de CI/CD. O monitoramento
+contínuo permite a tomada de decisões informadas para melhorar a qualidade do software
+e otimizar o processo de entrega.
+Em resumo, a integração de testes no fluxo de CI/CD é fundamental para garantir a
+qualidade do software em todas as fases do desenvolvimento e entrega. A automação de
+testes e o monitoramento contínuo dos resultados são componentes essenciais desse
+processo, permitindo a detecção precoce de problemas e a entrega de um software confiável
+e de alta qualidade.
+.
+faculdade.grancursosonline.com.br 9 de 11
+Professor(a): Bruno Malhano
+Considerações Finais da Aula
+Em suma, este capítulo sobre Desenvolvimento Orientado a Testes (TDD) destacou
+os princípios fundamentais dessa metodologia, enfatizando sua capacidade de elevar a
+qualidade do software. A importância de escrever testes unitários eficientes foi enfatizada,
+permitindo uma validação minuciosa de componentes individuais do código.
+Exploramos também os Testes de Integração e de Aceitação, acrescentando camadas
+adicionais de confiabilidade à avaliação do software. Além disso, compreendemos a relevância
+de integrar testes de maneira contínua em nosso fluxo de Integração Contínua/Entrega
+Contínua (CI/CD), garantindo a manutenção da qualidade em todas as etapas do ciclo de
+vida do desenvolvimento.
+Ao abraçar os princípios do TDD, estamos melhor preparados para desenvolver softwares
+de alta qualidade, minimizar erros e entregar produtos mais confiáveis aos nossos usuários.
+Essa abordagem não apenas melhora a eficácia do desenvolvimento, mas também fortalece a
+confiança no resultado. À medida que prosseguirmos em nossas jornadas de desenvolvimento,
+lembremos sempre o poder transformador do TDD e sua capacidade de elevar os padrões
+da indústria de desenvolvimento de software.
+Material Complementar
+TDD (Test Driven Development)
+2018, Código Fonte TV.
+Compreender os conceitos do TDD é uma qualidade fundamental no mundo do desen-
+volvimento de software. Compreender os fundamentos é fundamental para conseguir
+aplicar as soluções e estar preparado para as demandas do mercado.
+Link para acesso: https://www.youtube.com/watch?v=bLdEypr2e-8 (acesso em 27 out.
+2023).
+Referências
+BECK, K. Test-Driven Development by Example. Addison-Wesley Professional, 2003.
+CRISPIN, L.; GREGORY, J. Agile Testing: A Practical Guide for Testers and Agile Teams. Ad-
+dison-Wesley Professional, 2009.
+.
+faculdade.grancursosonline.com.br 10 de 11
+Professor(a): Bruno Malhano
+ENTENDENDO pipelines de CI/CD. Jet Brains, 2023. Disponível em: https://www.je-
+tbrains.com/pt-br/teamcity/ci-cd-guide/ci-cd-pipeline/. Acesso em: 23 abr. 2023.
+FOWLER, M. Continuous Integration. Martin Flower, 2006. Disponível em: https://martin-
+fowler.com/articles/continuousIntegration.html. Acesso em: 21 jul. 2021.
+FREEMAN, S.; PRYCE, N. Growing Object-Oriented Software, Guided by Tests. Addison-
+-Wesley Professional, 2009.
+HUMBLE, J.; Farley, D. Continuous Delivery: Reliable Software Releases through Build,
+Test, and Deployment Automation. Addison-Wesley Professional, 2010.
+MARICK, B. How to Misuse Code Coverage. Agile Testing, 2008. Disponível em: https://
+www.exampler.com/testing-com/writings/coverage.pdf. Acesso em: 21 jul. 2021.
+MESZAROS, G. xUnit Test Patterns: Refactoring Test Code. Addison-Wesley Professional,
+2007.
+LAMOUNIER, Stella Marys Dornelas. Teste e inspeção de software: técnicas e automatiza-
+ção. São Paulo: Platos Soluções Educacionais, 2021.
+PRESSMAN, R. S.; MAXIM, B. R. Software Engineering: A Practitioner’s Approach. McGraw-
+-Hill, 2015.
+SINGH, R.; CHAUHAN, S. Acceptance Testing: An Essential Process in Software Develop-
+ment. International Journal of Computer Science and Mobile Computing, v. 3, n. 7, 2014,
+pp. 480-485.
+SMART, J. BDD in Action: Behavior-Driven Development for the Whole Software Lifecycle.
+Manning Publications, 2014.
+.
+faculdade.grancursosonline.com.br 11 de 11
+PROFESSOR(A): BRUNO MALHANO
+IaC (Infratestrutura como Código) e CI/CD
+Métricas e Monitoramento
+Objetivo da Aula
+Compreender a importância do monitoramento da infraestrutura de TI. Conhecer
+os fundamentos para construção de métricas. Criar alertas de monitoria e implementar
+técnicas de monitoramento.
+Apresentação
+Trataremos de um tema essencial para garantir o desempenho e a confiabilidade de
+sistemas de infraestrutura e aplicativos. Imagine ter o poder de prever e evitar problemas
+antes mesmo que afetem seus usuários. Nesta aula, exploraremos a importância crítica
+do monitoramento para a saúde de seus sistemas. Vamos aprender a definir métricas
+relevantes que realmente importam os negócios suportados pela tecnologia. Descobriremos
+como configurar sistemas de monitoramento e alertas inteligentes para ficar à frente de
+qualquer problema. Por fim, veremos como implementar práticas de monitoramento para
+manter seus sistemas sempre na melhor forma possível.
+1. Importância do Monitoramento na Infraestrutura e Aplicativos
+Imagine pilotar um avião sem o painel de instrumentos. Você não saberia a que velocidade
+está indo, não teria as coordenadas do voo, não teria noção da saúde das turbinas ou
+quanto combustível resta. Seria um caos. Seria quase impossível pilotar e garantir um
+pouco adequado.
+Monitorar a infraestrutura e aplicativos é fundamental para garantir o bom funcionamento
+de uma empresa, especialmente no ambiente digital. O monitoramento contínuo permite
+que os problemas sejam identificados rapidamente, evitando que se tenha crises maiores.
+Imagine que você é responsável por uma empresa de comércio eletrônico e, de repente,
+o site começa a ficar lento e as vendas começam a cair. Como você descobre a causa desse
+problema? O monitoramento contínuo de infraestrutura e aplicativos é a resposta. Através
+Livro Eletrônico
+faculdade.grancursosonline.com.br 1 de 14
+Professor(a): Bruno Malhano
+do monitoramento constante, é possível identificar problemas antes mesmo que eles se
+tornem grandes crises, o que pode economizar tempo e dinheiro para a empresa.
+O monitoramento também permite melhorar o desempenho dos sistemas. Ao entender
+o desempenho dos seus aplicativos e infraestrutura, é possível otimizá-los para uma
+experiência mais rápida e eficiente para os usuários. Isso é especialmente importante no
+contexto do comércio eletrônico, onde a velocidade e a eficiência do site podem fazer toda
+a diferença na decisão de compra dos clientes.
+Outro benefício do monitoramento é garantir a disponibilidade dos serviços. Ao monitorar
+a disponibilidade dos aplicativos e infraestrutura, é possível identificar problemas de
+indisponibilidade e agir rapidamente para resolvê-los. Isso é crucial para manter a reputação
+da empresa e a satisfação dos clientes, que esperam que os serviços estejam sempre
+disponíveis e funcionando corretamente.
+2. Definindo Métricas Relevantes para Aplicativos e Infraestrutura
+“Métricas erradas são piores do que nenhuma métrica” (Bob Lewis, CIO, 2022).
+Essa frase resume a importância de escolher as métricas certas para avaliar o desempenho
+de aplicativos e infraestrutura. Quando se trata de monitorar e analisar dados, é fundamental
+selecionar as métricas mais relevantes e significativas para o negócio.
+Uma das primeiras coisas a se considerar ao escolher as métricas é a sua relevância
+para o negócio. As métricas devem estar alinhadas com os objetivos e metas da empresa.
+Por exemplo, para um aplicativo de mídia social, métricas como engajamento, número de
+compartilhamentos e tempo médio de uso são críticas. Essas métricas fornecem insights
+valiosos sobre como os usuários estão interagindo com o aplicativo e se estão realmente
+engajados com o conteúdo.
+Outro aspecto importante na escolha das métricas é a simplicidade. Métricas
+excessivamente complexas podem ser confusas e difíceis de interpretar. É melhor escolher
+métricas simples e diretas, que forneçam insights claros e compreensíveis. Por exemplo,
+ao avaliar a velocidade de carregamento de um aplicativo, é mais útil medir o tempo médio
+de resposta do servidor em milissegundos, em vez de usar métricas mais complexas que
+envolvam vários fatores.
+Além disso, é importante considerar as métricas históricas, que permitem identificar
+padrões e tendências ao longo do tempo. Ao analisar dados históricos, é possível entender
+melhor o desempenho do aplicativo ou infraestrutura em diferentes momentos e identificar
+.
+faculdade.grancursosonline.com.br 2 de 14
+Professor(a): Bruno Malhano
+possíveis melhorias ou problemas recorrentes. Por exemplo, ao monitorar a utilização de
+recursos de um servidor ao longo do tempo, é possível identificar se há picos de demanda em
+determinados momentos do dia ou da semana, permitindo uma melhor alocação de recursos.
+Os provedores de nuvem fornecem várias soluções de monitoramento integradas
+aos seus serviços. No ambiente de nuvem do Microsoft Azure, existem diversas métricas
+disponíveis para monitorar e avaliar o desempenho dos recursos e serviços utilizados. Essas
+métricas fornecem insights valiosos sobre a utilização, disponibilidade e desempenho dos
+recursos hospedados no Azure.
+As métricas no Azure são coletadas e armazenadas em intervalos regulares, geralmente
+em intervalos de um minuto. Elas podem ser acessadas por meio do Azure Monitor, uma
+solução abrangente de monitoramento e diagnóstico oferecida pela Microsoft.
+Figura 1: Métricas
+Fonte: Microsoft Learn. Disponível em: https://learn.microsoft.com/pt-br/azure/app-service/web-sites-monitor.
+Acesso em: 24 ago. 2023.
+Existem diferentes tipos de métricas no Azure, incluindo:
+• Métricas de desempenho: essas métricas fornecem informações sobre o desempenho
+de recursos como máquinas virtuais, bancos de dados, aplicativos web e outros servi-
+ços do Azure. Por exemplo, é possível monitorar a CPU, a memória, o uso de disco e a
+largura de banda de rede de uma máquina virtual;
+.
+faculdade.grancursosonline.com.br 3 de 14
+Professor(a): Bruno Malhano
+• Métricas de disponibilidade: essas métricas indicam a disponibilidade e a integridade
+dos recursos hospedados no Azure. Elas podem incluir informações sobre o tempo de
+atividade, tempo de resposta e erros ocorridos em um serviço específico;
+• Métricas de utilização: essas métricas mostram a utilização de recursos, como o nú-
+mero de solicitações em um aplicativo web, a quantidade de dados transferidos em
+uma conta de armazenamento ou o número de operações de leitura/gravação em um
+banco de dados;
+• Métricas de custo: essas métricas auxiliam no monitoramento dos custos dos recur-
+sos utilizados no Azure. Elas permitem entender o consumo de recursos e identificar
+possíveis oportunidades de otimização e redução de custos.
+As métricas coletadas podem ser visualizadas e analisadas por meio do Azure Monitor. É
+possível criar painéis personalizados, configurar alertas com base em métricas específicas
+e realizar análises de tendências ao longo do tempo.
+Além disso, o Azure também oferece recursos avançados de monitoramento, como
+o Azure Log Analytics, que permite coletar, analisar e correlacionar dados de logs de
+diferentes recursos e serviços do Azure, oferecendo insights mais aprofundados sobre o
+ambiente em nuvem.
+As métricas no ambiente de nuvem do Microsoft Azure permitem monitorar e avaliar
+o desempenho, disponibilidade, utilização e custos dos recursos e serviços utilizados,
+fornecendo informações valiosas para otimização e tomada de decisões.
+Escolher as métricas certas para avaliar o desempenho de aplicativos e infraestrutura é
+crucial para tomar decisões informadas e melhorar a experiência do usuário. Ao considerar
+a relevância para o negócio, a simplicidade e as tendências ao longo do tempo, é possível
+selecionar as métricas mais relevantes e significativas. Lembre-se que métricas erradas
+podem levar a análises equivocadas e ações inadequadas. Portanto, é essencial investir
+tempo e esforço na definição das métricas corretas.
+3. Configurando Sistemas de Monitoramento e Alerta
+Agora que entendemos a importância do monitoramento e sabemos quais métricas
+devemos rastrear, é hora de configurar os sistemas de monitoramento. Essa etapa é
+fundamental para garantir a eficiência e a confiabilidade do monitoramento contínuo.
+.
+faculdade.grancursosonline.com.br 4 de 14
+Professor(a): Bruno Malhano
+Existem inúmeras ferramentas de monitoramento disponíveis no mercado, e é importante
+escolher aquelas que atendam às suas necessidades específicas. Algumas das ferramentas
+mais populares são o Prometheus, Grafana e ELK Stack.
+O Prometheus é um sistema de monitoramento e alerta de código aberto, projetado
+para monitorar aplicativos e sistemas de forma escalável e confiável. Ele coleta métricas de
+alvos configurados, processa-os e armazena em um banco de dados de séries temporais.
+Além disso, o Prometheus possui uma poderosa linguagem de consulta para analisar e
+visualizar as métricas coletadas.
+O Grafana, por sua vez, é uma plataforma de visualização de métricas e análise de dados.
+Com ele, é possível criar painéis personalizados e visualizar as métricas coletadas de forma
+intuitiva e interativa. O Grafana suporta uma ampla variedade de fontes de dados, incluindo
+o Prometheus, o que o torna uma excelente opção para integrar com outras ferramentas
+de monitoramento.
+Já o ELK Stack é uma combinação de três ferramentas: Elasticsearch, Logstash e Kibana.
+O Elasticsearch é um mecanismo de busca e análise de dados distribuído, projetado para
+armazenar e pesquisar grandes volumes de dados em tempo real. O Logstash é responsável
+por coletar, processar e enriquecer os logs de várias fontes. Por fim, o Kibana é uma interface
+de usuário amigável que permite visualizar e explorar os dados armazenados no Elasticsearch.
+O Datadog é uma plataforma de monitoramento e análise de dados em tempo real. Ele
+oferece uma ampla gama de recursos para monitorar infraestruturas, aplicativos e serviços
+em nuvem. Com o Datadog, as equipes podem coletar, visualizar e analisar métricas, registros
+e rastreamentos de suas aplicações e infraestruturas em um único painel.
+Além disso, o Datadog também oferece recursos avançados, como monitoramento de
+contêineres e orquestradores, monitoramento de serviços em nuvem, monitoramento de
+rede e análise de segurança. Ele também permite a criação de alertas personalizados com
+base em métricas específicas e oferece integração com outras ferramentas populares,
+como Slack e Jira.
+O Dynatrace é uma plataforma de monitoramento e gerenciamento de desempenho
+de aplicativos de ponta a ponta. Ele fornece recursos abrangentes para monitorar, analisar
+e otimizar o desempenho de aplicações em ambientes complexos e distribuídos. Com o
+Dynatrace, as equipes podem obter insights detalhados sobre o desempenho de seus
+aplicativos, infraestrutura e usuários finais.
+Uma das principais características do Dynatrace é sua capacidade de rastrear
+automaticamente todas as transações e componentes de uma aplicação, fornecendo uma
+.
+faculdade.grancursosonline.com.br 5 de 14
+Professor(a): Bruno Malhano
+visão completa do desempenho em tempo real. Ele também oferece recursos avançados,
+como detecção automática de problemas, análise de causa raiz, otimização de desempenho
+e monitoramento de experiência do usuário. O Dynatrace também se integra com várias
+ferramentas e serviços populares, como AWS, Azure e Jenkins.
+Além de escolher as ferramentas de monitoramento adequadas, é essencial configurar
+alertas para ser notificado quando as métricas ultrapassarem os limites definidos. Esses
+alertas permitem ação imediata, ajudando a evitar problemas graves e minimizar o tempo
+de inatividade.
+Ao configurar os alertas, é importante definir limites para as métricas que estão sendo
+monitoradas. Esses limites podem ser valores mínimos ou máximos, dependendo do que
+está sendo analisado. Por exemplo, se você está monitorando a utilização de CPU de um
+servidor, pode definir um alerta para ser acionado quando a utilização ultrapassar 80%,
+indicando uma possível sobrecarga.
+É importante considerar a frequência de verificação das métricas e o tempo de resposta
+esperado para os alertas. Por exemplo, se você está monitorando o tempo de resposta de
+um serviço, pode definir um alerta para ser acionado se o tempo de resposta exceder 500
+milissegundos por mais de 5 minutos consecutivos.
+Outro aspecto a ser considerado na configuração dos alertas é a forma como você
+deseja ser notificado. Existem diversas opções disponíveis, como notificações por e-mail,
+mensagens de texto, integração com ferramentas de comunicação em equipe (como Slack
+ou Microsoft Teams) ou até mesmo a execução de scripts automatizados para lidar com
+a situação.
+É importante lembrar que a configuração dos alertas não é um processo estático. À
+medida que o sistema evolui e as necessidades mudam, pode ser necessário ajustar os
+alertas existentes ou adicionar novos. É recomendado realizar revisões periódicas para
+garantir que os alertas estejam alinhados com as necessidades atuais.
+Em resumo, configurar sistemas de monitoramento e alerta envolve escolher as
+ferramentas adequadas e definir alertas com limites e configurações apropriadas. Isso
+permitirá uma ação imediata em caso de violação desses limites, garantindo a prevenção
+de problemas e a manutenção de um ambiente estável e confiável.
+.
+faculdade.grancursosonline.com.br 6 de 14
+Professor(a): Bruno Malhano
+4. Implementando Práticas de Monitoramento
+O monitoramento é uma etapa essencial para garantir o bom funcionamento e a
+disponibilidade de nossos aplicativos e serviços na nuvem. Com as diversas opções e recursos
+oferecidos pelo Azure, podemos implementar práticas de monitoramento eficientes e obter
+insights valiosos sobre o desempenho e a saúde de nossas aplicações.
+O Azure oferece uma série de ferramentas e serviços que nos permitem monitorar nossos
+aplicativos e serviços de forma abrangente. Entre os principais serviços de monitoramento oferecidos
+pelo Azure, podemos destacar o Azure Monitor, Azure Application Insights e Azure Log Analytics.
+O Azure Monitor é um serviço centralizado que nos permite coletar e analisar métricas,
+logs e rastreamento de nossos recursos no Azure. Com o Azure Monitor, podemos monitorar
+o desempenho de nossas máquinas virtuais, bancos de dados, serviços de aplicativos e
+muito mais. Além disso, o Azure Monitor oferece alertas personalizados para que possamos
+ser notificados imediatamente em caso de problemas ou anomalias.
+O Azure Application Insights é um serviço de monitoramento de aplicativos que nos
+permite obter insights detalhados sobre o desempenho de nossas aplicações. Com o
+Application Insights, podemos rastrear as solicitações de nossos usuários, medir o
+desempenho das páginas, detectar erros e identificar gargalos de desempenho. Além
+disso, o Application Insights também nos permite monitorar a disponibilidade de nossos
+aplicativos em diferentes regiões.
+O Azure Log Analytics é uma solução de análise de dados que nos permite coletar,
+analisar e visualizar logs de nossos aplicativos e serviços. Com o Log Analytics, podemos
+realizar consultas avançadas em nossos logs, identificar tendências e padrões, e criar
+painéis personalizados para monitorar a saúde de nossos recursos no Azure. Além disso,
+o Log Analytics também nos permite integrar com outras ferramentas e serviços, como o
+Azure Monitor e o Azure Application Insights.
+Para implementar práticas de monitoramento eficientes no Azure, podemos seguir
+algumas etapas importantes:
+• Identifique os recursos críticos: comece identificando os recursos críticos que precisam
+ser monitorados, como máquinas virtuais, bancos de dados, serviços de aplicativos,
+entre outros;
+• Configure as métricas e logs: utilize as ferramentas e serviços do Azure para configurar
+a coleta de métricas e logs dos seus recursos. Isso permitirá que você tenha visibilidade
+sobre o desempenho e a saúde dos seus recursos;
+.
+faculdade.grancursosonline.com.br 7 de 14
+Professor(a): Bruno Malhano
+• Defina alertas personalizados: configure alertas personalizados para ser notificado
+imediatamente em caso de problemas ou anomalias nos seus recursos. Isso permitirá
+que você tome ações corretivas de forma rápida e eficiente;
+• Utilize a análise de dados: explore as ferramentas de análise de dados do Azure, como
+o Azure Log Analytics, para identificar tendências, padrões e insights sobre o desem-
+penho dos seus recursos;
+• Crie painéis personalizados: utilize as ferramentas de visualização do Azure para criar
+painéis personalizados que mostrem as principais métricas e informações sobre a
+saúde dos seus recursos.
+Implementar práticas de monitoramento no Azure é fundamental para garantir o bom
+funcionamento e a disponibilidade de nossos aplicativos e serviços na nuvem. Com o Azure
+Monitor, Azure Application Insights e Azure Log Analytics, podemos coletar métricas, analisar
+logs e obter insights valiosos sobre o desempenho e a saúde de nossas aplicações.
+Ao seguir as etapas mencionadas anteriormente, podemos implementar práticas
+de monitoramento eficientes no Azure. Ao identificar os recursos críticos, configurar as
+métricas e logs, definir alertas personalizados, utilizar a análise de dados e criar painéis
+personalizados, estaremos bem equipados para monitorar e gerenciar nossos recursos na
+nuvem de forma eficaz.
+O monitoramento contínuo e a análise de dados são ferramentas essenciais para
+identificar problemas e tomar ações corretivas rapidamente. Além disso, ao implementar
+práticas de monitoramento no Azure, estamos investindo na qualidade e no desempenho
+de nossas aplicações, proporcionando uma melhor experiência para nossos usuários.
+4.1. Criando Alertas no Microsoft Azure
+Podemos criar vários tipos de alertas dentro do Microsoft Azure. Como ponto de partida,
+vamos utilizar uma máquina virtual. Na aba de monitoramento, o Azure possui várias opções
+de monitoramento. Na aba de métricas, podemos escolher a granularidade da informação,
+o range de visualização e o tipo da métrica. Vamos definir o percentual de uso de CPU.
+.
+faculdade.grancursosonline.com.br 8 de 14
+Professor(a): Bruno Malhano
+Figura 2: Criando alertas no Azure
+Fonte: Elaborada pelo autor.
+A métrica que foi definida pode ser adicionada em painéis pré-definidos, desta forma,
+podemos compor painéis de monitoramento para apoiar as estratégias de monitoração
+dos serviços.
+Figura 3: Compondo painéis de monitoramento
+Fonte: Elaborada pelo autor.
+Adicionando a um painel, podemos selecionar um painel do Azure previamente configurado
+ou criar um do zero.
+.
+faculdade.grancursosonline.com.br 9 de 14
+Professor(a): Bruno Malhano
+Figura 4: Adicionando painel
+Fonte: Elaborada pelo autor.
+Após criar um novo painel já podemos visualizar que a métrica foi adicionada.
+Figura 5: Adição de métrica
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 10 de 14
+Professor(a): Bruno Malhano
+A partir de uma métrica definida, podemos criar alertas que vão ser disparados com
+base em um regra estabelecida. Por exemplo, podemos definir que, quando a porcentagem
+de CPU atingir mais de 80% em um determinado período, um alerta será disparado.
+Figura 6: Criando alertas
+Fonte: Elaborada pelo autor.
+Todo alerta precisa de um grupo de ação para disparar os alertas direcionados. Você
+pode definir os grupos de ação com base nas tecnologias, cargas de trabalho ou nos times
+que sustentam o ambiente.
+Figura 7: Grupos de ação
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 11 de 14
+Professor(a): Bruno Malhano
+A configuração de um grupo de ação é feita em uma subscrição e sob um grupo de
+recursos, basicamente onde o serviço foi registrado (configurado).
+Figura 8: Configuração de um grupo de ação
+Fonte: Elaborada pelo autor.
+Podemos definir o envio de e-mail e também de SMS para este grupo, e neste caso
+definimos como envio de e-mail para uma roles específica. Para este grupo de ação, o
+proprietário do recurso será alertado por e-mail.
+Figura 9: Comunicação por E-mail ou SMS
+Fonte: Elaborada pelo autor.
+.
+faculdade.grancursosonline.com.br 12 de 14
+Professor(a): Bruno Malhano
+Podemos definir níveis de severidade dos alertas e definir qual a métrica o alerta irá
+acompanhar.
+Figura 10: Definição de alerta
+Fonte: Elaborada pelo autor.
+Podemos adotar essas abordagens de monitoramento com todos os serviços da
+plataforma, cada serviço pode apresentar particularidades, mas de maneira geral, a Azure
+oferece soluções para garantir a saúde dos serviços.
+Considerações Finais da Aula
+Conseguimos compreender a importância do monitoramento na infraestrutura e
+aplicativos. Aprendemos como definir métricas relevantes que nos permitem avaliar com
+precisão o desempenho e a saúde de nossos sistemas. Compreendemos a configuração
+de sistemas de monitoramento e alertas como uma ferramenta crucial para antecipar
+problemas e tomar ações preventivas. Além disso, exploramos a implementação de práticas
+de monitoramento para manter nossos sistemas resilientes e altamente disponíveis.
+É importante lembrar que o monitoramento não é apenas uma tarefa técnica, mas, sim,
+uma estratégia essencial para garantir a satisfação dos usuários e a eficiência operacional.
+Ao dominarmos esses conceitos, capacitamo-nos a manter nossos sistemas em seu melhor
+estado, proporcionando experiências consistentes e confiáveis aos nossos clientes e usuários.
+.
+faculdade.grancursosonline.com.br 13 de 14
+Professor(a): Bruno Malhano
+Portanto, leve consigo o conhecimento adquirido nesta aula e aplique-o sempre que puder,
+sabendo que você agora possui uma valiosa ferramenta para o sucesso de seus projetos de
+infraestrutura e aplicativos.
+Material Complementar
+Prometheus + Grafana: Monitore sua aplicação de forma profissional
+2022, Full Cycle.
+Você entenderá os conceitos básicos e necessários para trabalhar com o Prometheus
+& Grafana, além de ver na prática como as ferramentas podem ser aplicadas para con-
+seguir monitorar de forma profissional uma aplicação.
+Link para acesso: https://www.youtube.com/watch?v=qvwI3OHDovE (acesso em 27
+out. 2023).
+Referências
+APPLICATION Insights overview. Microsoft, 2023. Disponível em: https://docs.microsoft.
+com/en-us/azure/azure-monitor/app/app-insights-overview. Acesso em: 25 ago. 2023.
+AZURE Monitor. Microsoft, 2023. Disponível em: https://azure.microsoft.com/services/
+monitor/. Acesso em: 25 ago. 2023.
+CHOOSING the Right Metrics for Your Application Monitoring. New Relic, 2023. Disponível
+em: https://newrelic.com/blog/best-practices/choosing-right-metrics-your-applica-
+tion-monitoring. Acesso em: 24 de ago. 2023.
+COMER, Douglas E. Redes de computadores e internet. 6. ed. Porto Alegre: Bookman,
+2016.
+ELK Stack. Elastic, 2023. Disponível em: https://www.elastic.co/what-is/elk-stack. Aces-
+so em: 26 de agosto de 2023.
+GRAFANA. Grafana: The open observability platform, 2023. Página inicial. Disponível em:
+https://grafana.com. Acesso em: 26 ago. 2023.
+LOG Analytics overview. Microsoft, 2023. Disponível em: https://docs.microsoft.com/en-
+-us/azure/azure-monitor/logs/log-analytics-overview. Acesso em: 24 ago. 2023.
+.
+faculdade.grancursosonline.com.br 14 de 14
